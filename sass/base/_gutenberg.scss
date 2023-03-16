@@ -1,0 +1,9 @@
+
+.block-list-appender button, button.acf-button , .wp-editor-tabs button {
+	min-width:unset;
+	padding:unset;
+	&, &:hover,&:focus {
+		background-color:transparent;
+	}
+}
+
