@@ -52,15 +52,37 @@
 
 @mixin bouton {
 	font-weight: 700;
-	border: none;
-	border-radius: 0;
+	border: solid 2px currentColor;
+	border-radius: 8px;
+
 	cursor: pointer;
 	display:inline-block;
-	margin: 0 0 1em;
-	padding: 0.7rem 1.3rem;
+	font-size: 1.2rem;
+	margin: 0;
+	padding: 8px 8px 12px;
+	position: relative;
 	text-align: center;
-	text-transform: uppercase;
+	text-decoration: none;
+	transition: all var(--transition);
+
 	vertical-align: middle;
+
+	&::after {
+		content:'>';
+		display: inline-block;
+		margin-left:1ch;
+	}
+	&.sans-fleche::after {
+		display: none;
+	}
+	&:hover, &:focus, &:active {
+		text-decoration: none;
+	}
+	@include bp(lg) {
+		border-radius: 16px;
+		font-size: 1.6rem;
+		padding: 12px 12px 16px;
+	}
 }
 
 @mixin screen-reader-text {

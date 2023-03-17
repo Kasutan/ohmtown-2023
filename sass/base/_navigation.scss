@@ -4,27 +4,19 @@
 :root {
 	--transition:0.45s ease-in-out;
 }
-a,
-a:visited {
-	//color: var(--wp--preset--color--primaire);
-	font-weight: 600;
-	text-decoration: underline;
-	transition: all var(--transition);
-}
 
+a,
+a:visited,
 a:hover,
 a:active,
 a:focus {
-	//color: var(--wp--preset--color--tertiaire);
 	text-decoration: underline;
 }
-
-
 
 a:hover,
 a:focus,
 a:active {
-	outline: 0;
+	outline-color: transparent;
 }
 a:focus-visible {
 	outline: medium dotted;

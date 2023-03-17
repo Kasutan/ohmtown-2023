@@ -38,12 +38,10 @@
 html {
 	font-size: 62.5%;
 	/* 1rem = 10px */
-	--taille-texte: 1.5rem;
+	--taille-texte: 1.6rem;
 	--font-texte: "Typewriter Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	--font-titre: "Simple Handmade", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
-//TODO Déplacer couleurs, tailles et graisses (et spacing ?) dans theme.json
 
 body,
 button,
@@ -54,16 +52,16 @@ textarea {
 	color: var(--texte); 
 	font-family:  "Typewriter Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-family: var(--font-texte);
-	font-size: 1.5rem; //si les variables css ne sont pas supportées
-	font-size: var(--taille-texte);
+	font-size: 1.6rem; //si les variables css ne sont pas supportées
+	font-size: var(--wp--custom--typography--font-size--medium);
 	font-weight: 400;
-	line-height: 1.75;
+	line-height: 1.33;
 	-webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-	background: var(--wp--preset--color--secondaire);
-	color: var(--wp--preset--color--blanc);
+	background: var(--wp--preset--color--citron-200);
+	color: var(--wp--preset--color--noir);
 }
 
 strong,
@@ -80,45 +78,41 @@ i {
 h1,
 .h1,
 h2,
-h3,
-h4,
-.h2,
-.h3,
-.h4 {
+.h2
+{
+	color:var(--wp--preset--color--gray-800);
 	font-family: var(--font-titre);
-	font-weight: 700;
 	padding: 0;
-}
-
-h1,
-.h1 {
-	@include fs(35);
-	line-height: 1.2;
-	margin: 1em 0 0.5em;
-	position: relative;
-	text-decoration: underline;
-	text-underline-offset:5px;
 	text-transform: uppercase;
 
 }
 
-h2,
-h3,
-.h2,
-.h3 {
-	color: var(--wp--preset--color--primaire);
-	margin: 0 0 0.5em;
+h1,
+.h1 {
+	font-size: var(--wp--custom--typography--font-size--colossal);
+	line-height: 3;
+	margin: 0;
 }
 
 h2,
 .h2 {
-	@include fs(24);
+	font-size: var(--wp--custom--typography--font-size--gigantic);
+	line-height: 2.3; 
+	margin : 0 0 0 0.4rem;
+	margin-bottom: clamp(0.4rem,1.11rem,1.6rem);
 }
 
 h3,
 .h3 {
-	@include fs(20);
+	color:#272216;
+	font-size: var(--wp--custom--typography--font-size--huge);
+	font-weight: 700;
+	line-height: 1.32;
+	margin: 0 0 0.4rem;
+	text-transform: uppercase;
+
 }
+
 
 h4,
 .h4,
@@ -126,14 +120,17 @@ h5,
 .h5,
 h6,
 .h6 {
-	color:var(--texte);
+	color:var(--wp--preset--color--noir);
+	font-size: var(--wp--custom--typography--font-size--large);
+	font-weight: 700;
+	line-height: 1.32;
+	margin: 0 0 0.4rem;
 }
 
 
 
 p {
-	margin-bottom: 1em;
-	margin-top: 0;
+	margin:0 0 1em;
 }
 
 dfn,
@@ -144,7 +141,7 @@ i {
 }
 
 blockquote {
-	border-left: solid 5px var(--wp--preset--color--tertiaire);
+	border-left: solid 5px var(--wp--preset--color--orange-main);
 	font-size: 1.2em;
 	margin: 0 0 1em;
 	padding: 5px 27px;
@@ -156,27 +153,10 @@ blockquote {
 
 mark,
 ins {
-	background: var(--fond);
+	background: var(--wp--preset--color--citron-200);
 	text-decoration: none;
 }
 
-small,
-.has-small-font-size {
-	@include fs(12);
-}
-
-.has-regular-font-size {
-	@include fs(15);
-}
-
-big,
-.has-big-font-size {
-	@include fs(25);
-}
-
-.has-huge-font-size {
-	@include fs(35);
-}
 
 
 /*--------------------------------------------------------------

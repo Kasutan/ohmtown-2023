@@ -148,6 +148,17 @@ if ( ! function_exists( 'kasutan_setup' ) ) :
 
 		// Enqueue editor styles.
 		add_editor_style( 'editor-styles.css' );
+
+
+		register_block_style(
+			'core/button',
+				array(
+					'name'  => 'secondaire',
+					'label' => 'Secondaire',
+					'inline_style' => '.secondaire {
+						background: #FFFCE9;color:#000}',
+			)
+		);
 	}
 endif;
 add_action( 'after_setup_theme', 'kasutan_setup' );
