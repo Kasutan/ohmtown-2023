@@ -599,28 +599,6 @@ a.bouton,
   transition: all var(--transition);
   vertical-align: middle;
 }
-button::after,
-input[type=button]::after,
-input[type=reset]::after,
-input[type=submit]::after,
-a.bouton::after,
-.wp-element-button::after,
-.wp-block-button.is-style-outline > .wp-block-button__link::after,
-.wp-block-button .wp-block-button__link.is-style-outline::after {
-  content: ">";
-  display: inline-block;
-  margin-left: 1ch;
-}
-button.sans-fleche::after,
-input[type=button].sans-fleche::after,
-input[type=reset].sans-fleche::after,
-input[type=submit].sans-fleche::after,
-a.bouton.sans-fleche::after,
-.wp-element-button.sans-fleche::after,
-.wp-block-button.is-style-outline > .wp-block-button__link.sans-fleche::after,
-.wp-block-button .wp-block-button__link.is-style-outline.sans-fleche::after {
-  display: none;
-}
 button:hover, button:focus, button:active,
 input[type=button]:hover,
 input[type=button]:focus,
@@ -658,6 +636,17 @@ a.bouton:active,
     font-size: 1.6rem;
     padding: 12px 12px 16px;
   }
+}
+
+a.bouton::after,
+.wp-element-button::after {
+  content: ">";
+  display: inline-block;
+  margin-left: 1ch;
+}
+a.bouton.sans-fleche::after,
+.wp-element-button.sans-fleche::after {
+  display: none;
 }
 
 .is-style-fill .wp-element-button,

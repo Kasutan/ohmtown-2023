@@ -67,14 +67,7 @@
 
 	vertical-align: middle;
 
-	&::after {
-		content:'>';
-		display: inline-block;
-		margin-left:1ch;
-	}
-	&.sans-fleche::after {
-		display: none;
-	}
+	
 	&:hover, &:focus, &:active {
 		text-decoration: none;
 	}

@@ -9,6 +9,19 @@ a.bouton,
 	@include bouton;
 }
 
+a.bouton,
+.wp-element-button
+{
+	&::after {
+		content:'>';
+		display: inline-block;
+		margin-left:1ch;
+	}
+	&.sans-fleche::after {
+		display: none;
+	}
+}
+
 .is-style-fill .wp-element-button, 
 a.bouton.primaire,
 button.primaire {
