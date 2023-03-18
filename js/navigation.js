@@ -14,6 +14,7 @@
 	}
 
 	volet = document.getElementById( 'volet-navigation' );
+	var header = document.getElementById( 'site-header' );
 
 	// Hide menu toggle button if volet is empty and return early.
 	if ( 'undefined' === typeof volet ) {
@@ -34,10 +35,12 @@
 	button.onclick = function() {
 		if ( -1 !== volet.className.indexOf( 'toggled' ) ) {
 			volet.className = volet.className.replace( ' toggled', '' );
+			header.className = header.className.replace( ' volet-ouvert', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
 			volet.setAttribute( 'aria-expanded', 'false' );
 		} else {
 			volet.className += ' toggled';
+			header.className += ' volet-ouvert';
 			button.setAttribute( 'aria-expanded', 'true' );
 			volet.setAttribute( 'aria-expanded', 'true' );
 		}

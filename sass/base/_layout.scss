@@ -18,7 +18,7 @@ body {
 	--padding-x-pleine-largeur:0;
 	--largeur-max:1920px;
 
-	//--header-height:80px;
+	--header-height:6rem;
 	//--max-width-xl:1900px;
 
 	/*Valeurs en dur pour les navigateurs qui ne supportent pas clamp*/
@@ -48,6 +48,23 @@ body {
 //Réglages de largeur communs à tous les templates
 .site-container {
 	@include largeur-max;
+
+	@include bp(lg) {
+		display: grid;
+		grid-template-columns: 37.5rem 1fr;
+
+		.site-header.js-sticky {
+			position:relative;
+			width: unset;
+			top:unset;
+		}
+
+		.site-footer {
+			background-color: red;
+			grid-column: 1 / span 2;
+		}
+
+	}
 }
 .site-main {
 	.fil-ariane, .entry-title {

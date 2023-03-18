@@ -25,8 +25,10 @@ a.bouton,
 .is-style-fill .wp-element-button, 
 a.bouton.primaire,
 button.primaire {
+	background-color: var(--wp--preset--color--orange-main);
 	border-color:var(--wp--preset--color--sand-900);
 	box-shadow: 5px 4px 2px var(--wp--preset--color--orange-800);
+	color: var(--wp--preset--color--blanc);
 	font-size: 1.6rem;
 	margin-bottom: 1em;
 

@@ -2,54 +2,59 @@
 ## Site header
 --------------------------------------------------------------*/
 .site-header {
-	--taille-logo:13rem;
+	--taille-logo:3.3rem;
 	
 	align-items: center;
-	background-color: var(--wp--preset--color--blanc);
-	display: grid;
-	grid-template-columns: 1fr var(--taille-logo) 1fr;
-	justify-content: space-between;
-	padding: 10px var(--padding-x-header);
+	background-color: var(--wp--preset--color--sand-main);
+	display: flex;
+	height:var(--header-height);
+	padding: 8px var(--padding-x-header);
 	position: relative;
 	z-index:10;
 
-	.site-branding, .menu-toggle {
+	a.resa.mobile {
+		line-height: 1;
+		margin-bottom: 0;
+		margin-right: 32px;
+	}
+	&.volet-ouvert {
+		a.resa.mobile {
+			display: none;
+		}
+	}
+	.menu-toggle {
 		position: relative;
 	}
+
+	
 
 	@include bp(md) {
 	}
 	@include bp(lg) {
+		--taille-logo:8rem;
+		flex-direction: column;
+		height:auto;
+		padding:20px var(--padding-x-header) 10px;
+		a.resa.mobile {
+			display: none;
+		}
+
+		.logo-header {
+			flex-basis:unset;
+			margin-left: auto;
+			margin-right: auto;
+			max-width:var(--taille-logo);
+		}
+
 	}
 
 }
 
-.title-area {
-	grid-column: 2;
+.logo-header {
+	flex:0 0 var(--taille-logo);
+	margin-right: auto;
 }
 
-
-.site-title {
-	margin:0;
-}
-
-.custom-logo-link {
-	display: inline-block;
-}
-
-.custom-logo {
-	display: block;
-	margin:0;
-}
-
-.header-navigation {
-	justify-self: end;
-	grid-column: 3;
-}
-
-.acces-client {
-	display: none;
-}
 
 //Header sticky toutes tailles d'écran
 .site-header.js-sticky {
@@ -70,56 +75,9 @@
 }
 .admin-bar .site-header.js-sticky {
 	top:46px;
-}	
-
-
-@include bp(md) {
-	.site-header {
-		--taille-logo:15rem;
-	}
-
-	.admin-bar .site-header.js-sticky {
+	@include bp(md) {
 		top:32px;
 	}
-
-	
-}
-
-@include bp(lg) {
-	.site-header {
-		--taille-logo:17.7rem;
-		display: flex;
-		flex-direction: column;
-		padding:20px var(--padding-x-header) 10px;
-
-	}
-	.title-area {
-		max-width: var(--taille-logo);
-	}
-	.header-navigation {
-		width:100%;
-	}
-
-	a.acces-client {
-		background-color: var(--wp--preset--color--tertiaire);
-		@include box-shadow;
-		border-bottom-left-radius: 5px;
-		border-bottom-right-radius: 5px;
-		color:var(--wp--preset--color--blanc);
-		display: block;
-		@include fs(12);
-		font-weight: 700;
-		padding:1rem;
-		position: absolute;
-		right:var(--padding-x-header);
-		text-decoration: none;
-		text-transform:uppercase;
-		top:0;
-		&:hover, &:focus {
-			text-decoration: underline;
-		}
-	}
-
 }
 
 /*--------------------------------------------------------------

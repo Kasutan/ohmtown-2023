@@ -59,41 +59,7 @@
 		}
 	}
 
-	.nav-social {
-		width: 100%;
-
-		ul {
-			display: flex;
-			justify-content: flex-end;
-			margin: 0;
-			padding: 0;
-			width: 100%;
-
-			@include bp(lg) {}
-
-			li a {
-				--size: 45px;
-				background-image: url('icons/facebook-blanc.svg');
-				background-repeat: no-repeat;
-				background-size: contain;
-				color: transparent;
-				display: block;
-				flex: 0 0 var(--size);
-				height: var(--size);
-				margin-right: 30px;
-				overflow: hidden;
-				width: var(--size);
-
-				&[href*="twitter"] {
-					background-image: url('icons/twitter.jpg');
-				}
-			}
-
-			li:last-of-type a {
-				margin-right: 0;
-			}
-		}
-	}
+	
 
 	.copyright {
 

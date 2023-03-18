@@ -1,0 +1,43 @@
+.nav-social {
+	width: 100%;
+
+	ul {
+		display: flex;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+
+		@include bp(lg) {}
+
+		li a {
+			--size: 32px;
+			background-color:var(--wp--preset--color--citron-main);
+			background-image: url('icons/facebook.svg');
+			border-radius: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 8px;
+			color: transparent;
+			display: block;
+			flex: 0 0 var(--size);
+			height: var(--size);
+			margin-right: 30px;
+			overflow: hidden;
+			width: var(--size);
+
+			&[href*="insta"] {
+				background-image: url('icons/insta.svg');
+				background-size: 11px;
+			}
+			&[href*="soundcloud"] {
+				background-image: url('icons/soundcloud.svg');
+				background-size: 12px;
+			}
+		}
+
+		li:last-of-type a {
+			margin-right: 0;
+		}
+	}
+}

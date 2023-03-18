@@ -32,7 +32,7 @@ class etcode_sublevel_walker extends Walker_Nav_Menu
 * Navigation
 *
 */
-add_action( 'tha_header_bottom', 'ea_site_header', 10 );
+//add_action( 'tha_header_bottom', 'ea_site_header', 10 );
 
 
 function ea_site_header() {

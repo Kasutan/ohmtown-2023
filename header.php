@@ -27,30 +27,9 @@ echo '<div class="site-container">';
 	
 
 	tha_header_before();
-	echo '<header class="site-header">';
+	echo '<header class="site-header" id="site-header">';
 	echo '<a class="skip-link screen-reader-text" href="#main-content">' . esc_html__( 'Aller directement au contenu', 'ohmtown' ) . '</a>';
 		tha_header_top();
-
-		echo '<div class="title-area">';
-		$logo_tag='p';
-		
-		if(has_custom_logo()) {
-			printf('<%s class="site-title">%s<span class="screen-reader-text">%s</span></%s>',
-				$logo_tag,
-				get_custom_logo(),	
-				get_bloginfo( 'name'),
-				$logo_tag,	
-			);
-		} else {
-			printf('<%s class="site-title">%s</%s>',
-				$logo_tag,
-				get_bloginfo( 'name'),
-				$logo_tag,	
-			);
-		}
-			
-		echo '</div>';
-
 		tha_header_bottom();
 	echo '</header>';
 	tha_header_after();
