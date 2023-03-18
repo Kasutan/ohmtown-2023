@@ -1,61 +1,56 @@
 {
     "key": "group_5f0c2bd7ee2a0",
-    "title": "Options générales",
+    "title": "Options de l'en-tête",
     "fields": [
         {
-            "key": "field_608ac16ae3a8c",
-            "label": "Page des actualités",
-            "name": "page_actualites",
+            "key": "field_641578c32f7b7",
+            "label": "Logo en-tête",
+            "name": "ohm_logo_header",
             "aria-label": "",
-            "type": "post_object",
-            "instructions": "Réglage utilisé pour le fil d'ariane et pour le bouton \"voir toutes les actualités\"",
-            "required": 1,
+            "type": "image",
+            "instructions": "",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "page"
-            ],
-            "taxonomy": "",
-            "allow_null": 0,
-            "multiple": 0,
             "return_format": "id",
-            "ui": 1
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         },
         {
-            "key": "field_6239a16d7bd62",
-            "label": "Page mentions légales",
-            "name": "page_mentions_legales",
+            "key": "field_63bd3e8fc525b",
+            "label": "Lien vers la réservation",
+            "name": "ohm_reserver",
             "aria-label": "",
-            "type": "post_object",
-            "instructions": "Réglage utilisé pour le lien dans le pied de page",
-            "required": 1,
+            "type": "link",
+            "instructions": "",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "page"
-            ],
-            "taxonomy": "",
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "id",
-            "ui": 1
+            "return_format": "array"
         },
         {
             "key": "field_60a0e771c0bde",
             "label": "Image bannière par défaut",
-            "name": "ohmtown_bg_image",
+            "name": "ohm_bg_image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -71,14 +66,14 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "jpg, jpeg",
-            "preview_size": "thumbnail"
+            "preview_size": "banniere"
         },
         {
-            "key": "field_63bd3e8fc525b",
-            "label": "Lien vers l'accès client dans l'en-tête",
-            "name": "ohmtown_acces_client",
+            "key": "field_6415d7dfb7747",
+            "label": "Réservation : label du bouton en mobile",
+            "name": "ohm_resa_label_mobile",
             "aria-label": "",
-            "type": "link",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -87,7 +82,49 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6415d87ab7748",
+            "label": "Réservation : label du bouton en desktop",
+            "name": "ohm_resa_label_desktop",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6415d91893321",
+            "label": "Info liens réseaux sociaux",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Les liens vers les réseaux sociaux peuvent être modifiés via Apparence \/ Menus",
+            "new_lines": "wpautop",
+            "esc_html": 0
         }
     ],
     "location": [
@@ -108,5 +145,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673347784
+    "modified": 1679153471
 }
