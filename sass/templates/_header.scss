@@ -2,15 +2,19 @@
 ## Site header
 --------------------------------------------------------------*/
 .site-header {
+	background-color: var(--wp--preset--color--sand-main);
+	position: relative;
+	z-index: 10;
+}
+.inner-header {
 	--taille-logo:3.3rem;
 	
 	align-items: center;
-	background-color: var(--wp--preset--color--sand-main);
 	display: flex;
 	height:var(--header-height);
-	padding: 8px var(--padding-x-header);
+	padding: 8px 18px;
 	position: relative;
-	z-index:10;
+	
 
 	a.resa.mobile {
 		line-height: 1;
@@ -34,7 +38,7 @@
 		--taille-logo:8rem;
 		flex-direction: column;
 		height:auto;
-		padding:20px var(--padding-x-header) 10px;
+		padding:16px 0;
 		a.resa.mobile {
 			display: none;
 		}
@@ -43,6 +47,7 @@
 			flex-basis:unset;
 			margin-left: auto;
 			margin-right: auto;
+			margin-bottom: 32px;
 			max-width:var(--taille-logo);
 		}
 
@@ -56,29 +61,41 @@
 }
 
 
-//Header sticky toutes tailles d'écran
-.site-header.js-sticky {
+//Header fixe en haut de page en mobile
+.site-header.js-fixed {
 	//box-shadow: 0 3px 3px rgba(18,75,90,0.2);
 	position:fixed;
 	left: 0;
 	top: 0;
 	width:100%;
 
-	@include bp(xxl) {
-		left:calc((100vw - var(--largeur-max))/2);
-		width:var(--largeur-max);
+	@include bp(lg) {
+		position:relative;
+		width: unset;
+		top:unset;
 	}
 }
 
 #wpadminbar {
 	position: fixed;
 }
-.admin-bar .site-header.js-sticky {
+.admin-bar .site-header.js-fixed {
 	top:46px;
 	@include bp(md) {
-		top:32px;
+		top:unset;
 	}
 }
+
+//Header sticky à gauche en desktop
+@include bp(lg) {
+	.inner-header {
+		padding-bottom: 10rem;
+		position:sticky;
+		top:5rem;
+	}
+}
+
+
 
 /*--------------------------------------------------------------
 ## Ancre pour backtotop

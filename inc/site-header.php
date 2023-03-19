@@ -1,6 +1,7 @@
 <?php
 add_action('tha_header_top','kasutan_header_top');
 function kasutan_header_top() {
+	echo '<div class="inner-header">';
 	$logo=$resa_mobile=$resa_desktop='';
 	if(function_exists('get_field')) {
 		$logo=esc_attr(get_field('ohm_logo_header','option'));
@@ -44,7 +45,7 @@ function kasutan_header_top() {
 		}
 
 	echo '</div>'; //fin .volet navigation
-
+	echo '</div>'; //fin inner-header;
 }
 
 function kasutan_bouton_resa($label,$classe='') {

@@ -39,9 +39,13 @@
 		var siteHeader=$('.site-header');
 		var siteContent=$('.site-main');
 		
+		if(width < 960) {
+			$(siteHeader).addClass('js-fixed');
+			siteContent.css('margin-top',siteHeader.outerHeight());
+		} else {
+			$("#volet-navigation").removeAttr('aria-expanded');
+		}
 		
-		$(siteHeader).addClass('js-sticky');
-		siteContent.css('margin-top',siteHeader.outerHeight());
 
 		/****************** Helpers formulaire *************************/	
 		

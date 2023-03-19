@@ -109,11 +109,10 @@ button.menu-toggle {
 
 .volet-navigation.toggled { 
 	display: flex;
-	flex-direction: column;
 	left:0;
 	height:calc(100vh - var(--header-height)); //magic number : hauteur du header sticky
 	overflow-x:hidden;
-	overflow-y:auto;
+	overflow-y:auto; //TODO FIX
 	padding: 0;
 	position:absolute;
 	top:100%;
@@ -129,6 +128,7 @@ button.menu-toggle {
 	}
 	.volet-navigation {
 		display:flex;
+		width: 100%;
 	}
 }
 
@@ -151,7 +151,7 @@ button.menu-toggle {
 .volet-navigation {
 	align-items: center;
 	background-color:var(--wp--preset--color--sand-main);
-	box-shadow: 0 3px 3px rgba(0,0,0,.2);
+	flex-direction: column;
 
 	.nav-main {
 		width:100%;
@@ -191,7 +191,17 @@ button.menu-toggle {
 	}
 
 	a.resa {
-		font-size: var(--wp--custom--typography--font-size--huge);
+		font-size: 2.4rem;
+	}
+
+	@include bp(lg) {
+		a.resa {
+			margin-bottom: 36px;
+		}
+	}
+
+	.nav-menu a {
+		text-align: left;
 	}
 
 }

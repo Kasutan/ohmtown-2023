@@ -284,7 +284,6 @@ body {
   --margin-y-1: 3rem;
   --margin-y-2: 6rem;
   --padding-x:20px;
-  --padding-x-header:20px;
   --padding-x-decor:var(--padding-x);
   --padding-x-pleine-largeur:0;
   --largeur-max:1920px;
@@ -300,13 +299,11 @@ body {
 @media (min-width: 960px) {
   :root {
     --padding-x: 10vw;
-    --padding-x-header:5vw;
   }
 }
 @media (min-width: 1440px) {
   :root {
     --padding-x: calc(50vw - 1114px/2);
-    --padding-x-header:var(--padding-x);
   }
 }
 @media (min-width: 1920px) {
@@ -324,12 +321,7 @@ body {
 @media (min-width: 960px) {
   .site-container {
     display: grid;
-    grid-template-columns: 37.5rem 1fr;
-  }
-  .site-container .site-header.js-sticky {
-    position: relative;
-    width: unset;
-    top: unset;
+    grid-template-columns: 28rem 1fr;
   }
   .site-container .site-footer {
     background-color: red;
@@ -1260,7 +1252,6 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
 
 .volet-navigation.toggled {
   display: flex;
-  flex-direction: column;
   left: 0;
   height: calc(100vh - var(--header-height));
   overflow-x: hidden;
@@ -1278,6 +1269,7 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   }
   .volet-navigation {
     display: flex;
+    width: 100%;
   }
 }
 /* Style pictos menu mobile */
@@ -1296,7 +1288,7 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
 .volet-navigation {
   align-items: center;
   background-color: var(--wp--preset--color--sand-main);
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
 }
 .volet-navigation .nav-main {
   width: 100%;
@@ -1332,7 +1324,15 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   text-transform: uppercase;
 }
 .volet-navigation a.resa {
-  font-size: var(--wp--custom--typography--font-size--huge);
+  font-size: 2.4rem;
+}
+@media (min-width: 960px) {
+  .volet-navigation a.resa {
+    margin-bottom: 36px;
+  }
+}
+.volet-navigation .nav-menu a {
+  text-align: left;
 }
 
 @media print {
@@ -1454,40 +1454,45 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
 ## Site header
 --------------------------------------------------------------*/
 .site-header {
-  --taille-logo:3.3rem;
-  align-items: center;
   background-color: var(--wp--preset--color--sand-main);
-  display: flex;
-  height: var(--header-height);
-  padding: 8px var(--padding-x-header);
   position: relative;
   z-index: 10;
 }
-.site-header a.resa.mobile {
+
+.inner-header {
+  --taille-logo:3.3rem;
+  align-items: center;
+  display: flex;
+  height: var(--header-height);
+  padding: 8px 18px;
+  position: relative;
+}
+.inner-header a.resa.mobile {
   line-height: 1;
   margin-bottom: 0;
   margin-right: 32px;
 }
-.site-header.volet-ouvert a.resa.mobile {
+.inner-header.volet-ouvert a.resa.mobile {
   display: none;
 }
-.site-header .menu-toggle {
+.inner-header .menu-toggle {
   position: relative;
 }
 @media (min-width: 960px) {
-  .site-header {
+  .inner-header {
     --taille-logo:8rem;
     flex-direction: column;
     height: auto;
-    padding: 20px var(--padding-x-header) 10px;
+    padding: 16px 0;
   }
-  .site-header a.resa.mobile {
+  .inner-header a.resa.mobile {
     display: none;
   }
-  .site-header .logo-header {
+  .inner-header .logo-header {
     flex-basis: unset;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 32px;
     max-width: var(--taille-logo);
   }
 }
@@ -1497,16 +1502,17 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   margin-right: auto;
 }
 
-.site-header.js-sticky {
+.site-header.js-fixed {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
 }
-@media (min-width: 1920px) {
-  .site-header.js-sticky {
-    left: calc((100vw - var(--largeur-max)) / 2);
-    width: var(--largeur-max);
+@media (min-width: 960px) {
+  .site-header.js-fixed {
+    position: relative;
+    width: unset;
+    top: unset;
   }
 }
 
@@ -1514,15 +1520,22 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   position: fixed;
 }
 
-.admin-bar .site-header.js-sticky {
+.admin-bar .site-header.js-fixed {
   top: 46px;
 }
 @media (min-width: 768px) {
-  .admin-bar .site-header.js-sticky {
-    top: 32px;
+  .admin-bar .site-header.js-fixed {
+    top: unset;
   }
 }
 
+@media (min-width: 960px) {
+  .inner-header {
+    padding-bottom: 10rem;
+    position: sticky;
+    top: 5rem;
+  }
+}
 /*--------------------------------------------------------------
 ## Ancre pour backtotop
 --------------------------------------------------------------*/
@@ -2010,6 +2023,12 @@ form.search-form input.search-submit {
 }
 .nav-social {
   width: 100%;
+  --size: 3.2rem;
+}
+@media (min-width: 960px) {
+  .nav-social {
+    --size:4rem;
+  }
 }
 .nav-social ul {
   display: flex;
@@ -2019,13 +2038,12 @@ form.search-form input.search-submit {
   width: 100%;
 }
 .nav-social ul li a {
-  --size: 32px;
   background-color: var(--wp--preset--color--citron-main);
   background-image: url("icons/facebook.svg");
   border-radius: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 8px;
+  background-size: 25%;
   color: transparent;
   display: block;
   flex: 0 0 var(--size);
@@ -2036,11 +2054,11 @@ form.search-form input.search-submit {
 }
 .nav-social ul li a[href*=insta] {
   background-image: url("icons/insta.svg");
-  background-size: 11px;
+  background-size: 34.375%;
 }
 .nav-social ul li a[href*=soundcloud] {
   background-image: url("icons/soundcloud.svg");
-  background-size: 12px;
+  background-size: 37.5%;
 }
 .nav-social ul li:last-of-type a {
   margin-right: 0;

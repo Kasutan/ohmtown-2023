@@ -1,5 +1,10 @@
 .nav-social {
 	width: 100%;
+	--size: 3.2rem;
+
+	@include bp(lg) {
+		--size:4rem;
+	}
 
 	ul {
 		display: flex;
@@ -11,13 +16,12 @@
 		@include bp(lg) {}
 
 		li a {
-			--size: 32px;
 			background-color:var(--wp--preset--color--citron-main);
 			background-image: url('icons/facebook.svg');
 			border-radius: 100%;
 			background-position: center;
 			background-repeat: no-repeat;
-			background-size: 8px;
+			background-size: 25%;
 			color: transparent;
 			display: block;
 			flex: 0 0 var(--size);
@@ -28,11 +32,11 @@
 
 			&[href*="insta"] {
 				background-image: url('icons/insta.svg');
-				background-size: 11px;
+				background-size: calc(100% * 11/32);
 			}
 			&[href*="soundcloud"] {
 				background-image: url('icons/soundcloud.svg');
-				background-size: 12px;
+				background-size: calc(100% * 12/32);
 			}
 		}
 

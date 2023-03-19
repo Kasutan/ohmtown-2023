@@ -13,7 +13,6 @@ body {
 	--margin-y-1: 3rem;
 	--margin-y-2: 6rem;
 	--padding-x:20px;
-	--padding-x-header:20px;
 	--padding-x-decor:var(--padding-x);
 	--padding-x-pleine-largeur:0;
 	--largeur-max:1920px;
@@ -31,12 +30,10 @@ body {
 
 	@include bp(lg) {
 		--padding-x : 10vw;
-		--padding-x-header:5vw;
 	}
 	
 	@include bp(xl) {
 		--padding-x: calc(50vw - 1114px/2);
-		--padding-x-header:var(--padding-x);
 	}
 
 	@include bp(xxl) {
@@ -51,13 +48,8 @@ body {
 
 	@include bp(lg) {
 		display: grid;
-		grid-template-columns: 37.5rem 1fr;
+		grid-template-columns: 28rem 1fr;
 
-		.site-header.js-sticky {
-			position:relative;
-			width: unset;
-			top:unset;
-		}
 
 		.site-footer {
 			background-color: red;
