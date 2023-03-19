@@ -1251,7 +1251,7 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
 }
 
 .volet-navigation.toggled {
-  display: flex;
+  display: block;
   left: 0;
   height: calc(100vh - var(--header-height));
   overflow-x: hidden;
@@ -1268,7 +1268,7 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
     display: none;
   }
   .volet-navigation {
-    display: flex;
+    display: block;
     width: 100%;
   }
 }
@@ -1286,35 +1286,41 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
 
 /******************* Style VOLET NAVIGATION **************************/
 .volet-navigation {
-  align-items: center;
   background-color: var(--wp--preset--color--sand-main);
-  flex-direction: column;
 }
-.volet-navigation .nav-main {
+
+.inner-volet {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
   width: 100%;
 }
-.volet-navigation .nav-menu {
+.inner-volet .nav-main {
+  width: 100%;
+}
+.inner-volet .nav-menu {
   display: flex;
   flex-direction: column;
   margin-bottom: 3.2rem;
   width: 100%;
 }
-.volet-navigation .nav-menu li {
+.inner-volet .nav-menu li {
   border-top: solid 2px var(--wp--preset--color--blanc);
 }
-.volet-navigation .nav-menu li:last-of-type {
+.inner-volet .nav-menu li:last-of-type {
   border-bottom: solid 2px var(--wp--preset--color--blanc);
 }
-.volet-navigation .nav-menu li.current-menu-item, .volet-navigation .nav-menu li.current-menu-ancestor {
+.inner-volet .nav-menu li.current-menu-item, .inner-volet .nav-menu li.current-menu-ancestor {
   background-color: var(--wp--preset--color--secondaire);
 }
-.volet-navigation .nav-menu li.current-menu-item > a, .volet-navigation .nav-menu li.current-menu-ancestor > a {
+.inner-volet .nav-menu li.current-menu-item > a, .inner-volet .nav-menu li.current-menu-ancestor > a {
   color: var(--wp--preset--color--blanc);
 }
-.volet-navigation .nav-menu li.current-menu-item button.ouvrir-sous-menu svg path, .volet-navigation .nav-menu li.current-menu-ancestor button.ouvrir-sous-menu svg path {
+.inner-volet .nav-menu li.current-menu-item button.ouvrir-sous-menu svg path, .inner-volet .nav-menu li.current-menu-ancestor button.ouvrir-sous-menu svg path {
   fill: var(--wp--preset--color--blanc);
 }
-.volet-navigation .nav-menu a {
+.inner-volet .nav-menu a {
   color: var(--wp--preset--color--blanc);
   font-size: var(--wp--custom--typography--font-size--huge);
   display: block;
@@ -1323,16 +1329,16 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   text-decoration: none;
   text-transform: uppercase;
 }
-.volet-navigation a.resa {
+.inner-volet a.resa {
   font-size: 2.4rem;
 }
 @media (min-width: 960px) {
-  .volet-navigation a.resa {
+  .inner-volet a.resa {
     margin-bottom: 36px;
   }
-}
-.volet-navigation .nav-menu a {
-  text-align: left;
+  .inner-volet .nav-menu a {
+    text-align: left;
+  }
 }
 
 @media print {

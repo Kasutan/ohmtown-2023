@@ -25,7 +25,8 @@ function kasutan_header_top() {
 		<?php echo kasutan_picto(array('icon'=>'close', 'class' => 'fermer-menu','size'=>'16'));?>
 	</button>
 	
-	<div class="volet-navigation"  id="volet-navigation">
+	<div class="volet-navigation"  id="volet-navigation"><div class="inner-volet">
+
 		<nav id="site-navigation" class="nav-main" aria-label="menu principal">
 		<?php
 		if( has_nav_menu( 'primary' ) ) {
@@ -44,7 +45,7 @@ function kasutan_header_top() {
 			wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-header', 'container_class' => 'nav-social' ) );
 		}
 
-	echo '</div>'; //fin .volet navigation
+	echo '</div></div>'; //fin .volet navigation
 	echo '</div>'; //fin inner-header;
 }
 

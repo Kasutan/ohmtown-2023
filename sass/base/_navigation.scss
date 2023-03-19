@@ -108,11 +108,11 @@ button.menu-toggle {
 }
 
 .volet-navigation.toggled { 
-	display: flex;
+	display: block;
 	left:0;
 	height:calc(100vh - var(--header-height)); //magic number : hauteur du header sticky
 	overflow-x:hidden;
-	overflow-y:auto; //TODO FIX
+	overflow-y:auto;
 	padding: 0;
 	position:absolute;
 	top:100%;
@@ -127,7 +127,7 @@ button.menu-toggle {
 		display: none;
 	}
 	.volet-navigation {
-		display:flex;
+		display:block;
 		width: 100%;
 	}
 }
@@ -149,10 +149,14 @@ button.menu-toggle {
 
 /******************* Style VOLET NAVIGATION **************************/
 .volet-navigation {
-	align-items: center;
 	background-color:var(--wp--preset--color--sand-main);
+}
+.inner-volet {
+	align-items: center;
+	display: flex;
 	flex-direction: column;
-
+	padding-bottom:3rem;
+	width: 100%;
 	.nav-main {
 		width:100%;
 	}
@@ -198,10 +202,12 @@ button.menu-toggle {
 		a.resa {
 			margin-bottom: 36px;
 		}
+
+		.nav-menu a {
+			text-align: left;
+		}
 	}
 
-	.nav-menu a {
-		text-align: left;
-	}
+
 
 }
