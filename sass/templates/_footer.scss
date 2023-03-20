@@ -4,15 +4,81 @@
 
 
 .site-footer {
-	background-color: var(--wp--preset--color--primaire);
-	@include decor-xl;
-	color: var(--wp--preset--color--blanc);
-	padding: 2.5rem var(--padding-x) 1rem;
+	background-color: var(--wp--preset--color--sand-50);
+	color: var(--wp--preset--color--noir);
+	padding: 1.6rem var(--padding-x) 2.8rem;
 	position: relative;
-	--largeur-col: 27rem;
-	.col {
-		margin-bottom: 2rem;
+
+	--largeur-logo:8rem;
+
+
+	 strong {
+		font-weight: 600;
 	}
+	.footer-top {
+		display: flex;
+	}
+
+	.logo-footer {
+		flex:0 0 var(--largeur-logo);
+		margin-right: 2.4rem;
+	}
+
+	.main-footer {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		strong {
+			font-size: 1.6rem;
+		}
+	}
+	.horaires-wrap {
+		flex-basis:100%;
+		margin-top:2rem;
+		margin-bottom: 2rem;
+		overflow: auto;
+		padding-bottom: 2rem;
+		p {
+			margin-bottom: 0.5em;
+		}
+	}
+	.horaires {
+		display: flex;
+	}
+	.horaire {
+		display: flex;
+		flex: 0 0 9.5rem;
+		flex-direction: column;
+		strong, span {
+			display: inline-block;
+			text-align: center;
+			width:100%;
+
+		}
+		span {
+			border-left:solid 2px var(--wp--preset--color--sand-main); //TODO vérifier couleur
+			text-transform: uppercase;
+			&.info {
+				padding:1em 1ch;
+			}
+			&:first-of-type {
+				padding-top: 0.5em;
+			}
+			&:last-of-type {
+				flex-grow:1;
+			}
+		}
+	}
+
+	p.adresse {
+		line-height: 1.8;
+		margin-bottom: 0;
+	}
+	.copyright {
+		font-weight: 400;
+		margin-top: 2rem;
+	}
+	
 	@include bp(sm) {
 		.colonnes-footer {
 			display: grid;
@@ -23,22 +89,23 @@
 			grid-column: 1 / span 2;
 		}
 	}
-
+	.nav-social {
+		ul {
+			justify-content: flex-start;
+		}
+		//TODO taille et espacement des pictos + padding left du bloc liens
+	}
 	@include bp(md) {
-		padding-top: 5rem;
 		
 		.colonnes-footer {
 			display: flex;
 			justify-content: space-around;
 		}
-		.nav-social {
-			margin-top: 5rem;
-		}
+		
 	}
 
 	a {
-		color: var(--wp--preset--color--blanc);
-		text-decoration: none;
+		color: var(--wp--preset--color--noir);
 
 		&:hover,
 		&:focus {
@@ -54,7 +121,6 @@
 
 			a {
 				font-weight: 700;
-				text-transform: uppercase;
 			}
 		}
 	}
@@ -63,61 +129,16 @@
 
 	.copyright {
 
-		text-align: center;
+		text-transform: uppercase;
 
 		span,
 		a {
-			color: var(--wp--preset--color--blanc);
+			color: var(--wp--preset--color--noir);
 			display: inline-block;
-			font-weight: 500;
-			margin-bottom: 1rem;
-			@include fs(10);
 		}
-		.sep {
-			display: inline-block;
-			margin: 0 4px;
-		}
+	
 
 		
-	}
-
-	.backtotop {
-		--taille:40px;
-		align-items: center;
-		background-color: var(--wp--preset--color--secondaire);
-		border:none;
-		border-radius: 50%;
-		display: flex;
-		height:var(--taille);
-		padding:8px;
-		width:var(--taille);
-		top : var(--taille);
-		position: absolute;
-		right:10px;
-		top : calc(-10px - var(--taille));
-		transition: all var(--transition);
-		z-index:1;
-
-		svg {
-			position: relative;
-			top:-2px;
-			transform-origin: center;
-			transform: rotateZ(180deg);
-			path {
-				fill : var(--wp--preset--color--blanc);
-			}
-		}
-
-		&:hover, &:focus {
-			background-color:var(--wp--preset--color--tertiaire);
-			border:none;
-			//transform : translateY(-0.5rem);
-			svg {
-				path {
-					fill : var(--wp--preset--color--blanc);
-				}
-			}
-		}
 	}
 
 }

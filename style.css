@@ -324,7 +324,6 @@ body {
     grid-template-columns: 28rem 1fr;
   }
   .site-container .site-footer {
-    background-color: red;
     grid-column: 1/span 2;
   }
 }
@@ -1581,17 +1580,73 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
 ## Footer
 --------------------------------------------------------------*/
 .site-footer {
-  background-color: var(--wp--preset--color--primaire);
-  background-image: url("icons/decor-xl.svg");
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  color: var(--wp--preset--color--blanc);
-  padding: 2.5rem var(--padding-x) 1rem;
+  background-color: var(--wp--preset--color--sand-50);
+  color: var(--wp--preset--color--noir);
+  padding: 1.6rem var(--padding-x) 2.8rem;
   position: relative;
-  --largeur-col: 27rem;
+  --largeur-logo:8rem;
 }
-.site-footer .col {
+.site-footer strong {
+  font-weight: 600;
+}
+.site-footer .footer-top {
+  display: flex;
+}
+.site-footer .logo-footer {
+  flex: 0 0 var(--largeur-logo);
+  margin-right: 2.4rem;
+}
+.site-footer .main-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.site-footer .main-footer strong {
+  font-size: 1.6rem;
+}
+.site-footer .horaires-wrap {
+  flex-basis: 100%;
+  margin-top: 2rem;
   margin-bottom: 2rem;
+  overflow: auto;
+  padding-bottom: 2rem;
+}
+.site-footer .horaires-wrap p {
+  margin-bottom: 0.5em;
+}
+.site-footer .horaires {
+  display: flex;
+}
+.site-footer .horaire {
+  display: flex;
+  flex: 0 0 9.5rem;
+  flex-direction: column;
+}
+.site-footer .horaire strong, .site-footer .horaire span {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+.site-footer .horaire span {
+  border-left: solid 2px var(--wp--preset--color--sand-main);
+  text-transform: uppercase;
+}
+.site-footer .horaire span.info {
+  padding: 1em 1ch;
+}
+.site-footer .horaire span:first-of-type {
+  padding-top: 0.5em;
+}
+.site-footer .horaire span:last-of-type {
+  flex-grow: 1;
+}
+.site-footer p.adresse {
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+.site-footer .copyright {
+  font-weight: 400;
+  margin-top: 2rem;
 }
 @media (min-width: 500px) {
   .site-footer .colonnes-footer {
@@ -1603,21 +1658,17 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
     grid-column: 1/span 2;
   }
 }
+.site-footer .nav-social ul {
+  justify-content: flex-start;
+}
 @media (min-width: 768px) {
-  .site-footer {
-    padding-top: 5rem;
-  }
   .site-footer .colonnes-footer {
     display: flex;
     justify-content: space-around;
   }
-  .site-footer .nav-social {
-    margin-top: 5rem;
-  }
 }
 .site-footer a {
-  color: var(--wp--preset--color--blanc);
-  text-decoration: none;
+  color: var(--wp--preset--color--noir);
 }
 .site-footer a:hover, .site-footer a:focus {
   text-decoration: underline;
@@ -1627,55 +1678,14 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
 }
 .site-footer .menu li a {
   font-weight: 700;
-  text-transform: uppercase;
 }
 .site-footer .copyright {
-  text-align: center;
+  text-transform: uppercase;
 }
 .site-footer .copyright span,
 .site-footer .copyright a {
-  color: var(--wp--preset--color--blanc);
+  color: var(--wp--preset--color--noir);
   display: inline-block;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  font-size: calc(10 * var(--taille-texte) / 15);
-}
-.site-footer .copyright .sep {
-  display: inline-block;
-  margin: 0 4px;
-}
-.site-footer .backtotop {
-  --taille:40px;
-  align-items: center;
-  background-color: var(--wp--preset--color--secondaire);
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  height: var(--taille);
-  padding: 8px;
-  width: var(--taille);
-  top: var(--taille);
-  position: absolute;
-  right: 10px;
-  top: calc(-10px - var(--taille));
-  transition: all var(--transition);
-  z-index: 1;
-}
-.site-footer .backtotop svg {
-  position: relative;
-  top: -2px;
-  transform-origin: center;
-  transform: rotateZ(180deg);
-}
-.site-footer .backtotop svg path {
-  fill: var(--wp--preset--color--blanc);
-}
-.site-footer .backtotop:hover, .site-footer .backtotop:focus {
-  background-color: var(--wp--preset--color--tertiaire);
-  border: none;
-}
-.site-footer .backtotop:hover svg path, .site-footer .backtotop:focus svg path {
-  fill: var(--wp--preset--color--blanc);
 }
 
 .loop {
