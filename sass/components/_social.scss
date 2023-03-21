@@ -1,6 +1,7 @@
 .nav-social {
 	width: 100%;
 	--size: 3.2rem;
+	--space: 3rem;
 
 	@include bp(lg) {
 		--size:4rem;
@@ -26,7 +27,7 @@
 			display: block;
 			flex: 0 0 var(--size);
 			height: var(--size);
-			margin-right: 30px;
+			margin-right: var(--space);
 			overflow: hidden;
 			width: var(--size);
 
