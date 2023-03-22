@@ -8,6 +8,13 @@
  * @license      GPL-2.0+
 **/
 
+
+//Redirection du single vers l'archive pour certains événements
+//Rediriger avant l'envoi des headers
+if(function_exists('kasutan_event_maybe_redirect')) {
+	kasutan_event_maybe_redirect();
+}
+
 get_header();
 
 tha_content_before();

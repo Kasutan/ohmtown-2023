@@ -45,7 +45,7 @@
 		
 	
 	}
-	.liens {
+	.liens-single {
 		padding:var(--padding-v) var(--padding-x-single);
 	}
 	.form {
@@ -73,7 +73,7 @@
 				width:calc(100% - 2* var(--padding-x-single) + 2 * 1.6rem);
 			}
 		}
-		.liens {
+		.liens-single {
 			background-color: var(--wp--preset--color--citron-main);
 			margin-bottom: 4rem;
 			padding-bottom: 6.4rem;
