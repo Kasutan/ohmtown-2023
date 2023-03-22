@@ -39,25 +39,27 @@ add_action('tha_entry_content_after','kasutan_single_entry_content_after');
 function kasutan_single_entry_content_after(){
 	$post_type=get_post_type();
 
-	if($post_type==="post" || $post_type==="programmation") {
-		echo '<div class="liens">Thanks for reading ! + boutons de partage</div>'; 
-
-	} else if($post_type==="jobs") {
-		echo '<div class="liens">Vous connaissez quelqu\'un fait pour ce poste ? + boutons de partage</div>';
-	}
+	
 }
 
 add_action('tha_entry_bottom','kasutan_single_entry_bottom');
 function kasutan_single_entry_bottom(){
 	$post_type=get_post_type();
 
+	if($post_type==="post" || $post_type==="programmation") {
+		echo '<div class="liens">Thanks for reading ! + boutons de partage</div>'; 
+
+	} else if($post_type==="jobs") {
+		echo '<div class="liens">Vous connaissez quelqu\'un fait pour ce poste ? + boutons de partage</div>';
+	}
+
 	if($post_type==="post") {
-		echo '<p>Vous avez trouvé cet article intéressant + formulaire newsletter</p>'; 
+		echo '<div class="form">Vous avez trouvé cet article intéressant + formulaire newsletter</div>'; 
 
 	} else if($post_type==="programmation") {
-		echo '<p>Notre programmation vous intéresse ? + formulaire newsletter</p>'; 
+		echo '<div class="form">Notre programmation vous intéresse ? + formulaire newsletter</div>'; 
 	} else if($post_type==="jobs") {
-		echo '<p>Formulaire de candidature avec titre pré-rempli</p>'; 
+		echo '<div class="form">Formulaire de candidature avec titre pré-rempli</div>'; 
 	}
 }
 
