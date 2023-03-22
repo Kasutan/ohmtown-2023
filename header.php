@@ -18,7 +18,8 @@ echo '<head>';
 	tha_head_bottom();
 echo '</head>';
 
-echo '<body class="' . join( ' ', get_body_class() ) . '">';  //TODO ajout classe footer-blanc selon option page (option ACF à créer)
+echo '<body class="' . join( ' ', get_body_class() ) . '">';
+
 if ( function_exists( 'wp_body_open' ) ) {
 	wp_body_open();
 }

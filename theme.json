@@ -142,7 +142,7 @@
 					"large": "clamp(1.6rem, 1.67vw, 2.4rem)",
 					"huge": "clamp(2.4rem, 2.77vw, 4rem)",
 					"gigantic": "clamp(2.83rem, 5.6vw, 8.08rem)",
-					"colossal": "clamp(4.85rem, 8.9vw, 12.9rem)"
+					"colossal": "clamp(6rem, 8.9vw, 12.9rem)"
 				},
 				"line-height": {
 					"tiny": 1.15,

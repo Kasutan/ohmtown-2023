@@ -61,11 +61,8 @@ function ea_archive_header() {
 }
 
 // Banniere
-add_action( 'ea_archive_header_before', 'kasutan_actus_banniere', 5 );
+add_action( 'ea_archive_header_before', 'kasutan_page_banniere', 5 );
 
-
-// Breadcrumbs
-add_action( 'ea_archive_header_before', 'kasutan_fil_ariane', 10 );
 
 // Fermer balise loop
 add_action( 'tha_content_while_after', 'ea_archive_while_after',10 );

@@ -1,4 +1,21 @@
 <?php
+add_filter( 'body_class', function( $classes ) {
+	if (!function_exists('get_field')) {
+		return $classes;
+	}
+	if (esc_attr(get_field('couleur_footer'))==='Blanc') {
+		$classes = array_merge( $classes, array( 'footer-blanc' ) );
+	}
+
+	if(is_single() || esc_attr(get_field('hauteur_banniere'))==='reduite') {
+		$classes = array_merge( $classes, array( 'banniere-reduite' ) );
+	}
+
+	return $classes;
+
+} );
+
+
 add_action('tha_header_top','kasutan_header_top');
 function kasutan_header_top() {
 	echo '<div class="inner-header">';
