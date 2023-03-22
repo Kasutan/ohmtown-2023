@@ -25,14 +25,18 @@ function kasutan_jobs_post_type() {
 		'search_items'          => __( 'Rechercher un job', 'ohmtown' ),
 		'not_found'             => __( 'Aucun job', 'ohmtown' ),
 		'not_found_in_trash'    => __( 'Aucun job dans la corbeille', 'ohmtown' ),
+		'featured_image'        => __( 'Vignette pour l\'affichage en grille'),
+		'set_featured_image'    => __( 'Choisir une image vignette'),
+		'remove_featured_image' => __( 'Enlever cette image'),
+		'use_featured_image'    => __( 'Utiliser cette image')
 	);
 	$args = array(
 		'label'                 => __( 'Jobs', 'ohmtown' ),
 		'description'           => __( 'Jobs', 'ohmtown' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'revisions', 'custom-fields','thumbnail' ),
+		'supports'              => array( 'title', 'revisions', 'custom-fields','thumbnail', 'editor' ),
 		'hierarchical'          => false,
-		'public'                => false,
+		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
 		'menu_position'         => 20,

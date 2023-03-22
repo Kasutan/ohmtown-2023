@@ -30,7 +30,7 @@ function kasutan_carte_post_type() {
 		'label'                 => __( 'Plats & Boissons', 'ohmtown' ),
 		'description'           => __( 'Plats & Boissons de la carte', 'ohmtown' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'revisions', 'custom-fields' ),
+		'supports'              => array( 'title', 'revisions', 'custom-fields','editor' ),
 		'hierarchical'          => false,
 		'public'                => false,
 		'show_ui'               => true,

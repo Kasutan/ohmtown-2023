@@ -68,7 +68,7 @@ if ( ! function_exists( 'kasutan_setup' ) ) :
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support( 'post-thumbnails', array('post','page','programmation','jobs'));
+		add_theme_support( 'post-thumbnails', array('post','page','jobs'));
 
 		register_nav_menus( array(
 			'primary' => 'Menu principal',
