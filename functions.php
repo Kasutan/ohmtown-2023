@@ -31,6 +31,8 @@ include_once( get_template_directory() . '/inc/login-logo.php' );
 include_once( get_template_directory() . '/inc/programmation/cpt-programmation.php' );
 include_once( get_template_directory() . '/inc/programmation/tax-programmation.php' );
 include_once( get_template_directory() . '/inc/programmation/fonctions-programmation.php' );
+include_once( get_template_directory() . '/inc/jobs/cpt-jobs.php' );
+include_once( get_template_directory() . '/inc/jobs/fonctions-jobs.php' );
 
 //TODO : CPT et tax pour les menus
 
