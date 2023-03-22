@@ -31,6 +31,9 @@ include_once( get_template_directory() . '/inc/login-logo.php' );
 include_once( get_template_directory() . '/inc/programmation/cpt-programmation.php' );
 include_once( get_template_directory() . '/inc/programmation/tax-programmation.php' );
 include_once( get_template_directory() . '/inc/programmation/fonctions-programmation.php' );
+include_once( get_template_directory() . '/inc/carte/cpt-carte.php' );
+include_once( get_template_directory() . '/inc/carte/tax-carte.php' );
+include_once( get_template_directory() . '/inc/carte/fonctions-carte.php' );
 include_once( get_template_directory() . '/inc/jobs/cpt-jobs.php' );
 include_once( get_template_directory() . '/inc/jobs/fonctions-jobs.php' );
 
@@ -65,7 +68,7 @@ if ( ! function_exists( 'kasutan_setup' ) ) :
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support( 'post-thumbnails', array('post','page','programmation'));
+		add_theme_support( 'post-thumbnails', array('post','page','programmation','jobs'));
 
 		register_nav_menus( array(
 			'primary' => 'Menu principal',
