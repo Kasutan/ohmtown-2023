@@ -208,17 +208,17 @@ add_action( 'wp_enqueue_scripts', 'kasutan_scripts' );
 * https://developer.wordpress.org/reference/functions/add_image_size/
 */
 /*Autres tailles réglées en bo : 
-• small 112 carré forcer crop 
-• medium 352 hauteur libre -> actus
-• medium_large 720 (moitié largeur contenu)
-• large 1440 (pleine largeur contenu)
+• small 330 hauteur libre ne pas forcer crop
+• medium 455 hauteur libre
+• medium_large 570 (moitié largeur contenu)
+• large 1000 (pleine largeur contenu)
 
 
 */
-add_image_size('banniere',1920,388,false);
-update_option( 'medium_large_size_w', 720 ); 
-update_option( 'medium_large_size_h', 553 );
-
+add_image_size('banniere',1640,0,false);
+update_option( 'medium_large_size_w', 570 ); 
+update_option( 'medium_large_size_h', 0 );
+update_option( 'thumbnail_crop', 0 );
 
 /**
  * Afficher tous les résultats sans pagination sur page résultats de recherche et sur l'archive principale du blog

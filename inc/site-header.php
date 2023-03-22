@@ -11,7 +11,7 @@ function kasutan_header_top() {
 	}
 
 	if($logo) {
-		printf('<div class="logo-header"><a href="/" class="logo-link">%s</a></div>', wp_get_attachment_image( $logo,'medium'));
+		printf('<div class="logo-header"><a href="/" class="logo-link">%s</a></div>', wp_get_attachment_image( $logo,'thumbnail'));
 	}
 
 	if($resa_mobile) {
