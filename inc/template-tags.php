@@ -131,6 +131,7 @@ function kasutan_page_banniere() {
 
 	if(is_front_page(  )) {
 		printf('<h1 class="screen-reader-text">%s</h1>',$titre);
+		return;
 	}
 
 	if(!function_exists('get_field')) {
