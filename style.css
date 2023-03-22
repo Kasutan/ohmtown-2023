@@ -283,32 +283,36 @@ body {
 :root {
   --margin-y-1: 3rem;
   --margin-y-2: 6rem;
-  --padding-x:20px;
-  --padding-x-decor:var(--padding-x);
+  --padding-x:1.6rem;
   --padding-x-pleine-largeur:0;
   --largeur-max:1920px;
   --header-height:6rem;
   /*Valeurs en dur pour les navigateurs qui ne supportent pas clamp*/
   --hauteur-banniere:400px;
 }
-@supports (height: clamp(560px, 78vw, 1083px)) {
+@supports (height: clamp(276px, 43vw, 620px)) {
   :root {
-    --hauteur-banniere:clamp(220px,28vw,550px);
+    --hauteur-banniere:clamp(276px,43vw,620px);
+  }
+}
+@media (min-width: 500px) {
+  :root {
+    --padding-x: 4.3vw;
   }
 }
 @media (min-width: 960px) {
   :root {
-    --padding-x: 10vw;
+    --padding-x: 5.56vw;
   }
 }
 @media (min-width: 1440px) {
   :root {
-    --padding-x: calc(50vw - 1114px/2);
+    --padding-x: calc((100vw - 100rem - 28rem )/2);
   }
 }
 @media (min-width: 1920px) {
   :root {
-    --padding-x: calc((var(--largeur-max) - 1114px)/2);
+    --padding-x: calc((var(--largeur-max) - 100rem - 28rem )/2);
     --padding-x-pleine-largeur: calc(50vw - var(--largeur-max)/2);
   }
 }
@@ -1336,6 +1340,7 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
     margin-bottom: 36px;
   }
   .inner-volet .nav-menu a {
+    font-size: 3.2rem;
     text-align: left;
   }
 }

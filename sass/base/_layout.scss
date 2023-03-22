@@ -12,8 +12,7 @@ body {
 :root {
 	--margin-y-1: 3rem;
 	--margin-y-2: 6rem;
-	--padding-x:20px;
-	--padding-x-decor:var(--padding-x);
+	--padding-x:1.6rem;
 	--padding-x-pleine-largeur:0;
 	--largeur-max:1920px;
 
@@ -23,21 +22,24 @@ body {
 	/*Valeurs en dur pour les navigateurs qui ne supportent pas clamp*/
 	--hauteur-banniere :400px; 
 	
-	@supports(height:clamp(560px,78vw,1083px)) {
-		--hauteur-banniere :clamp(220px,28vw,550px);
+	@supports(height:clamp(276px,43vw,620px)) {
+		--hauteur-banniere :clamp(276px,43vw,620px);
 	}
 
-
+	@include bp(sm) {
+		--padding-x : 4.3vw;
+	}
+	
 	@include bp(lg) {
-		--padding-x : 10vw;
+		--padding-x : 5.56vw;
 	}
 	
 	@include bp(xl) {
-		--padding-x: calc(50vw - 1114px/2);
+		--padding-x: calc((100vw - 100rem - 28rem )/2);
 	}
 
 	@include bp(xxl) {
-		--padding-x: calc((var(--largeur-max) - 1114px)/2);
+		--padding-x: calc((var(--largeur-max) - 100rem - 28rem )/2);
 		--padding-x-pleine-largeur : calc(50vw - var(--largeur-max)/2);
 	}
 }
