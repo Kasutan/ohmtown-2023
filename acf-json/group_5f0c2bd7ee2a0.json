@@ -1,6 +1,6 @@
 {
     "key": "group_5f0c2bd7ee2a0",
-    "title": "Options de l'en-tête",
+    "title": "Réglages de l'en-tête pour tout le site",
     "fields": [
         {
             "key": "field_641578c32f7b7",
@@ -25,7 +25,7 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "preview_size": "medium"
+            "preview_size": "thumbnail"
         },
         {
             "key": "field_63bd3e8fc525b",
@@ -145,5 +145,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679472933
+    "modified": 1679509835
 }

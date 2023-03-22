@@ -58,7 +58,7 @@
             "name": "hauteur_banniere",
             "aria-label": "",
             "type": "radio",
-            "instructions": "Pour les événements, articles de blog et jobs, la hauteur de la bannière sera réduite automatiquement, le réglage ci-dessus sera sans effet.",
+            "instructions": "Pour les événements, articles de blog et jobs, la hauteur de la bannière sera réduite automatiquement, le réglage ci-dessous sera sans effet.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {

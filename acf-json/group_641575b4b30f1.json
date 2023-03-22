@@ -1,6 +1,6 @@
 {
     "key": "group_641575b4b30f1",
-    "title": "Réglages du pied de page",
+    "title": "Réglages du pied de page pour tout le site",
     "fields": [
         {
             "key": "field_641577d54661a",
@@ -296,5 +296,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679339383
+    "modified": 1679509803
 }
