@@ -840,6 +840,7 @@ button.outline,
 .wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color) {
   --color:var(--wp--preset--color--sand-900);
   border-color: var(--color);
+  border-radius: 100px;
   color: var(--color);
 }
 .is-style-outline .wp-element-button:focus, .is-style-outline .wp-element-button:hover,
