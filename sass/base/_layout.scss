@@ -52,10 +52,25 @@ body {
 .site-container {
 	@include largeur-max;
 
+	.site-main {
+		padding-bottom: 2.4rem;
+	}
+
+	.entry-content {
+		padding-top: 2.4rem;
+	}
+
 	@include bp(lg) {
 		display: grid;
 		grid-template-columns: 28rem 1fr;
 
+		.site-main {
+			padding-bottom: 8rem; //TODO fluid
+		}
+
+		.entry-content {
+			padding-top: 4rem;//TODO fluid
+		}
 
 		.site-footer {
 			grid-column: 1 / span 2;

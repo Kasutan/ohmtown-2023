@@ -1,0 +1,55 @@
+.agenda .row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.agenda .titre-section {
+  font-family: var(--font-texte);
+}
+.agenda #past-events {
+  display: none;
+}
+.agenda #toggle-events-wrap {
+  align-items: center;
+  border-top: solid 1px transparent;
+  border-bottom: solid 1px var(--wp--preset--color--sand-900);
+  display: flex;
+  height: 5.4rem;
+  justify-content: center;
+  width: 100%;
+}
+.agenda #toggle-events-wrap.toggled {
+  border-bottom-color: transparent;
+  border-top-color: var(--wp--preset--color--sand-900);
+}
+.agenda #toggle-events {
+  align-items: center;
+  border: none;
+  color: var(--wp--preset--color--sand-900);
+  display: flex;
+}
+.agenda #toggle-events .cacher {
+  display: none;
+}
+.agenda #toggle-events[aria-expanded=true] .afficher {
+  display: none;
+}
+.agenda #toggle-events[aria-expanded=true] .cacher {
+  display: block;
+}
+.agenda #toggle-events[aria-expanded=true] .picto {
+  transform: rotateX(180deg);
+}
+.agenda #toggle-events .picto {
+  margin-left: 4rem;
+}
+@media (min-width: 960px) {
+  .agenda #toggle-events {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 960px) {
+  .agenda {
+    padding-top: 1rem;
+  }
+}

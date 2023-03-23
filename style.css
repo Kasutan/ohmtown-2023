@@ -326,10 +326,22 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+.site-container .site-main {
+  padding-bottom: 2.4rem;
+}
+.site-container .entry-content {
+  padding-top: 2.4rem;
+}
 @media (min-width: 960px) {
   .site-container {
     display: grid;
     grid-template-columns: 28rem 1fr;
+  }
+  .site-container .site-main {
+    padding-bottom: 8rem;
+  }
+  .site-container .entry-content {
+    padding-top: 4rem;
   }
   .site-container .site-footer {
     grid-column: 1/span 2;

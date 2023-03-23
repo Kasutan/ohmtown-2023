@@ -184,6 +184,16 @@ class BE_ACF_Customizations {
 
 		/*********Bloc vide ***************/
 		$this->helper_register_block_type( 
+			'agenda',
+			'Bloc agenda',
+			'Section avec les événements à venir, un volet escamotable pour les événements passés et un filtre par date.',
+			'album', 
+			true, //JS pour toggle volet events passés et filtre par date
+			array( 'event','evenement')
+		);
+
+		/*********Bloc vide ***************/
+		$this->helper_register_block_type( 
 			'vide',
 			'Bloc vide',
 			'Section avec .',
