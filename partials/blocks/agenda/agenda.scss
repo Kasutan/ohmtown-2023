@@ -1,6 +1,7 @@
 @import "./././sass/abstracts/variables-et-mixins";
 
 .agenda {
+	
 	.row {
 		align-items: center;
 		border-bottom: solid 1px var(--wp--preset--color--gray-900);
@@ -8,6 +9,15 @@
 		justify-content: space-between;
 		margin-bottom: 1.4rem;
 		padding-bottom: 1.6rem;
+		form {
+			display: flex;
+			flex-direction: column;
+		}
+		button.outline.clear {
+			display: none;
+			margin-top:1.6rem;
+			padding:3px 16px 5px;
+		}
 	}
 	.titre-section {
 		font-family: var(--font-texte);

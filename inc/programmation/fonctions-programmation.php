@@ -73,8 +73,16 @@ function kasutan_event_affiche_meta_single($post_id) {
 function kasutan_event_affiche_li($post_id) {
 	$titre=get_the_title($post_id);
 	$metas=kasutan_event_get_meta($post_id);
+	$date_pour_filtre='';
 
-	echo '<li class="event">';
+	if(isset($metas['date_event'])) {
+		$date_pour_filtre=date('Y-m-d',strtotime($metas['date_event']));
+	}
+
+	printf('<li class="event %s">',$date_pour_filtre);
+		if(isset($metas['date_event'])) {
+			$date_pour_filtre=date('Y-m-d',strtotime($metas['date_event']));
+		}
 
 		echo '<div class="col-1">';
 			if(isset($metas['date_texte'])) {

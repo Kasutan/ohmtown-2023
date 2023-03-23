@@ -31,6 +31,8 @@ printf('<section class="acf agenda %s">', $className);
 			<form>
 				<label class="screen-reader-text" for="date-filter">Filtrer les événements par date</label>
 				<input type="date" id="date-filter" name="date-filter" />
+				<button id="date-filter-clear" class="outline clear">Voir tous les événements</button>
+
 			</form>
 		<?php
 	echo '</div>';
