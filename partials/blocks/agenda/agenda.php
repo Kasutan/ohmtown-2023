@@ -53,9 +53,7 @@ printf('<section class="acf agenda %s">', $className);
 		echo '<ul class="events futurs">';
 		while($posts->have_posts(  )) {
 			$posts->the_post();
-			echo '<li class="event">';
-				kasutan_event_affiche_li(get_the_ID());
-			echo '</li>';
+			kasutan_event_affiche_li(get_the_ID());
 		} 
 		echo '</ul>';
 	} else {
@@ -90,14 +88,19 @@ printf('<section class="acf agenda %s">', $className);
 			<?php
 		echo '</button></div>';
 
-		echo '<ul class="events passes" id="past-events" aria-expanded="false">';
-		while($posts_passes->have_posts(  )) {
-			$posts_passes->the_post();
-			echo '<li class="event">';
+		echo '<div  id="past-events" aria-expanded="false">';
+			echo '<div class="row">';
+				printf('<h2 class="titre-section h3">%s</h2>',$titre_passe);
+			echo '</div>';
+
+			echo '<ul class="events passes">';
+			while($posts_passes->have_posts(  )) {
+				$posts_passes->the_post();
 				kasutan_event_affiche_li(get_the_ID());
-			echo '</li>';
-		} 
-		echo '</ul>';
+			} 
+			echo '</ul>';
+
+		echo '</div>';
 	}
 	wp_reset_postdata(  );
 

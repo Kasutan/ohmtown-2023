@@ -96,7 +96,7 @@ function kasutan_event_affiche_li($post_id) {
 
 		echo '<div class="col-3">';
 			if(isset($metas['avec_single']) && 'oui'===$metas['avec_single']) {
-				printf('<a href="%s" class="bouton outline permalien">En savoir plus</a>',get_the_permalink());
+				printf('<a href="%s" class="bouton outline permalien">en savoir plus</a>',get_the_permalink());
 			}
 			if(isset($metas['prix'])) {
 				printf('<p class="prix">%s</p>',$metas['prix']);

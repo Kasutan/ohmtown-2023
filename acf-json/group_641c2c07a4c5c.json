@@ -43,7 +43,7 @@
         {
             "key": "field_641c2c5f3f91f",
             "label": "Titre événements passés",
-            "name": "titre_passé",
+            "name": "titre_passe",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -119,5 +119,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679568105
+    "modified": 1679599431
 }

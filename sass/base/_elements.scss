@@ -112,11 +112,12 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	background-color: rgba(58,124,50,0.1);
-	color: var(--noir);
-	border: none;
-	outline-color:var(--wp--preset--color--secondaire);
-	min-height:1.7rem;
+	background-color: solid 1px var(--wp--preset--color--blanc);
+	color: solid 1px var(--wp--preset--color--noir);
+	border: solid 1px var(--wp--preset--color--gray-900);
+	border-radius: 100px;
+	outline-color:var(--wp--preset--color--orange-main);
+	min-height:2.8rem;
 	padding: 3px;
 	padding-left: 10px;
 	
@@ -126,6 +127,9 @@ textarea {
 	}
 }
 
+input[type="date"] {
+	padding: 4px 16px;
+}
 
 textarea {
 	width: 100%;
