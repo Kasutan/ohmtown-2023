@@ -26,12 +26,38 @@
 			});
 		}
 		
-		/********* Désactiver certains liens parents en desktop **********/
-		if(width >= 960 ) {
-			$('.disable.menu-item-has-children > a').click(function(e) {
-				e.preventDefault();
+
+		/****************** Copier le lien single au clic sur un bouton *************************/	
+		//https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText
+		//Attention fonctionnalité désactivée pour localhost sur Chrome et probablement sur Firefox et/ou uniquement autorisée en httpS
+
+		var boutonCopier=$('#copier-url');
+		if(boutonCopier.length > 0) {
+			boutonCopier.click(function(){
+				let text=$(this).attr('data-url');
+				if(navigator && navigator.clipboard && navigator.clipboard.writeText) {
+					navigator.clipboard.writeText(text).then( () => {
+						/* success */
+						//TODO tester avec site en ligne
+						console.log('Lien copié dans le presse-papier :',text);
+						$(this).find('.avant').hide();
+						$(this).find('.apres').show();
+						},
+						() => {
+						/* failure */
+						alert('Le presse-papier n\'est pas accessible sur ce navigateur. Vous pouvez copier le lien directement ici : '+ text);
+
+						}
+					);
+				} else {
+					alert('Le presse-papier n\'est pas accessible sur ce navigateur. Vous pouvez copier le lien directement ici : '+ text);
+				}
+
+				
+				
 			})
 		}
+
 
 
 		/****************** Sticky header *************************/
@@ -59,7 +85,6 @@
 
 	}); //fin document ready
 })( jQuery );
-
 
 /*=================================================
 Animations

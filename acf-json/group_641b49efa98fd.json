@@ -101,6 +101,26 @@
             ]
         },
         {
+            "key": "field_641d6ffa4a7c9",
+            "label": "Label du bouton \"copier le lien\"",
+            "name": "ohm_partage_copier",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "copier le lien",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_641d5a29521eb",
             "label": "Bloc d'inscription à la newsletter",
             "name": "ohm_bloc_newsletter",
@@ -181,5 +201,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679647495
+    "modified": 1679650868
 }

@@ -1871,11 +1871,13 @@ form.search-form input.search-submit {
 .single {
   --padding-v:2.4rem;
   --trait:calc(100% - 2 * var(--padding-x-single) );
+  --bouton-fb:3.5rem;
 }
 @media (min-width: 960px) {
   .single {
     --padding-v:4rem;
     --trait:20rem;
+    --bouton-fb:5.2rem;
   }
 }
 .single .entry-header, .single .entry-content {
@@ -1908,13 +1910,41 @@ form.search-form input.search-submit {
   padding: var(--padding-v) var(--padding-x-single);
 }
 .single .liens-single {
+  align-items: center;
   display: flex;
   justify-content: space-between;
   padding: var(--padding-v) var(--padding-x-single);
 }
-.single .liens-single label {
+.single .liens-single .label {
   flex-shrink: 1;
   font-size: 1.6rem;
+}
+.single .liens-single .partage {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  margin-left: 2.4rem;
+}
+.single .liens-single .bouton.secondaire {
+  margin-bottom: 0;
+  padding: 6px 8px 8px;
+}
+.single .liens-single .copier {
+  font-size: 1.6rem;
+  margin-right: 1.6rem;
+}
+.single .liens-single .copier .picto {
+  margin-right: 4px;
+}
+.single .liens-single .copier .apres {
+  display: none;
+}
+.single .liens-single .facebook {
+  align-items: center;
+  display: flex;
+  height: var(--bouton-fb);
+  justify-content: center;
+  width: var(--bouton-fb);
 }
 .single .form {
   background-color: var(--wp--preset--color--citron-200);
@@ -1926,10 +1956,10 @@ form.search-form input.search-submit {
 .single .form p {
   margin: 0;
 }
-.single .form .has-medium-font-size {
+.single .form p.fs-16 {
   font-size: 1.6rem;
 }
-.single .form p.has-small-font-size {
+.single .form p.fs-14 {
   font-size: 1.4rem;
   margin-bottom: 3.6rem;
 }
@@ -1954,6 +1984,12 @@ form.search-form input.search-submit {
     background-color: var(--wp--preset--color--citron-main);
     margin-bottom: 4rem;
     padding-bottom: 6.4rem;
+  }
+  .single .liens-single .label {
+    font-size: 2.4rem;
+  }
+  .single .liens-single .copier .picto {
+    margin-right: 1rem;
   }
 }
 

@@ -1,13 +1,15 @@
 .single {
 	--padding-v:2.4rem;
 	--trait:calc(100% - 2 * var(--padding-x-single) );
-	
+	--bouton-fb:3.5rem;
+
 	//TODO affiner tailles des textes
 
 
 	@include bp(lg) {
 		--padding-v:4rem;
 		--trait:20rem;
+		--bouton-fb:5.2rem;
 	}
 
 	.entry-header, .entry-content {
@@ -46,12 +48,40 @@
 	
 	}
 	.liens-single {
+		align-items: center;
 		display: flex;
 		justify-content: space-between;
 		padding:var(--padding-v) var(--padding-x-single);
-		label {
+		.label {
 			flex-shrink:1;
 			font-size: 1.6rem;
+		}
+		.partage {
+			display: flex;
+			flex-shrink: 0;
+			justify-content: flex-end;
+			margin-left: 2.4rem;
+		}
+		.bouton.secondaire {
+			margin-bottom: 0;
+			padding:6px 8px 8px;
+		}
+		.copier {
+			font-size:1.6rem;
+			margin-right: 1.6rem;
+			.picto {
+				margin-right: 4px;
+			}
+			.apres {
+				display: none;
+			}
+		}
+		.facebook {
+			align-items: center;
+			display: flex;
+			height:var(--bouton-fb);
+			justify-content: center;
+			width:var(--bouton-fb);
 		}
 	}
 	.form {
@@ -63,10 +93,10 @@
 		p {
 			margin: 0;
 		}
-		.has-medium-font-size {
+		p.fs-16 {
 			font-size: 1.6rem;
 		}
-		p.has-small-font-size {
+		p.fs-14 {
 			font-size: 1.4rem;
 			margin-bottom: 3.6rem;
 		}
@@ -93,6 +123,12 @@
 			background-color: var(--wp--preset--color--citron-main);
 			margin-bottom: 4rem;
 			padding-bottom: 6.4rem;
+			.label {
+				font-size: 2.4rem;
+			}
+			.copier .picto {
+				margin-right: 1rem;
+			}
 		}
 		
 	}

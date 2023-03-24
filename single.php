@@ -55,11 +55,11 @@ function kasutan_single_entry_bottom(){
 		$blocs=get_field('ohm_bloc_newsletter','option');
 	}
 
-	if($labels && function_exists('kasutan_espaces_inseccables')) {
+	if($labels && function_exists('kasutan_espaces_inseccables') && function_exists('kasutan_boutons_partage')) {
 		if(isset($labels[$post_type])) {
 			echo '<div class="liens-single">';
 				printf('<div class="label">%s</div>',kasutan_espaces_inseccables(wp_kses_post($labels[$post_type])));
-				echo '<div class="partage">Boutons de partage</div>'; 
+				kasutan_boutons_partage();
 			echo '</div>';
 		}
 	}

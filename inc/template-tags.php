@@ -8,7 +8,7 @@
  * @license      GPL-2.0+
 **/
 
-
+//TODO supprimer les fonctions inutilisées
 
 /**
  * Entry Category
@@ -202,6 +202,43 @@ function kasutan_single_banniere() {
 		echo '<a href="/" class="retour">< Retour</a>';
 	}
 	
+}
+
+/**
+* Boutons de partage pour un single
+* simplesharingbuttons.com
+*/
+function kasutan_boutons_partage() {
+	$lien=get_the_permalink();
+	$titre=get_the_title();
+	$url_fb='https://www.facebook.com/sharer/sharer.php?u='.urlencode($lien).'&quote='.urlencode($titre);
+	$label_copier='';
+	if(function_exists("get_field")) {
+		$label_copier=wp_kses_post(get_field('ohm_partage_copier','options'));
+	}
+
+	echo '<ul class="partage">';
+		printf('<li><button class="bouton secondaire copier" id="copier-url" data-url="%s">',$lien);
+		?>
+			<span class="picto">
+				<svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#prefix__clip0_619_1744)"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 1.498a2.264 2.264 0 00-3.205 0l-1.309 1.31a.417.417 0 11-.589-.59L4.705.91a3.097 3.097 0 014.386 0 3.098 3.098 0 010 4.385L7.781 6.603a.417.417 0 11-.59-.59l1.31-1.308a2.264 2.264 0 000-3.206H8.5zM2.808 3.397a.417.417 0 010 .59L1.498 5.294a2.264 2.264 0 000 3.206H1.5a2.264 2.264 0 003.206 0l1.309-1.308a.417.417 0 11.589.59L5.295 9.09a3.098 3.098 0 01-4.386 0 3.097 3.097 0 010-4.385l1.309-1.308a.417.417 0 01.59 0zm4.154.231a.417.417 0 00-.589-.59L3.04 6.373a.417.417 0 10.589.59l3.333-3.334z" fill="#2E2A30"/></g><defs><clipPath id="prefix__clip0_619_1744"><path fill="#fff" d="M0 0h10v10H0z"/></clipPath></defs></svg>
+			</span>
+		<?php
+			if(!$label_copier) {
+				$label_copier="copier le lien";
+			}
+			printf('<span class="avant">%s</span><span class="apres">lien copié&nbsp;!</span>',$label_copier);
+		echo '</button></li>';
+		printf('<li><a href="%s" class="bouton secondaire sans-fleche facebook" title="Partager sur Facebook" target="_blank" rel="noopener noreferrer">',$url_fb);
+		?>
+			<span class="picto" aria-hidden="true">
+				<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M7.68329 5.00021H5.33329V3.66687C5.33329 2.97887 5.38929 2.54554 6.37529 2.54554H7.62063V0.425538C7.01463 0.362871 6.40529 0.332204 5.79529 0.333538C3.98663 0.333538 2.66663 1.4382 2.66663 3.46621V5.00021H0.666626V7.66687L2.66663 7.66621V13.6669H5.33329V7.66487L7.37729 7.66421L7.68329 5.00021Z" fill="#F2C94C"/>
+				</svg>
+			</span>
+		</a></li>
+	</ul>
+	<?php
 }
 
 /**
