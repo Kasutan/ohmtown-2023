@@ -1908,7 +1908,13 @@ form.search-form input.search-submit {
   padding: var(--padding-v) var(--padding-x-single);
 }
 .single .liens-single {
+  display: flex;
+  justify-content: space-between;
   padding: var(--padding-v) var(--padding-x-single);
+}
+.single .liens-single label {
+  flex-shrink: 1;
+  font-size: 1.6rem;
 }
 .single .form {
   background-color: var(--wp--preset--color--citron-200);
@@ -1916,6 +1922,16 @@ form.search-form input.search-submit {
   border-radius: 16px;
   margin: 0 var(--padding-x) var(--padding-v);
   padding: 2.4rem;
+}
+.single .form p {
+  margin: 0;
+}
+.single .form .has-medium-font-size {
+  font-size: 1.6rem;
+}
+.single .form p.has-small-font-size {
+  font-size: 1.4rem;
+  margin-bottom: 3.6rem;
 }
 @media (min-width: 960px) {
   .single .single-top-wrap::after {

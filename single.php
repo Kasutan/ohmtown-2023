@@ -38,7 +38,7 @@ function kasutan_single_top() {
 }
 
 
-add_action('tha_entry_content_after','kasutan_single_entry_content_after');
+//add_action('tha_entry_content_after','kasutan_single_entry_content_after');
 function kasutan_single_entry_content_after(){
 	$post_type=get_post_type();
 
@@ -48,22 +48,42 @@ function kasutan_single_entry_content_after(){
 add_action('tha_entry_bottom','kasutan_single_entry_bottom');
 function kasutan_single_entry_bottom(){
 	$post_type=get_post_type();
-
-	if($post_type==="post" || $post_type==="programmation") {
-		echo '<div class="liens-single">Thanks for reading ! + boutons de partage</div>'; 
-
-	} else if($post_type==="jobs") {
-		echo '<div class="liens-single">Vous connaissez quelqu\'un fait pour ce poste ? + boutons de partage</div>';
+	
+	$labels=$blocs=false;
+	if(function_exists('get_field')) {
+		$labels=get_field('ohm_label_partage','option');
+		$blocs=get_field('ohm_bloc_newsletter','option');
 	}
 
-	if($post_type==="post") {
-		echo '<div class="form">Vous avez trouvé cet article intéressant + formulaire newsletter</div>'; 
+	if($labels && function_exists('kasutan_espaces_inseccables')) {
+		if(isset($labels[$post_type])) {
+			echo '<div class="liens-single">';
+				printf('<div class="label">%s</div>',kasutan_espaces_inseccables(wp_kses_post($labels[$post_type])));
+				echo '<div class="partage">Boutons de partage</div>'; 
+			echo '</div>';
+		}
+	}
 
-	} else if($post_type==="programmation") {
-		echo '<div class="form">Notre programmation vous intéresse ? + formulaire newsletter</div>'; 
-	} else if($post_type==="jobs") {
+
+	if($post_type==="jobs") {
 		echo '<div class="form">Formulaire de candidature avec titre pré-rempli</div>'; 
+	} else {
+		//Event ou article de blog, on affiche un bloc réutilisable et un formulaire d'inscription à la newsletter
+
+		if($blocs && function_exists('kasutan_retourne_bloc_reutilisable')) {
+			if(isset($blocs[$post_type])) {
+				$contenu=kasutan_retourne_bloc_reutilisable(esc_attr($blocs[$post_type]));
+				if($contenu) {
+					echo '<div class="form">';
+						echo $contenu;
+						echo '<p>Formulaire newsletter</p>';
+					echo '</div>';
+				}
+			}
+			
+		}
 	}
+	
 }
 
 // Build the page

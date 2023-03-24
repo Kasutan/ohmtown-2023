@@ -219,3 +219,49 @@ function kasutan_make_list($text) {
 	return ob_get_clean();
 }
 
+/***************************************************************
+			Blocs réutilisables
+***************************************************************/
+
+/**
+* Reusable Blocks accessible in backend
+* @link https://www.billerickson.net/reusable-blocks-accessible-in-wordpress-admin-area
+*
+*/
+add_action( 'admin_menu', 'noustoutes_reusable_blocks_admin_menu' );
+
+function noustoutes_reusable_blocks_admin_menu() {
+	add_menu_page( 'Blocs réutilisables', 'Blocs réutilisables', 'edit_posts', 'edit.php?post_type=wp_block', '', 'dashicons-editor-table', 25 );
+}
+
+/**** Colonne dans l'admin avec ID du block************/
+
+add_action( 'manage_edit-wp_block_columns', 'revealid_add_id_column', 5 );
+add_filter( 'manage_wp_block_posts_custom_column', 'revealid_id_column_content', 5, 2 );
+
+function revealid_add_id_column( $columns ) {
+	$columns['revealid_id'] = 'Identifiant à copier dans la page Réglages du site';
+	return $columns;
+}
+
+function revealid_id_column_content( $column, $id ) {
+	if( 'revealid_id' == $column ) {
+		echo $id;
+	}
+}
+
+/**** Fonction pour récupérer un bloc réutilisable d'après son ID************/
+function kasutan_retourne_bloc_reutilisable($ID) {
+
+	if('wp_block'===get_post_type($ID)) {
+		$content_bloc = get_post_field( 'post_content', $ID );
+		return apply_filters( 'the_content', $content_bloc );
+	} else {
+		return '';
+	}
+}
+
+/******** Espaces inseccables************/
+function kasutan_espaces_inseccables($string) {
+	return str_replace(array(' !',' ?',' :'),array('&nbsp;!','&nbsp;?','&nbsp;:'),$string);
+}

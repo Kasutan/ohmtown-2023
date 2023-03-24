@@ -46,7 +46,13 @@
 	
 	}
 	.liens-single {
+		display: flex;
+		justify-content: space-between;
 		padding:var(--padding-v) var(--padding-x-single);
+		label {
+			flex-shrink:1;
+			font-size: 1.6rem;
+		}
 	}
 	.form {
 		background-color: var(--wp--preset--color--citron-200);
@@ -54,6 +60,16 @@
 		border-radius: 16px;
 		margin:0 var(--padding-x) var(--padding-v);
 		padding:2.4rem;
+		p {
+			margin: 0;
+		}
+		.has-medium-font-size {
+			font-size: 1.6rem;
+		}
+		p.has-small-font-size {
+			font-size: 1.4rem;
+			margin-bottom: 3.6rem;
+		}
 	}
 
 	@include bp(lg) {

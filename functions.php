@@ -225,6 +225,7 @@ update_option( 'medium_large_size_w', 570 );
 update_option( 'medium_large_size_h', 0 );
 update_option( 'thumbnail_crop', 0 );
 
+
 /**
  * Afficher tous les résultats sans pagination sur page résultats de recherche et sur l'archive principale du blog
  */
