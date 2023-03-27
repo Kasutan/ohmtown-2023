@@ -58,7 +58,7 @@
             "name": "hauteur_banniere",
             "aria-label": "",
             "type": "radio",
-            "instructions": "Pour les événements, articles de blog et jobs, la hauteur de la bannière sera réduite automatiquement, le réglage ci-dessous sera sans effet.",
+            "instructions": "Pour les événements, articles de blog et jobs, la hauteur de la bannière sera réduite automatiquement, le réglage ci-dessus sera sans effet.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -76,6 +76,28 @@
             "other_choice": 0,
             "layout": "vertical",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_6421d9e7a64b1",
+            "label": "Opacité du filtre sur l'image bannière (en pourcentage)",
+            "name": "banniere_opacite",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 60,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -117,5 +139,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679478615
+    "modified": 1679940127
 }

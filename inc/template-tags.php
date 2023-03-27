@@ -142,6 +142,13 @@ function kasutan_page_banniere() {
 
 
 	$image_id=esc_attr(get_field('banniere'));
+	$opacity=esc_attr(get_field('banniere_opacite'));
+	if(!$opacity) {
+		$opacity='60'; //defaut
+	}
+	$opacity.='%';
+	$style_filtre=sprintf('style="opacity:%s"',$opacity);
+	
 
 	if(!$image_id) {
 		$image_id=esc_attr(get_field('ohm_bg_image','option'));//image par défaut
@@ -150,6 +157,9 @@ function kasutan_page_banniere() {
 	if(!empty($image_id)) {
 		printf('<div class="page-banniere">');
 			echo wp_get_attachment_image( $image_id, 'banniere',false,array('decoding'=>'async','loading'=>'eager'));
+
+			//Filtre dont l'opacité vient d'une option de la publication
+			printf('<div class="filtre" %s></div>',$style_filtre);
 
 			echo '<a href="/" class="retour">< Retour</a>';
 

@@ -1604,6 +1604,14 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   top: 0;
   width: 100%;
 }
+.page-banniere .filtre {
+  background-color: var(--wp--preset--color--noir);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 .page-banniere .titre-banniere, .page-banniere .retour {
   color: var(--wp--preset--color--blanc);
   position: relative;
