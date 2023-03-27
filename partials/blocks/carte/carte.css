@@ -13,7 +13,7 @@
   line-height: 1.2;
   text-align: right;
 }
-.carte .row .intro {
+.carte .row .intro-section {
   font-weight: 400;
 }
 .carte .boutons-onglets {
@@ -21,7 +21,8 @@
   border-radius: 100px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+  max-width: 34rem;
   padding: 4px 8px;
 }
 .carte button.bouton-onglet {
@@ -43,8 +44,11 @@
   margin-left: 50%;
   transform: translateX(-50%);
   border-top: 1px dashed #D18300;
-  background-color: #FFF0C7;
-  padding: 1rem;
+  border-image-source: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23D18300FF' stroke-width='2' stroke-dasharray='18%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-image-slice: 1;
+  border-image-repeat: round;
+  background-color: var(--wp--preset--color--marron-100);
+  padding: 1rem var(--padding-x);
 }
 @media (min-width: 1920px) {
   .carte .tablist-container {
@@ -83,6 +87,7 @@
   margin-bottom: 1.8rem;
 }
 .carte .contenu-onglet .nom {
+  color: var(--wp--preset--color--black);
   grid-column: 1/span 2;
   text-transform: unset;
 }
@@ -102,4 +107,105 @@
   font-size: 1.6rem;
   font-weight: 700;
   padding: 3.4rem 4rem;
+}
+@media (min-width: 768px) {
+  .carte .row {
+    align-items: flex-end;
+    margin-bottom: 4.6rem;
+  }
+  .carte .row > .titre-section {
+    flex-basis: 25%;
+  }
+  .carte .row > .intro-section {
+    flex-grow: 1;
+    font-size: 1.6rem;
+  }
+  .carte .onglets-wrap-decor {
+    position: relative;
+  }
+  .carte .decor-onglets {
+    background-color: var(--wp--preset--color--marron-100);
+    display: block;
+    height: 100%;
+    left: calc(-1 * var(--padding-x));
+    position: absolute;
+    top: 6rem;
+    width: calc(100% + 2 * var(--padding-x));
+  }
+  .carte .onglets-wrap {
+    background-color: var(--wp--preset--color--white);
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    padding: 3rem;
+    position: relative;
+    z-index: 1;
+  }
+  .carte .onglets-wrap > * {
+    position: relative;
+  }
+  .carte .boutons-onglets {
+    margin-left: 1rem;
+  }
+  .carte .tablist-container {
+    width: unset;
+    margin-left: unset;
+    transform: unset;
+    background-color: transparent;
+    padding: 1.6rem 0;
+  }
+  .carte .contenu-onglet {
+    box-shadow: unset;
+    border-radius: 0;
+    column-gap: 1rem;
+    display: grid;
+    grid-template-columns: 30rem 1fr;
+  }
+  .carte .contenu-onglet[hidden] {
+    display: none;
+  }
+  .carte .contenu-onglet .elem-carte {
+    column-gap: 2rem;
+  }
+  .carte .contenu-onglet .image {
+    border-radius: 0;
+    height: 40rem;
+  }
+  .carte .contenu-onglet .image.mobile {
+    display: none;
+  }
+  .carte .contenu-onglet .image.desktop {
+    display: block;
+  }
+  .carte .contenu-onglet .plats {
+    height: 40rem;
+    overflow: auto;
+    padding: 0;
+  }
+  .carte .contenu-onglet .elem-carte {
+    border-radius: 16px;
+    margin-bottom: 1.4rem;
+    padding: 4px;
+    padding-right: 2rem;
+  }
+  .carte .contenu-onglet .elem-carte:first-of-type {
+    background-color: var(--wp--preset--color--marron-100);
+    border-radius: 1.6rem;
+  }
+  .carte .contenu-onglet .texte {
+    grid-column: 1/span 2;
+    margin-top: 1.6rem;
+  }
+}
+@media (min-width: 960px) {
+  .carte .row > .titre-section {
+    flex-basis: 30vw;
+  }
+  .carte .contenu-onglet .texte {
+    min-height: 13.3rem;
+  }
+}
+@media (min-width: 1440px) {
+  .carte .onglets-wrap {
+    padding: 4rem 8rem;
+  }
 }

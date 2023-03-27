@@ -16,7 +16,7 @@
 			line-height: 1.2;
 			text-align: right;
 		}
-		.intro {
+		.intro-section {
 			font-weight: 400;
 		}
 	}
@@ -26,7 +26,8 @@
 		border-radius: 100px;
 		display: flex;
 		justify-content: space-between;
-		margin-bottom: 2rem;
+		margin: 0 auto 2rem;
+		max-width:34rem;
 		padding:4px 8px;
 	}
 	button.bouton-onglet {
@@ -47,8 +48,9 @@
 	.tablist-container {
 		@include bleed();
 		border-top: 1px dashed #D18300;
-		background-color: #FFF0C7;
-		padding:1rem;
+		@include  border-custom ;
+		background-color: var(--wp--preset--color--marron-100);
+		padding:1rem var(--padding-x);
 	}
 
 	.contenu-onglet {
@@ -82,6 +84,7 @@
 			margin-bottom: 1.8rem;
 		}
 		.nom {
+			color:var(--wp--preset--color--black);
 			grid-column: 1 / span 2;
 			text-transform: unset;
 		}
@@ -101,6 +104,131 @@
 			font-weight: 700;
 			padding:3.4rem 4rem;
 
+		}
+	}
+
+	@include bp(md) {
+		.row {
+			align-items: flex-end;
+			margin-bottom: 4.6rem;
+			> .titre-section {
+				flex-basis: 25%;
+			}
+			> .intro-section {
+				flex-grow:1;
+				font-size: 1.6rem;
+			}
+		}
+
+		.onglets-wrap-decor {
+			position: relative;
+		}
+		.decor-onglets {
+			background-color: var(--wp--preset--color--marron-100);
+			display: block;
+			height:100%;
+			left:calc(-1* var(--padding-x));
+			position: absolute;
+			top:6rem;
+			width:calc(100% + 2* var(--padding-x));
+
+		}
+		.onglets-wrap {
+			background-color: var(--wp--preset--color--white);
+			box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+			border-radius: 16px;
+			padding:3rem;
+			position: relative;
+			z-index: 1;
+
+			> * {
+				position: relative;
+			}
+			
+		}
+
+		.boutons-onglets {
+			margin-left:1rem;
+		}
+
+		.tablist-container {
+			@include unset-bleed;
+			background-color: transparent;
+			padding:1.6rem 0;
+		}
+
+		.contenu-onglet {
+			box-shadow: unset;
+			border-radius: 0;
+			column-gap: 1rem;
+			display: grid;
+			grid-template-columns: 30rem 1fr;
+			&[hidden] {
+				display: none;
+			}
+
+			.elem-carte {
+				column-gap:2rem;
+			}
+
+			.image {
+				&.mobile {
+					display: none;
+				}
+				&.desktop {
+					display: block;
+				}
+				border-radius: 0;
+				height:40rem;
+			}
+			.plats {
+				height: 40rem;
+				overflow: auto;
+				padding: 0;
+			}
+
+			.elem-carte {
+				border-radius: 16px;
+				margin-bottom: 1.4rem;
+				padding:4px;
+				padding-right:2rem;
+
+				&:first-of-type {
+					background-color: var(--wp--preset--color--marron-100);
+					border-radius: 1.6rem;
+				}
+			}
+
+			.texte {
+				grid-column: 1 / span 2;
+				margin-top: 1.6rem;
+			}
+		}
+
+		
+	}
+
+	@include bp(lg) {
+		.row {
+			> .titre-section {
+				flex-basis: 30vw;
+			}
+		}
+
+		.contenu-onglet {
+			.texte {
+				//stabiliser la barre latérale quand on change d'onglet
+				min-height:13.3rem;
+			}
+		}
+
+		
+	}
+
+	@include bp(xl) {
+		
+		.onglets-wrap {
+			padding: 4rem 8rem;
 		}
 	}
 }

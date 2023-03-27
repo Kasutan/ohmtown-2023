@@ -43,6 +43,12 @@
 	}
 }
 
+@mixin unset-bleed {
+	width: unset;
+	margin-left: unset;
+	transform: unset;
+}
+
 @mixin largeur-max {
 	max-width:var(--largeur-max);
 	margin-left:auto;

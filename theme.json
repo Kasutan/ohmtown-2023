@@ -102,6 +102,11 @@
 					"name": "Marron main"
 				},
 				{
+					"slug": "marron-100",
+					"color": "#FFF0C7",
+					"name": "Marron 100"
+				},
+				{
 					"slug": "gray-900",
 					"color": "#0E0710",
 					"name": "Gray 900"

@@ -34,7 +34,7 @@ printf('<section class="acf carte %s">', $className);
 	echo '</div>';
 
 	if(have_rows('categories_carte') && function_exists('kasutan_carte_affiche_li')) {
-		
+
 		//On parcours les rows du répéteur et on stocke en parallèle le contenu des boutons et celui des onglets
 		//De cette façon on les a dans le même ordre = celui choisi dans les options du bloc
 
@@ -104,10 +104,14 @@ printf('<section class="acf carte %s">', $className);
 	}
 
 	if(!empty($boutons)) {
-		printf('<ul role="tablist" class="boutons-onglets">%s</ul>',$boutons);
-		echo '<div class="tablist-container">';
-			echo $onglets;
-		echo '</div>';
+		echo '<div class="onglets-wrap-decor"><div class="decor-onglets"></div><div class="onglets-wrap">'; //Pour style desktop
+
+			printf('<ul role="tablist" class="boutons-onglets">%s</ul>',$boutons);
+			echo '<div class="tablist-container">';
+				echo $onglets;
+			echo '</div>';
+		
+		echo '</div></div>';
 	}
 
 echo '</section>';
