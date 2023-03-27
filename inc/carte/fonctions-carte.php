@@ -1,25 +1,17 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-function kasutan_carte_affiche_ligne($post_id) {
+function kasutan_carte_affiche_li($post_id) {
 	$nom=get_the_title($post_id);
-	$fonction=$tel=$mobile=$email=false;
+	$desc=get_the_content($post_id);
+	$prix=false;
 
 	if(function_exists('get_field')) {
-		$fonction=wp_kses_post(get_field('fonction',$post_id));
-		$tel=wp_kses_post(get_field('tel',$post_id));
-		$mobile=wp_kses_post(get_field('mobile',$post_id));
-		$email=wp_kses_post(get_field('email',$post_id));
+		$prix=wp_kses_post(get_field('prix',$post_id));
 	}
-	echo '<li class="personne">';
-		printf('<div class="image">%s</div>',get_the_post_thumbnail( $post_id, 'thumbnail'));
-		echo '<div class="texte">';
-			printf('<h3 class="nom has-vert-color">%s</h3>',$nom);
-			if($fonction) printf('<p class="fonction">%s</p>',$fonction);
-			if($tel) printf('<a class="tel" href="tel:%s">Tél.&nbsp;: %s</a>',$tel,$tel);
-			if($mobile) printf('<a class="mobile" href="tel:%s">Mobile.&nbsp;: %s</a>',$mobile,$mobile);
-			if($email) printf('<a class="email" href="mailto:%s">Mail&nbsp;: %s</a>',antispambot($email),antispambot($email));
-			
-		echo '</div>';
+	echo '<li class="elem-carte">';
+			printf('<h3 class="nom">%s</h3>',$nom);
+			printf('<div class="desc">%s</div>',$desc);
+			if ($prix) printf('<div class="prix">%s€</prix>',$prix);
 	echo '</li>';
 }

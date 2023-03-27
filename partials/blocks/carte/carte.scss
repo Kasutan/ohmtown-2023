@@ -1,0 +1,13 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.carte {
+	
+	.row {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1.4rem;
+		padding-bottom: 1.6rem;
+	}
+
+} 

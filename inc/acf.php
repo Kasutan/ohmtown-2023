@@ -182,7 +182,7 @@ class BE_ACF_Customizations {
 			return;
 
 
-		/*********Bloc vide ***************/
+		/*********Bloc agenda ***************/
 		$this->helper_register_block_type( 
 			'agenda',
 			'Bloc agenda',
@@ -190,6 +190,16 @@ class BE_ACF_Customizations {
 			'album', 
 			true, //JS pour toggle volet events passés et filtre par date
 			array( 'event','evenement')
+		);
+
+		/*********Bloc carte ***************/
+		$this->helper_register_block_type( 
+			'carte',
+			'Bloc carte (Boire & Manger)',
+			'Section avec titre, intro et présentation de la carte en plusieurs onglets.',
+			'album', 
+			true, //JS pour toggle onglets
+			array( 'boire','manger','carte')
 		);
 
 		/*********Bloc vide ***************/
