@@ -205,6 +205,9 @@
   }
 }
 @media (min-width: 1440px) {
+  .carte .row > .titre-section {
+    flex-basis: 35rem;
+  }
   .carte .onglets-wrap {
     padding: 4rem 8rem;
   }

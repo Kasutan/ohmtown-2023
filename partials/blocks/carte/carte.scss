@@ -226,7 +226,11 @@
 	}
 
 	@include bp(xl) {
-		
+		.row {
+			> .titre-section {
+				flex-basis: 35rem;
+			}
+		}
 		.onglets-wrap {
 			padding: 4rem 8rem;
 		}

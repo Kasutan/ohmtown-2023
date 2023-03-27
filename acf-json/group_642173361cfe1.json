@@ -66,7 +66,7 @@
             "name": "categories_carte",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "La liste des plats et boissons pour chaque onglet de la carte est affichée automatiquement à partir des éléments saisis dans le menu Plats & Boissons. L'ordre peut être modifié en allant dans le sous-menu \"Trier\".",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -200,5 +200,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679934033
+    "modified": 1679939956
 }

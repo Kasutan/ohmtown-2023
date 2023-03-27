@@ -71,6 +71,7 @@ printf('<section class="acf carte %s">', $className);
 						array( 
 							'post_type'=>'ohm_carte',
 							'posts_per_page'=> -1,
+							'order' => 'ASC',
 							'tax_query' => array(
 								array(
 									'taxonomy' => 'ohm_types_plats',
