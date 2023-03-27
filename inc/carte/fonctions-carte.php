@@ -15,3 +15,35 @@ function kasutan_carte_affiche_li($post_id) {
 			if ($prix) printf('<div class="prix">%s€</prix>',$prix);
 	echo '</li>';
 }
+
+
+/******************Colonnes dans l'admin *****************/
+add_filter( 'manage_ohm_carte_posts_columns', 'kasutan_set_custom_edit_carte_columns' );
+
+function kasutan_set_custom_edit_carte_columns( $columns ) {
+
+
+$columns['prix'] = 'Prix';
+
+
+return $columns;
+}
+
+add_action( 'manage_ohm_carte_posts_custom_column' , 'kasutan_custom_carte_column', 10, 2 );
+
+function kasutan_custom_carte_column( $column, $post_id ) {
+	if(!function_exists('get_field')) {
+		echo '';
+	}
+switch ( $column ) {
+
+	// display the value of an ACF (Advanced Custom Fields) field
+	
+	case 'prix' :
+		echo esc_html(get_field( 'prix', $post_id )).'€';
+		break;
+
+	default:
+		break;
+}
+}
