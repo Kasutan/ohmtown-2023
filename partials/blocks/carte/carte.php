@@ -9,6 +9,9 @@
 */
 
 
+//Réf onglets accessibles
+//https://codepen.io/smashingmag/pen/YzvVXWw
+//https://www.smashingmagazine.com/2022/11/guide-keyboard-accessibility-javascript-part2/?utm_source=pocket_reader
 
 
 if(array_key_exists('className',$block)) {
@@ -37,21 +40,31 @@ printf('<section class="acf carte %s">', $className);
 
 		$boutons='';
 		$onglets='';
+		$i=0;
 
 		while(have_rows('categories_carte')) : the_row();
+			/*HTML différent pour le premier onglet, qui est affiché au début*/
+			$i++;
+			$attr_bouton = ($i===1) ? ' aria-selected="true"' : '';
+			$attr_panel = ($i===1) ? '' : 'hidden';
+
+
 			$cat_id=esc_attr(get_sub_field('cat'));
 			$cat=get_term($cat_id,'ohm_types_plats');
 
-			$image=esc_attr(get_sub_field('image'));
+			$image_mobile=esc_attr(get_sub_field('image_mobile'));
+			$image_desktop=esc_attr(get_sub_field('image_desktop'));
 			$texte=wp_kses_post(get_sub_field('texte'));
-
-			$boutons.=sprintf('<a class="bouton-onglet" href="#contenu-%s">%s</a>',$cat_id,$cat->name);
+			
+			$boutons.=sprintf('<li role="presentation"><button id="tab-%s" role="tab" tabindex="-1" class="bouton-onglet" %s>%s</button></li>',$cat_id,$attr_bouton,$cat->name);
+			
 
 			ob_start();
 
 			//TODO vérif accessibilité
-			printf('<div class="contenu-onglet" id="contenu-%s">',$cat_id);
-				printf('<div class="image">%s</div>',wp_get_attachment_image( $image, 'medium_large'));
+			printf('<section class="contenu-onglet" role="tabpanel" aria-labelledby="tab-%s" tabindex="0" %s>',$cat_id,$attr_panel);
+				printf('<div class="image mobile">%s</div>',wp_get_attachment_image( $image_mobile, 'medium_large'));
+				printf('<div class="image desktop">%s</div>',wp_get_attachment_image( $image_desktop, 'medium_large'));
 
 				echo '<ul class="plats">';
 					$posts=new WP_Query(
@@ -82,7 +95,7 @@ printf('<section class="acf carte %s">', $className);
 
 				if($texte) printf('<div class="texte">%s</div>',$texte);
 			
-			echo '</div>'; //fin .contenu-onglet
+			echo '</section>'; //fin .contenu-onglet
 
 			$onglets.=ob_get_clean();
 
@@ -91,8 +104,10 @@ printf('<section class="acf carte %s">', $className);
 	}
 
 	if(!empty($boutons)) {
-		printf('<div class="boutons-onglets">%s</div>',$boutons);
-		echo $onglets;
+		printf('<ul role="tablist" class="boutons-onglets">%s</ul>',$boutons);
+		echo '<div class="tablist-container">';
+			echo $onglets;
+		echo '</div>';
 	}
 
 echo '</section>';

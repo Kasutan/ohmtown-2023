@@ -1,0 +1,105 @@
+.carte .row {
+  align-items: center;
+  column-gap: 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.4rem;
+}
+.carte .row > * {
+  flex-basis: 50%;
+  margin-bottom: 0;
+}
+.carte .row h2.titre-section {
+  line-height: 1.2;
+  text-align: right;
+}
+.carte .row .intro {
+  font-weight: 400;
+}
+.carte .boutons-onglets {
+  border: 1px solid var(--wp--preset--color--gray-900);
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 4px 8px;
+}
+.carte button.bouton-onglet {
+  border: none;
+  font-size: 1.6rem;
+  padding: 0 16px 2px;
+}
+.carte button.bouton-onglet[aria-selected=true] {
+  background-color: var(--wp--preset--color--jaune-800);
+  border-radius: 100px;
+  color: var(--wp--preset--color--white);
+}
+.carte button.bouton-onglet:focus-visible {
+  outline-offset: 2px;
+  outline: 2px solid var(--wp--preset--color--jaune-800);
+}
+.carte .tablist-container {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-top: 1px dashed #D18300;
+  background-color: #FFF0C7;
+  padding: 1rem;
+}
+@media (min-width: 1920px) {
+  .carte .tablist-container {
+    width: var(--largeur-max);
+  }
+}
+.carte .contenu-onglet {
+  background-color: var(--wp--preset--color--white);
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+}
+.carte .contenu-onglet:focus-visible {
+  border: 1px dashed #D18300;
+  outline-color: transparent;
+}
+.carte .contenu-onglet .image {
+  border-radius: 16px 16px 0px 0px;
+  height: 300px;
+  overflow: hidden;
+}
+.carte .contenu-onglet .image.desktop {
+  display: none;
+}
+.carte .contenu-onglet .image img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.carte .contenu-onglet .plats {
+  padding: 1rem;
+}
+.carte .contenu-onglet .elem-carte {
+  column-gap: 5.5rem;
+  display: grid;
+  grid-template-columns: 1fr 6rem;
+  margin-bottom: 1.8rem;
+}
+.carte .contenu-onglet .nom {
+  grid-column: 1/span 2;
+  text-transform: unset;
+}
+.carte .contenu-onglet .desc {
+  font-size: 1.6rem;
+}
+.carte .contenu-onglet .prix {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: right;
+}
+.carte .contenu-onglet .texte {
+  border-top: 1px dashed #D18300;
+  border-image-source: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23D18300FF' stroke-width='2' stroke-dasharray='18%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-image-slice: 1;
+  border-image-repeat: round;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 3.4rem 4rem;
+}

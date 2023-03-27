@@ -1,13 +1,106 @@
 @import "./././sass/abstracts/variables-et-mixins";
 
 .carte {
-	
+
 	.row {
 		align-items: center;
+		column-gap:3.2rem;
 		display: flex;
 		justify-content: space-between;
-		margin-bottom: 1.4rem;
-		padding-bottom: 1.6rem;
+		margin-bottom: 3.4rem;
+		> * {
+			flex-basis:50%;
+			margin-bottom: 0;
+		}
+		h2.titre-section {
+			line-height: 1.2;
+			text-align: right;
+		}
+		.intro {
+			font-weight: 400;
+		}
 	}
 
-} 
+	.boutons-onglets {
+		border: 1px solid var(--wp--preset--color--gray-900);
+		border-radius: 100px;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 2rem;
+		padding:4px 8px;
+	}
+	button.bouton-onglet {
+		border:none;
+		font-size: 1.6rem;
+		padding:0 16px 2px;
+		&[aria-selected="true"] {
+			background-color: var(--wp--preset--color--jaune-800);
+			border-radius: 100px;
+			color: var(--wp--preset--color--white);
+		}
+		&:focus-visible {
+			outline-offset: 2px;
+			outline: 2px solid var(--wp--preset--color--jaune-800);
+		}
+	}
+
+	.tablist-container {
+		@include bleed();
+		border-top: 1px dashed #D18300;
+		background-color: #FFF0C7;
+		padding:1rem;
+	}
+
+	.contenu-onglet {
+		background-color: var(--wp--preset--color--white);
+		box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+		border-radius: 16px;
+		&:focus-visible {
+			border: 1px dashed #D18300;
+			outline-color: transparent;
+		}
+		.image {
+			&.desktop {
+				display: none;
+			}
+			border-radius: 16px 16px 0px 0px;
+			height:300px;
+			overflow: hidden;
+			img {
+				height:100%;
+				object-fit: cover;
+				width:100%;
+			}
+		}
+		.plats {
+			padding:1rem;
+		}
+		.elem-carte {
+			column-gap:5.5rem;
+			display: grid;
+			grid-template-columns: 1fr 6rem;
+			margin-bottom: 1.8rem;
+		}
+		.nom {
+			grid-column: 1 / span 2;
+			text-transform: unset;
+		}
+		.desc {
+			font-size: 1.6rem;
+		}
+		.prix {
+			font-size: 2.4rem;
+			font-weight: 700;
+			text-align: right;
+		}
+		.texte {
+			border-top: 1px dashed #D18300;
+			@include border-custom();
+
+			font-size: 1.6rem;
+			font-weight: 700;
+			padding:3.4rem 4rem;
+
+		}
+	}
+}
