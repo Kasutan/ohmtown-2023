@@ -1,8 +1,13 @@
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
-.footer-blanc .site-footer {
-	background-color: var(--wp--preset--color--blanc);
+.footer-blanc {
+	.site-main {
+		padding:0;
+	}
+	.site-footer {
+		background-color: var(--wp--preset--color--blanc);
+	}
 }
 
 

@@ -48,7 +48,7 @@
   border-image-slice: 1;
   border-image-repeat: round;
   background-color: var(--wp--preset--color--marron-100);
-  padding: 1rem var(--padding-x);
+  padding: 1rem var(--padding-x) 2.4rem;
 }
 @media (min-width: 1920px) {
   .carte .tablist-container {
@@ -126,7 +126,7 @@
   .carte .decor-onglets {
     background-color: var(--wp--preset--color--marron-100);
     display: block;
-    height: 100%;
+    height: calc(100% + 8rem);
     left: calc(-1 * var(--padding-x));
     position: absolute;
     top: 6rem;
@@ -197,8 +197,14 @@
   }
 }
 @media (min-width: 960px) {
+  .carte {
+    padding-bottom: 8rem;
+  }
   .carte .row > .titre-section {
     flex-basis: 30vw;
+  }
+  .carte .tablist-container {
+    padding-bottom: 0;
   }
   .carte .contenu-onglet .texte {
     min-height: 13.3rem;
