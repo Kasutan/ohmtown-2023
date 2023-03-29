@@ -316,7 +316,7 @@ body {
 @media (min-width: 1920px) {
   :root {
     --padding-x: calc((var(--largeur-max) - 100rem - 28rem )/2);
-    --padding-x: calc((var(--largeur-max) - 88.8rem - 28rem )/2);
+    --padding-x-single: calc((var(--largeur-max) - 88.8rem - 28rem )/2);
     --padding-x-pleine-largeur: calc(50vw - var(--largeur-max)/2);
   }
 }

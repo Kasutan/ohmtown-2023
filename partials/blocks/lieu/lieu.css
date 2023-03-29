@@ -2,8 +2,10 @@
   width: calc(100% + 2 * var(--padding-x));
   transform: translateX(calc(-1 * var(--padding-x)));
   background-color: var(--wp--preset--color--sand-50);
-  padding: 2.4rem var(--padding-x) 3.2rem;
+  padding: 2.4rem var(--padding-x-single) 3.2rem;
   position: relative;
+  transform: translateX(calc(-1 * var(--padding-x-single)));
+  width: calc(100% + 2 * var(--padding-x-single));
 }
 .lieu .titre-col {
   font-family: var(--font-titre);
@@ -89,24 +91,57 @@
   }
 }
 @media (min-width: 768px) {
-  .lieu .texte-wrap {
-    align-items: center;
-    column-gap: 3.2rem;
-    display: flex;
-    justify-content: flex-end;
-    padding-bottom: 4rem;
+  .lieu {
+    --gap:4rem;
+    column-gap: var(--gap);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: var(--gap);
+    padding-top: var(--gap);
   }
-  .lieu .texte-wrap .texte {
+  .lieu .col {
+    padding: 0;
+  }
+  .lieu .priv-panel {
+    grid-column: 1/span 2;
+  }
+  .lieu .priv-panel::before {
+    left: 0;
+    width: 20rem;
+  }
+  .lieu .fond-blanc {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: var(--gap);
+    padding: var(--gap);
+  }
+  .lieu .pdf, .lieu .form {
     flex-basis: 50%;
   }
-  .lieu .texte-wrap h2.titre-section {
-    flex-basis: 30rem;
-    text-align: right;
+  .lieu .pdf h4, .lieu .form h4 {
+    font-size: 2.4rem;
+  }
+  .lieu .pdf {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .lieu .pdf h4 {
+    margin-bottom: 1.6rem;
+    order: 1;
+  }
+  .lieu .pdf p {
+    order: 2;
+  }
+  .lieu .pdf a {
+    order: 4;
     margin-bottom: 0;
   }
   .lieu .image {
-    height: unset;
+    margin-bottom: 1.6rem;
     max-width: unset;
+    order: 3;
   }
   .lieu .image.mobile {
     display: none;
@@ -114,12 +149,21 @@
   .lieu .image.desktop {
     display: block;
   }
+  .lieu .form {
+    border-top: none;
+    padding-top: 0;
+  }
+  .lieu .form h4, .lieu .form p {
+    margin-bottom: 3.2rem;
+  }
 }
 @media (min-width: 960px) {
-  .lieu {
-    margin-top: -4rem;
+  .lieu .pdf h4, .lieu .form h4 {
+    font-size: 3.2rem;
   }
-  .lieu .texte-wrap {
-    align-items: flex-end;
+}
+@media (min-width: 1440px) {
+  .lieu {
+    --gap:8rem;
   }
 }

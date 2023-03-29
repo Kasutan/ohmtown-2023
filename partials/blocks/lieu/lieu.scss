@@ -3,8 +3,11 @@
 .lieu {
 	@include bleed-ohm;
 	background-color: var(--wp--preset--color--sand-50);
-	padding:2.4rem var(--padding-x) 3.2rem;
+	padding:2.4rem var(--padding-x-single) 3.2rem;
 	position:relative;
+	transform: translateX(calc(-1*var(--padding-x-single)));
+	width: calc(100% + 2*var(--padding-x-single));
+	
 	
 	.titre-col {
 		font-family: var(--font-titre);
@@ -105,25 +108,59 @@
 		}
 	}
 
+
 	@include bp(md) {
-		.texte-wrap {
-			align-items: center;
-			column-gap:3.2rem;
-			display: flex;
-			justify-content: flex-end;
-			padding-bottom: 4rem;
-			.texte {
-				flex-basis:50%;
-			}
-			h2.titre-section {
-				flex-basis:30rem;
-				text-align: right;
-				margin-bottom: 0;
+		--gap:4rem;
+		column-gap :var(--gap);
+		display:grid;
+		grid-template-columns: 1fr 1fr;
+		padding-bottom:var(--gap);
+		padding-top:var(--gap);
+		.col {
+			padding:0;
+		}
+		.priv-panel {
+			grid-column: 1 / span 2;
+			&::before {
+				left:0;
+				width:20rem;
 			}
 		}
+		.fond-blanc {
+			display: flex;
+			flex-direction: row-reverse;
+			gap:var(--gap);
+			padding:var(--gap);
+		}
+		.pdf, .form {
+			flex-basis:50%;
+			h4 {
+				font-size: 2.4rem;
+			}
+		}
+		.pdf {
+			align-items: flex-start;
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 0;
+			h4 {
+				margin-bottom: 1.6rem;
+				order:1;
+			}
+			p {
+				order:2;
+			}
+
+			a {
+				order:4;
+				margin-bottom: 0;
+			}
+
+		}
 		.image {
-			height:unset;
+			margin-bottom: 1.6rem;
 			max-width: unset;
+			order:3;
 			&.mobile {
 				display: none;
 			}
@@ -131,15 +168,26 @@
 				display: block;
 			}
 		}
+
+		.form {
+			border-top:none;
+			padding-top:0;
+			h4, p {
+				margin-bottom: 3.2rem;
+			}
+		}
 		
 	}
 
 	@include bp(lg) {
-		margin-top: -4rem;
-		.texte-wrap {
-			align-items: flex-end;
-			
+		.pdf, .form {
+			h4 {
+				font-size: 3.2rem;
+			}
 		}
 		
+	}
+	@include bp(xl) {
+		--gap:8rem;
 	}
 }
