@@ -2,6 +2,7 @@
   width: calc(100% + 2 * var(--padding-x));
   transform: translateX(calc(-1 * var(--padding-x)));
   margin-top: -2.4rem;
+  margin-bottom: 4.8rem;
   position: relative;
 }
 .lieu-intro .texte-wrap {
@@ -79,6 +80,7 @@
 @media (min-width: 960px) {
   .lieu-intro {
     margin-top: -4rem;
+    margin-bottom: 4rem;
   }
   .lieu-intro .texte-wrap {
     align-items: flex-end;

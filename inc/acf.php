@@ -202,7 +202,7 @@ class BE_ACF_Customizations {
 			array( 'boire','manger','carte')
 		);
 
-		/*********Bloc vide ***************/
+		/*********Bloc lieu intro ***************/
 		$this->helper_register_block_type( 
 			'lieu-intro',
 			'Bloc introduction pour page Le lieu',
@@ -210,6 +210,16 @@ class BE_ACF_Customizations {
 			'album', 
 			false,
 			array( 'lieu','intro')
+		);
+
+		/*********Bloc lieu  ***************/
+		$this->helper_register_block_type( 
+			'lieu',
+			'Bloc principal pour page Le lieu',
+			'Section avec deux blocs de texte et bloc privatisation',
+			'album', 
+			true, //bloc privatisation escamotable
+			array( 'lieu','privatisation')
 		);
 
 		/*********Bloc vide ***************/
