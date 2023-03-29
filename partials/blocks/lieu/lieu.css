@@ -75,7 +75,9 @@
   display: inline-flex;
 }
 .lieu .pdf .picto {
+  flex: 0 0 16px;
   margin-right: 0.8rem;
+  width: 16px;
 }
 .lieu .form {
   border-top: 1px dashed #D18300;

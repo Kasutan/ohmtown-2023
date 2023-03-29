@@ -988,7 +988,6 @@ input[type=datetime],
 input[type=datetime-local],
 input[type=color],
 textarea {
-  background-color: solid 1px var(--wp--preset--color--blanc);
   color: solid 1px var(--wp--preset--color--noir);
   border: solid 1px var(--wp--preset--color--gray-900);
   border-radius: 100px;
@@ -1025,8 +1024,114 @@ textarea {
   width: 100%;
 }
 
-.forminator-custom-form {
-  /*Layout*/
+body .forminator-ui.forminator-custom-form[data-design=default] .forminator-input {
+  border-radius: 100px;
+}
+body .forminator-ui.forminator-custom-form[data-design=default] .forminator-input:placeholder {
+  color: #000000;
+  opacity: 1;
+}
+body .forminator-ui.forminator-custom-form[data-design=default] .forminator-input.forminator-datepicker {
+  background-image: url("icons/calendrier.svg");
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 20px);
+  background-position-y: center;
+}
+body .forminator-ui.forminator-custom-form[data-design=default] .forminator-input-with-icon .forminator-datepicker {
+  padding: 9px;
+  padding-right: 51px;
+}
+
+body .forminator-ui#forminator-module-305.forminator-design--default .forminator-input::placeholder {
+  color: #000000;
+  opacity: 1 !important;
+}
+
+body .forminator-ui.forminator-custom-form[data-design=default] .forminator-textarea {
+  border-radius: 16px;
+}
+
+.forminator-ui label {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+.forminator-ui .select2-selection {
+  border-radius: 100px;
+}
+.forminator-ui .iti__flag-container {
+  display: none;
+}
+.forminator-ui textarea {
+  border-radius: 16px;
+}
+
+.forminator-select-dropdown {
+  border-radius: 16px;
+}
+
+.forminator-row-last .forminator-field {
+  display: flex;
+  justify-content: flex-end;
+}
+
+body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button {
+  background-color: var(--wp--preset--color--citron-main);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 4px 4px 2px rgba(253, 226, 56, 0.75);
+  color: var(--wp--preset--color--gray-800);
+  display: inline-flex;
+  margin-bottom: 1em;
+  width: unset;
+  background-image: url("icons/envoi.svg");
+  background-repeat: no-repeat;
+  background-position-x: 1.6rem;
+  background-position-y: center;
+  background-size: 1.6rem;
+  padding: 8px 8px 12px;
+  padding-left: 4.2rem;
+}
+body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:focus, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:hover, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:active {
+  background-color: var(--wp--preset--color--citron-200);
+  box-shadow: 4px 4px 2px rgba(253, 226, 56, 0.75);
+  outline-color: transparent;
+}
+body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:active {
+  box-shadow: 0px 2px 0px #FDE238;
+}
+body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:disabled, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button.disabled {
+  background-color: var(--wp--preset--color--citron-main);
+  box-shadow: none;
+  color: var(--wp--preset--color--gray-400);
+  cursor: default;
+}
+@media (min-width: 960px) {
+  body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button {
+    border-radius: 16px;
+    box-shadow: 10px 9px 4px rgba(253, 226, 56, 0.75);
+    font-size: 1.6rem;
+    padding: 12px 12px 16px;
+    padding-left: 4.2rem;
+  }
+  body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:focus, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:hover, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:active {
+    box-shadow: 10px 9px 4px rgba(253, 226, 56, 0.75);
+  }
+  body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:active {
+    box-shadow: 1px 4px 0px #FDE238;
+  }
+}
+
+.temp .forminator-custom-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 22px;
@@ -1036,55 +1141,55 @@ textarea {
   /*Styles des champs radio*/
   /*Styles du champ file upload*/
 }
-.forminator-custom-form .forminator-row {
+.temp .forminator-custom-form .forminator-row {
   box-sizing: border-box;
   margin: 0 !important;
 }
-.forminator-custom-form .forminator-col {
+.temp .forminator-custom-form .forminator-col {
   padding: 0 !important;
 }
-.forminator-custom-form .forminator-response-message, .forminator-custom-form .forminator-row.pleine-largeur {
+.temp .forminator-custom-form .forminator-response-message, .temp .forminator-custom-form .forminator-row.pleine-largeur {
   grid-column-start: 1;
   grid-column-end: -1;
 }
-.forminator-custom-form .forminator-error-message {
+.temp .forminator-custom-form .forminator-error-message {
   font-size: calc(12 * var(--taille-texte) / 15);
   color: var(--wp--preset--color--primaire);
 }
-.forminator-custom-form label {
+.temp .forminator-custom-form label {
   display: block;
   margin-bottom: 5px;
 }
-.forminator-custom-form input[type=text],
-.forminator-custom-form input[type=email],
-.forminator-custom-form input[type=tel] {
+.temp .forminator-custom-form input[type=text],
+.temp .forminator-custom-form input[type=email],
+.temp .forminator-custom-form input[type=tel] {
   width: 100%;
 }
-.forminator-custom-form .forminator-phone {
+.temp .forminator-custom-form .forminator-phone {
   width: 100%;
 }
-.forminator-custom-form .forminator-field[role=radiogroup] {
+.temp .forminator-custom-form .forminator-field[role=radiogroup] {
   --couleur:var(--wp--preset--color--secondaire);
   --size:15px;
   display: flex;
 }
-.forminator-custom-form .forminator-field[role=radiogroup] label {
+.temp .forminator-custom-form .forminator-field[role=radiogroup] label {
   margin-bottom: 0;
 }
-.forminator-custom-form .forminator-field[role=radiogroup] .forminator-label {
+.temp .forminator-custom-form .forminator-field[role=radiogroup] .forminator-label {
   margin-right: 20px;
 }
-.forminator-custom-form .forminator-field[role=radiogroup] .forminator-radio-inline {
+.temp .forminator-custom-form .forminator-field[role=radiogroup] .forminator-radio-inline {
   align-items: center;
   display: flex;
   flex-direction: row;
   margin-right: 20px;
 }
-.forminator-custom-form .forminator-field[role=radiogroup] .forminator-radio-bullet {
+.temp .forminator-custom-form .forminator-field[role=radiogroup] .forminator-radio-bullet {
   align-items: center;
   display: contents;
 }
-.forminator-custom-form .forminator-field[role=radiogroup] .forminator-radio-bullet::after {
+.temp .forminator-custom-form .forminator-field[role=radiogroup] .forminator-radio-bullet::after {
   align-items: center;
   background-color: rgba(196, 196, 196, 0.1);
   border: 1px solid var(--wp--preset--color--secondaire);
@@ -1095,39 +1200,32 @@ textarea {
   width: var(--size);
   height: var(--size);
 }
-.forminator-custom-form .forminator-field[role=radiogroup] input:checked + .forminator-radio-bullet::after {
+.temp .forminator-custom-form .forminator-field[role=radiogroup] input:checked + .forminator-radio-bullet::after {
   content: "✔";
 }
-.forminator-custom-form .forminator-field[role=radiogroup] input:focus-visible + .forminator-radio-bullet::after {
+.temp .forminator-custom-form .forminator-field[role=radiogroup] input:focus-visible + .forminator-radio-bullet::after {
   outline: dotted 2px var(--wp--preset--color--secondaire);
   outline-offset: 1px;
 }
-.forminator-custom-form .forminator-row-last {
-  grid-column: 1/span 2;
-}
-.forminator-custom-form .forminator-row-last .forminator-field {
-  display: flex;
-  justify-content: flex-end;
-}
-.forminator-custom-form .file .forminator-label {
+.temp .forminator-custom-form .file .forminator-label {
   color: var(--wp--preset--color--primaire);
   font-size: calc(20 * var(--taille-texte) / 15);
   font-weight: 700;
 }
-.forminator-custom-form .file .forminator-input-file {
+.temp .forminator-custom-form .file .forminator-input-file {
   font-size: calc(16 * var(--taille-texte) / 15);
 }
-.forminator-custom-form .forminator-uploaded-file--content {
+.temp .forminator-custom-form .forminator-uploaded-file--content {
   margin: 20px 0;
   background: var(--fond);
   display: flex;
   justify-content: space-between;
   padding: 10px;
 }
-.forminator-custom-form .forminator-uploaded-file--content .forminator-uploaded-file--image {
+.temp .forminator-custom-form .forminator-uploaded-file--content .forminator-uploaded-file--image {
   display: none;
 }
-.forminator-custom-form .forminator-uploaded-file--content button {
+.temp .forminator-custom-form .forminator-uploaded-file--content button {
   min-width: unset;
 }
 
