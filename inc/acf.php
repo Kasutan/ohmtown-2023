@@ -204,6 +204,16 @@ class BE_ACF_Customizations {
 
 		/*********Bloc vide ***************/
 		$this->helper_register_block_type( 
+			'lieu-intro',
+			'Bloc introduction pour page Le lieu',
+			'Section avec titre, texte et image à cheval.',
+			'album', 
+			false,
+			array( 'lieu','intro')
+		);
+
+		/*********Bloc vide ***************/
+		$this->helper_register_block_type( 
 			'vide',
 			'Bloc vide',
 			'Section avec .',

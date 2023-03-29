@@ -1,0 +1,93 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.lieu-intro {
+	@include bleed-ohm;
+	margin-top: -2.4rem;
+	position:relative;
+	.texte-wrap {
+		padding:2.4rem calc(var(--padding-x) + 0.8rem) 2rem;
+		position: relative;
+		> * {
+			position: relative;
+		}
+		&::before {
+			background-color:  var(--wp--preset--color--citron-main);
+			content:' ';
+			display: block;
+			left:0;
+			height:calc(100% + 6rem);
+			//height:90%;
+			position: absolute;
+			top:0;
+			width:100%;
+		}
+	}
+	h2 {
+		line-height:1;
+		margin-bottom: 4px;
+	}
+	.texte {
+		font-size: 1.6rem;
+		font-weight: 700;
+		margin-bottom: 0;
+	}
+	.image {
+		&.desktop {
+			display: none;
+		}
+		height:54.2rem;
+		padding:0 var(--padding-x);
+		position: relative;
+		img {
+			border-radius: 16px;
+			height:100%;
+			width: 100%;
+
+		}
+
+	}
+	@include bp(sm) {
+		.image {
+			max-width:50rem;
+			margin:0 auto;
+		}
+	}
+
+	@include bp(md) {
+		.texte-wrap {
+			align-items: center;
+			column-gap:3.2rem;
+			display: flex;
+			justify-content: flex-end;
+			padding-bottom: 4rem;
+			.texte {
+				flex-basis:50%;
+			}
+			h2.titre-section {
+				flex-basis:30rem;
+				text-align: right;
+				margin-bottom: 0;
+			}
+		}
+		.image {
+			height:unset;
+			max-width: unset;
+			&.mobile {
+				display: none;
+			}
+			&.desktop {
+				display: block;
+			}
+		}
+		
+	}
+
+	@include bp(lg) {
+		margin-top: -4rem;
+		.texte-wrap {
+			align-items: flex-end;
+			
+		}
+		
+	}
+}

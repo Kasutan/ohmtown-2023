@@ -43,6 +43,11 @@
 	}
 }
 
+@mixin bleed-ohm {
+	width: calc(100% + 2*var(--padding-x));
+	transform: translateX(calc(-1*var(--padding-x)));
+}
+
 @mixin unset-bleed {
 	width: unset;
 	margin-left: unset;
