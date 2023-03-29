@@ -76,7 +76,6 @@ function kasutan_single_entry_bottom(){
 				if($contenu) {
 					echo '<div class="form">';
 						echo $contenu;
-						echo '<p>Formulaire newsletter</p>';
 					echo '</div>';
 				}
 			}

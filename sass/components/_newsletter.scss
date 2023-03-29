@@ -1,0 +1,36 @@
+.mailjet_widget_front_container {
+	.titre-widget, .widgettitle {
+		font-weight: 700;
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+	}
+
+	form {
+		align-items: center;
+		display: flex;
+	}
+	input[type="email"] {
+		margin-right: 1rem;
+		min-width: 17rem;
+		&::placeholder {
+			@include placeholder
+		}
+	}
+
+	@include bp(lg) {
+		input[type="email"] {
+			font-size: 1.6rem;
+			min-width:34rem;
+		}
+		.titre-widget, .widgettitle {
+			font-size: 1.6rem;
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.entry-footer .mailjet_widget_front_container {
+	.titre-widget, .widgettitle {
+		display: none;
+	}
+}

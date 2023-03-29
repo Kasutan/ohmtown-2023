@@ -29,10 +29,10 @@
         },
         {
             "key": "field_641577b89340c",
-            "label": "Newsletter (TODO)",
-            "name": "ohm_newsletter",
+            "label": "Newsletter",
+            "name": "",
             "aria-label": "",
-            "type": "textarea",
+            "type": "message",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -41,11 +41,9 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
+            "message": "Pour modifier le formulaire d'inscription à la newsletter, aller dans Apparence > Widgets",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_64157611268db",
@@ -296,5 +294,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679509803
+    "modified": 1680076351
 }

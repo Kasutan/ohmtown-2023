@@ -6,20 +6,19 @@
 */
 add_action( 'tha_footer_top', 'kasutan_footer_top' );
 function kasutan_footer_top() {
-	$logo=$form='';
+	$logo='';
 	if(function_exists('get_field')) {
 		$logo=esc_attr(get_field('ohm_logo_footer','option'));
-		$form=wp_kses_post(get_field('ohm_newsletter','option'));
 	}
-	if(!$logo && !$form) {
+	if(!$logo && !is_active_sidebar('newsletter-footer')) {
 		return;
 	}
 	echo '<div class="footer-top">';
 		if($logo) {
 			printf('<div class="logo-footer"><a href="/" class="logo-link">%s</a></div>', wp_get_attachment_image( $logo,'thumbnail'));
 		}
-		if($form) {
-			printf('<div class="newsletter">%s</div>',$form);
+		if(is_active_sidebar('newsletter-footer')) {
+			dynamic_sidebar( 'newsletter-footer' );
 		}
 	echo '</div>';
 }

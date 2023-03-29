@@ -76,6 +76,19 @@ if ( ! function_exists( 'kasutan_setup' ) ) :
 			'social' => 'Liens vers les réseaux sociaux',
 		) );
 
+
+		register_sidebar(array( 
+			'name' => 'Formulaire newsletter',
+			'id' => 'newsletter-footer',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<p class="titre-widget">',
+			'after_title' => '</p>',
+		));
+
+		//Affichage classique des widgets
+		remove_theme_support( 'widgets-block-editor' );
+
 		//Autoriser les shortcodes dans les widgets
 		add_filter( 'widget_text', 'shortcode_unautop' );
 		add_filter( 'widget_text', 'do_shortcode' );
