@@ -27,9 +27,16 @@
 			margin-left: 2.5rem;
 			width:0.8rem;
 		}
+
+		[aria-expanded="true"] {
+			.picto {
+				transform: rotateX(180deg);
+			}
+		}
 		
 	}
 	.priv-panel {
+		display: none;
 		position: relative;
 		&::before {
 			background: var(--wp--preset--color--jaune-400);
@@ -39,7 +46,7 @@
 			left:1.6rem;
 			position: relative;
 			top:0;
-			width:calc(100% - 1.6rem);
+			width:calc(100% - 3.2rem);
 		}
 
 		.titre-col {

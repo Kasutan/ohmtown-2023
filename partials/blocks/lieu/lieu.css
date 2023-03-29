@@ -26,7 +26,11 @@
   margin-left: 2.5rem;
   width: 0.8rem;
 }
+.lieu #toggle-priv-wrap [aria-expanded=true] .picto {
+  transform: rotateX(180deg);
+}
 .lieu .priv-panel {
+  display: none;
   position: relative;
 }
 .lieu .priv-panel::before {
@@ -37,7 +41,7 @@
   left: 1.6rem;
   position: relative;
   top: 0;
-  width: calc(100% - 1.6rem);
+  width: calc(100% - 3.2rem);
 }
 .lieu .priv-panel .titre-col {
   margin-bottom: 1.6rem;

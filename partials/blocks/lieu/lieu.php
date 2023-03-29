@@ -51,7 +51,7 @@ printf('<section class="acf lieu %s">', $className);
 		echo '</div>';
 	}
 
-	echo '<div id="priv-panel" class="priv-panel" aria-expanded="false">';
+	echo '<div id="privatisation" class="priv-panel" aria-expanded="false">';
 		printf('<h3 class="titre-col">%s</h3>',$titre_priv);
 		echo '<div class="fond-blanc">';
 			echo '<div class="pdf">';
