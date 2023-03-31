@@ -12,7 +12,6 @@
 // Image bannière 
 add_action( 'tha_entry_top', 'kasutan_single_banniere', 5 );
 
-//TODO : tous contenus dynamiques !
 
 //Elements dans le header, sous la bannière
 add_action( 'tha_entry_top', 'kasutan_single_top',10 );
@@ -28,9 +27,11 @@ function kasutan_single_top() {
 			if(function_exists('kasutan_event_affiche_meta_single')) {
 				kasutan_event_affiche_meta_single($post_id);
 			}
-		} else if($post_type==="post") {
-			printf('<p class="sous-titre">Sous-titre</p>');
-			printf('<p class="extrait">Extrait</p>');
+		} else if($post_type==="post" && function_exists('get_field')) {
+			$sous_titre=wp_kses_post( get_field('sous-titre') );
+			$intro=wp_kses_post( get_field('introduction') );
+			if($sous_titre) printf('<p class="sous-titre">%s</p>',$sous_titre);
+			if($intro) printf('<p class="intro">%s</p>',$intro);
 		} else if($post_type==="jobs") {
 			//RAS
 		} 
