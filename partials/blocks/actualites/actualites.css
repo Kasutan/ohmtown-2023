@@ -135,6 +135,8 @@
     background: transparent;
     display: block;
     padding-bottom: 0;
+    padding-left: var(--padding-x-single);
+    padding-right: var(--padding-x-single);
   }
   .actualites.layout-2 .actus {
     padding: 3.2rem 0 4rem;

@@ -151,6 +151,8 @@
 			background: transparent;
 			display: block;
 			padding-bottom: 0;
+			padding-left:var(--padding-x-single);
+			padding-right:var(--padding-x-single);
 			.actus {
 				padding: 3.2rem 0 4rem;
 				&::before {
