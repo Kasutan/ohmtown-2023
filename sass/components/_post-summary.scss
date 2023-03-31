@@ -1,30 +1,38 @@
 //Vignette article pour pages archives (y compris recherche)
 .post-summary {
-	//@include box-shadow();
+	background-color: #fff;
+	border-radius: 16px;
+	box-shadow: 5px 6px 10px rgba(120, 107, 78, 0.2);
 	display: flex;
 	flex-direction: column;
-	margin:0 auto var(--margin-y-1);
-	max-width:46rem;
+	//max-width:32rem;
+	overflow: hidden;
 	position:relative;
+	width:100%;
+
+	.post-summary__content {
+		padding:0 1.6rem 1.6rem
+	}
 	
-	p.entry-date {
-		color:var(--wp--preset--color--primaire)
+	.post-summary__title {
+		font-size: 1.6rem;
+		margin-bottom: var(--margin-v);
+		text-transform: unset;
+	}
+	.entry-date {
+		font-weight: 700;
+		margin-bottom: var(--margin-v);
 	}
 
+	.extrait {
+		margin-bottom: 1.8rem;
+	}
 	a.suite {
 		align-items: center;
-		border-radius: 50%;
 		display: flex;
-		height:2.6rem;
-		justify-content: center;
-		margin-bottom: 0;
-		padding:0;
-		padding-left: 2px;
-		width:2.6rem;
-		svg {
-			max-height:60%;
-			max-width:90%;
-		}
+		font-size: 1.6rem;
+		justify-content: flex-end;
+		text-decoration: none;
 	}
 }
 
@@ -38,22 +46,16 @@
 } 
 .post-summary__image {
 	display: block;
-	margin-bottom: 0.5rem;
+	margin-bottom: 8px;
 	img {
-		aspect-ratio:1.36;
+		aspect-ratio:var(--ratio); //défini dans .loop pour être modifiable plus facilement dans les différents blocs ACF
 		display: block;
 		width:100%;
 	}
-	&.contain {
-		border-bottom:solid 1px lightgrey;
-		padding:1rem;
-		img {
-			object-fit: contain;
-		}
-	}
+
 
 	@supports not (aspect-ratio: auto) { 
-		height: 257px;
+		height: 200px;
 		img {
 			height:100%;
 		}

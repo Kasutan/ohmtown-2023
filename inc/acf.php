@@ -222,6 +222,16 @@ class BE_ACF_Customizations {
 			array( 'lieu','privatisation')
 		);
 
+		/*********Bloc actualités ***************/
+		$this->helper_register_block_type( 
+			'actualites',
+			'Bloc actualités pour la page blog',
+			'Section avec titre, sous-titre, texte et deux articles d\'une catégorie.',
+			'album', 
+			false,
+			array( 'actualite','blog')
+		);
+
 		/*********Bloc vide ***************/
 		$this->helper_register_block_type( 
 			'vide',

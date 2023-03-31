@@ -1,0 +1,126 @@
+{
+    "key": "group_6426fdd86bfb9",
+    "title": "Bloc actualités",
+    "fields": [
+        {
+            "key": "field_6426fdd872c88",
+            "label": "Bloc actualités pour la page blog",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Section avec titre, sous-titre, texte et deux articles d'une catégorie.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6426fdd876666",
+            "label": "Titre de la section",
+            "name": "titre",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6426fe0728cf4",
+            "label": "Sous-titre",
+            "name": "sous-titre",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6426fdd879f86",
+            "label": "Texte",
+            "name": "texte",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 5,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_6426fe2828cf5",
+            "label": "Catégorie des articles à afficher dans ce bloc",
+            "name": "cat",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "Les 2 articles les plus récents dans cette catégorie seront affichés dans le bloc.\r\nAttention à placer chaque article dans une seule catégorie à la fois pour ne pas l'afficher plusieurs fois dans les différents blocs de la page Blog.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "field_type": "radio",
+            "allow_null": 0,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/actualites"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1680277419
+}

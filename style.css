@@ -1923,25 +1923,29 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   }
 }
 
+.loop-slider {
+  overflow: auto;
+  margin-bottom: 1.6rem;
+  padding-bottom: 1.6rem;
+  position: relative;
+}
+
 .loop {
+  --gap:1.6rem;
+  --largeur-vignette:21rem;
+  --nb-col:2;
+  --ratio:1.06;
+  display: grid;
+  grid-template-columns: repeat(var(--nb-col), var(--largeur-vignette));
+  gap: var(--gap);
   list-style: none;
   margin: 0;
-  padding-top: var(--margin-y-1);
-}
-.loop .post-summary {
-  margin-bottom: var(--margin-y-1);
 }
 @media (min-width: 960px) {
   .loop {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--margin-y-1);
-    margin-bottom: var(--margin-y-1);
-  }
-  .loop .post-summary {
-    margin-bottom: 0;
-    max-width: unset;
-    width: 100%;
+    --largeur-vignette:1fr;
+    --nb-col:3;
+    --ratio:1.5;
   }
 }
 
@@ -2349,29 +2353,36 @@ form.search-form input.search-submit {
 }
 
 .post-summary {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 5px 6px 10px rgba(120, 107, 78, 0.2);
   display: flex;
   flex-direction: column;
-  margin: 0 auto var(--margin-y-1);
-  max-width: 46rem;
+  overflow: hidden;
   position: relative;
+  width: 100%;
 }
-.post-summary p.entry-date {
-  color: var(--wp--preset--color--primaire);
+.post-summary .post-summary__content {
+  padding: 0 1.6rem 1.6rem;
+}
+.post-summary .post-summary__title {
+  font-size: 1.6rem;
+  margin-bottom: var(--margin-v);
+  text-transform: unset;
+}
+.post-summary .entry-date {
+  font-weight: 700;
+  margin-bottom: var(--margin-v);
+}
+.post-summary .extrait {
+  margin-bottom: 1.8rem;
 }
 .post-summary a.suite {
   align-items: center;
-  border-radius: 50%;
   display: flex;
-  height: 2.6rem;
-  justify-content: center;
-  margin-bottom: 0;
-  padding: 0;
-  padding-left: 2px;
-  width: 2.6rem;
-}
-.post-summary a.suite svg {
-  max-height: 60%;
-  max-width: 90%;
+  font-size: 1.6rem;
+  justify-content: flex-end;
+  text-decoration: none;
 }
 
 .post-summary__title {
@@ -2384,23 +2395,16 @@ form.search-form input.search-submit {
 
 .post-summary__image {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
 .post-summary__image img {
-  aspect-ratio: 1.36;
+  aspect-ratio: var(--ratio);
   display: block;
   width: 100%;
 }
-.post-summary__image.contain {
-  border-bottom: solid 1px lightgrey;
-  padding: 1rem;
-}
-.post-summary__image.contain img {
-  object-fit: contain;
-}
 @supports not (aspect-ratio: auto) {
   .post-summary__image {
-    height: 257px;
+    height: 200px;
   }
   .post-summary__image img {
     height: 100%;
