@@ -232,6 +232,16 @@ class BE_ACF_Customizations {
 			array( 'actualite','blog')
 		);
 
+		/*********Bloc focus ***************/
+		$this->helper_register_block_type( 
+			'focus',
+			'Bloc focus pour la page blog',
+			'Section avec un article mis en avant.',
+			'album', 
+			false,
+			array( 'focus','blog','article')
+		);
+
 		/*********Bloc vide ***************/
 		$this->helper_register_block_type( 
 			'vide',

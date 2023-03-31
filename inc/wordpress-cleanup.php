@@ -190,7 +190,7 @@ add_filter( 'excerpt_more', 'ea_excerpt_more' );
 function kasutan_custom_excerpt_length( $length ) {
 	return 20;
 }
-add_filter( 'excerpt_length', 'kasutan_custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'kasutan_custom_excerpt_length', 10 );
 
 
 // Remove inline CSS for emoji
