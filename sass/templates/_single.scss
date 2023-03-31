@@ -2,8 +2,8 @@
 	--padding-v:2.4rem;
 	--trait:calc(100% - 2 * var(--padding-x-single) );
 	--bouton-fb:3.5rem;
-
-	//TODO affiner tailles des textes
+	--margin-v:4px;
+	--margin-v2:8px;
 
 
 	@include bp(lg) {
@@ -34,17 +34,67 @@
 		font-size: 3.2rem;
 		font-size: clamp(3.2rem, 2.77vw, 4rem);
 		font-family: var(--font-texte);
+		font-weight: 700;
+		margin-bottom: var(--margin-v);
 		text-transform: unset;
 	}
-	.extrait {
+	.sous-titre {
+		font-size: 1.6rem;
+		font-weight: 700;
+		margin-bottom: var(--margin-v);
+	}
+	.intro {
+		font-size: 1.4rem;
 		margin-bottom: 0;
 	}
 
 	.entry-content {
+
+
 		border-bottom:solid 6px var(--wp--preset--color--jaune-400);
 		padding:var(--padding-v) var(--padding-x-single);
 
-		
+		//Tailles des textes et des titres adaptées
+
+		font-size: 1.4rem;
+		font-weight: 400;
+
+		h2, .h2 {
+			font-family: var(--font-texte);
+			font-size: 2.4rem;
+			font-weight: 700;
+			line-height: 1.2;
+			margin-bottom: var(--margin-v);
+			text-transform: unset;
+		}
+
+		h3, .h3 {
+			font-size: 1.6rem;
+			font-weight: 700;
+			margin-bottom: var(--margin-v2);
+			text-transform: unset;
+		}
+
+		.wp-block-image {
+			margin-bottom: var(--margin-v2);
+			img {
+				border-radius: 16px;
+			}
+		}
+
+		@include bp(lg) {
+			.wp-block-image {
+				&.alignleft {
+					float: left;
+					margin:0 1.6rem 0 -1.6rem;
+					max-width: 50%;
+				}
+			}
+			p {
+				margin-bottom: 2.4rem;
+			}
+		}
+
 	
 	}
 	.liens-single {
