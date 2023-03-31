@@ -18,8 +18,9 @@ $titre=wp_kses_post( get_field('titre') );
 $sous_titre=wp_kses_post( get_field('sous-titre') );
 $texte=wp_kses_post( get_field('texte') );
 $cat=esc_attr(get_field('cat'));
+$layout=esc_attr(get_field('layout'));
 
-printf('<section class="acf actualites %s">', $className);
+printf('<section class="acf actualites layout-%s %s">', $layout, $className);
 	echo '<div class="intro">';
 		printf('<h2 class="titre-section">%s</h2>',$titre);
 		if($sous_titre) printf('<p class="sous-titre">%s</p>',$sous_titre);
@@ -29,7 +30,7 @@ printf('<section class="acf actualites %s">', $className);
 	$posts=new WP_Query(
 		array( 
 			'post_type'=>'post',
-			'posts_per_page'=> 2,
+			'posts_per_page'=> intval($layout) + 1,
 			'order' => 'DESC',
 			'cat' => $cat,
 		)

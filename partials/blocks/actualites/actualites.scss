@@ -48,6 +48,10 @@
 		.loop {
 			--largeur-vignette:1fr;
 		}
+
+		.post-summary {
+			box-shadow: none;
+		}
 	}
 
 	@include bp(lg) {
@@ -77,4 +81,84 @@
 		padding:8rem var(--padding-x);
 
 	}
+
+
+	/**************Variante du bloc******************/
+	&.layout-2 {
+		margin-bottom: 0;
+		.intro .texte {
+			border-bottom:solid 6px var(--wp--preset--color--jaune-400);
+			padding-bottom: 4rem;
+		}
+
+		.actus {
+			background-color: transparent;
+		}
+
+
+		.loop {
+			--nb-col:3;
+		}
+
+		.post-summary {
+			border-radius: 0;
+			box-shadow: none;
+
+			img {
+				border-radius: 16px;
+			}
+
+			a.suite {
+				justify-content: center;
+				text-decoration: underline;
+			}
+		}
+
+		@include bp(sm) {
+			.loop {
+				--ratio : 1.45;
+				--largeur-vignette:25rem;
+			}
+		}
+
+		@include bp(md) {
+			.intro .texte {
+				border-bottom:none;
+			}
+			.actus {
+				padding: 3.2rem var(--padding-x) 0;
+				position: relative;
+				&::before {
+					background: var(--wp--preset--color--jaune-main);
+					content:'';
+					display: block;
+					height:6px;
+					left:var(--padding-x);
+					position: absolute;
+					top:0;
+					width:20rem;
+				}
+			}
+			.loop {
+				--largeur-vignette:1fr;
+			}
+
+			.post-summary a.suite {
+				justify-content: flex-start;
+			}
+		}
+		@include bp(lg) {
+			background: transparent;
+			display: block;
+			padding-bottom: 0;
+			.actus {
+				padding: 3.2rem 0 4rem;
+				&::before {
+					left:0;
+				}
+			}
+		}
+	}
+
+
 } 

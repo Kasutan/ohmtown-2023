@@ -16,9 +16,34 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Section avec titre, sous-titre, texte et deux articles d'une catégorie.",
+            "message": "Section avec titre, sous-titre, texte et deux ou trois articles d'une catégorie, selon la mise en page choisie.",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_64271390aeb63",
+            "label": "Mise en page de la section",
+            "name": "layout",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "1ère section affichée sur la page, avec 2 articles",
+                "2": "2e section affichée sur la page, avec 3 articles"
+            },
+            "default_value": 1,
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
         },
         {
             "key": "field_6426fdd876666",
@@ -86,7 +111,7 @@
             "name": "cat",
             "aria-label": "",
             "type": "taxonomy",
-            "instructions": "Les 2 articles les plus récents dans cette catégorie seront affichés dans le bloc.\r\nAttention à placer chaque article dans une seule catégorie à la fois pour ne pas l'afficher plusieurs fois dans les différents blocs de la page Blog.",
+            "instructions": "Les 2 ou 3 articles les plus récents dans cette catégorie seront affichés dans le bloc.\r\nAttention à placer chaque article dans une seule catégorie à la fois pour ne pas l'afficher plusieurs fois dans les différents blocs de la page Blog.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -122,5 +147,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1680277419
+    "modified": 1680282994
 }
