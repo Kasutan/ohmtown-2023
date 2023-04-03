@@ -1,0 +1,43 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.home-actualites {
+	@include bleed-ohm;
+	--margin-v:4px;
+
+	.actus {
+		padding:4rem 0 0;
+	}
+
+	
+	.plus-wrap {
+		display: flex;
+		justify-content: flex-end;
+		padding-right: var(--padding-x);
+		padding-top: 2rem;
+	}
+	.loop {
+		--largeur-vignette:20rem;
+		--nb-col:3;
+	}
+
+	@include bp(md) {
+		padding:0 var(--padding-x);
+		.loop {
+			--largeur-vignette:1fr;
+		}
+
+		.plus-wrap {
+			padding-top: 0;
+			padding-right: 0;
+		}
+
+	}
+
+	@include bp(lg) {
+		.actus {
+			padding-top: 8rem;
+		}
+		
+	}
+
+}

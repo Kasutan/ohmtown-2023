@@ -1,0 +1,79 @@
+{
+    "key": "group_642b194be5da2",
+    "title": "Bloc actualités pour la home",
+    "fields": [
+        {
+            "key": "field_642b194beb481",
+            "label": "Bloc actualités pour la home",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Section avec un titre (pour le SEO), les trois derniers articles du blog et un lien vers la page blog",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_642b194bf2928",
+            "label": "Titre de la section",
+            "name": "titre",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Pour le SEO et les lecteurs d'écran uniquement",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_642b1b0364a12",
+            "label": "Lien vers la page blog",
+            "name": "lien",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/home-actualites"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1680546579
+}

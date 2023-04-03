@@ -262,6 +262,16 @@ class BE_ACF_Customizations {
 			array( 'actualite','blog')
 		);
 
+		/*********Bloc actualités Home***************/
+		$this->helper_register_block_type( 
+			'home-actualites',
+			'Bloc actualités pour la page home',
+			'Section avec un titre (pour le SEO), les trois derniers articles du blog et un lien vers la page blog',
+			'album', 
+			true, //pour scroller à la moitié de la première vignette en mobile
+			array( 'actualite','blog','accueil')
+		);
+
 		/*********Bloc focus ***************/
 		$this->helper_register_block_type( 
 			'focus',
