@@ -222,6 +222,16 @@ class BE_ACF_Customizations {
 			array( 'boire','manger','carte')
 		);
 
+		/*********Bloc home-carte ***************/
+		$this->helper_register_block_type( 
+			'home-carte',
+			'Bloc carte (Boire & Manger) pour la home',
+			'Section avec 2 affichages alternés. Pour chacun : titre, intro, photo et lien vers le menu.',
+			'album', 
+			true, //JS pour alternance automatique en mobile
+			array( 'boire','manger','carte','menu','accueil')
+		);
+
 		/*********Bloc lieu intro ***************/
 		$this->helper_register_block_type( 
 			'lieu-intro',

@@ -1,0 +1,214 @@
+.home-carte {
+  width: calc(100% + 2 * var(--padding-x));
+  transform: translateX(calc(-1 * var(--padding-x)));
+  min-height: 35rem;
+  position: relative;
+}
+.home-carte a.bouton.primaire {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.home-carte .vers-carte.desktop {
+  display: none;
+}
+.home-carte .slide {
+  background-color: #fff;
+  opacity: 1;
+  padding: 4rem 12.7%;
+  transition: opacity var(--transition);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.home-carte .slide.slide-0 {
+  z-index: 1;
+}
+.home-carte .slide.slide-1 {
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.home-carte .slide .image {
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.home-carte .slide .image img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.home-carte .slide .titre-slide, .home-carte .slide .texte, .home-carte .slide .bouton {
+  position: relative;
+}
+.home-carte .slide .titre-slide {
+  background-color: rgba(248, 241, 224, 0.75);
+  display: inline-block;
+  font-size: 5rem;
+  line-height: 1.2;
+  padding: 0 10px 0 0;
+  margin-bottom: 1.6rem;
+}
+.home-carte .slide .highlight {
+  --fond:rgba(248, 241, 224, 0.95);
+  background-color: var(--fond);
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+  box-shadow: 1.5em 0 0 var(--fond);
+  line-height: 1.4;
+}
+.home-carte .slide .texte {
+  margin-bottom: 2.8rem;
+}
+.home-carte .dots {
+  --dot-color:var(--wp--preset--color--orange-400);
+  bottom: 2.6rem;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+.home-carte .dot {
+  border: solid 2px var(--dot-color);
+  border-radius: 50%;
+  height: 1.6rem;
+  width: 1.6rem;
+  transition: background-color var(--transition);
+}
+.home-carte .dot.dot-0 {
+  background-color: var(--dot-color);
+}
+.home-carte.js-toggle-slide .slide.slide-0 {
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.home-carte.js-toggle-slide .slide.slide-1 {
+  opacity: 1;
+  pointer-events: unset;
+  z-index: 1;
+}
+.home-carte.js-toggle-slide .dot.dot-0 {
+  background-color: transparent;
+}
+.home-carte.js-toggle-slide .dot.dot-1 {
+  background-color: var(--dot-color);
+}
+@media (min-width: 960px) {
+  .home-carte {
+    --pad-top:clamp(4rem,16vw,22.8rem);
+    min-height: 66.4rem;
+    position: relative;
+  }
+  .home-carte .dots {
+    display: none;
+  }
+  .home-carte .toggle-zones {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .home-carte .toggle-zones > div {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 33%;
+  }
+  .home-carte .toggle-zones .zone-0 {
+    left: 0;
+  }
+  .home-carte .toggle-zones .zone-1 {
+    right: 0;
+  }
+  .home-carte .slide .image {
+    width: 33%;
+  }
+  .home-carte .slide .image:hover {
+    opacity: 1;
+  }
+  .home-carte .slide .titre-slide {
+    background-color: transparent;
+    font-size: 9rem;
+  }
+  .home-carte .slide .highlight {
+    --fond:transparent;
+  }
+  .home-carte .slide .texte {
+    font-size: 2.4rem;
+  }
+  .home-carte .slide::after {
+    background-image: url("fleche-courbe.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: " ";
+    display: block;
+    height: 25rem;
+    position: absolute;
+    width: 30rem;
+  }
+  .home-carte .slide.boire {
+    padding-left: 45%;
+    padding-right: 10%;
+    padding-top: clamp(4rem, 7vw, 10rem);
+    pointer-events: none;
+  }
+  .home-carte .slide.boire::after {
+    top: calc(60% + 5rem);
+    left: calc(33% - 10rem);
+    transform: rotateZ(180deg);
+  }
+  .home-carte .slide.manger {
+    padding-left: 10%;
+    padding-right: calc(33% + 8px);
+    padding-top: var(--pad-top);
+  }
+  .home-carte .slide.manger .image {
+    left: unset;
+    right: 0;
+  }
+  .home-carte .slide.manger::after {
+    top: calc(var(--pad-top) - 18rem);
+    right: calc(33% + 2rem);
+  }
+  .home-carte .vers-carte.mobile {
+    display: none;
+  }
+  .home-carte a.bouton.primaire {
+    font-size: 2.4rem;
+    font-weight: 700;
+    transition: unset;
+  }
+  .home-carte .vers-carte.desktop {
+    display: block;
+    position: absolute;
+    right: calc(33% - 9rem);
+    top: calc(var(--pad-top) - 1rem);
+    z-index: 2;
+  }
+  .home-carte.js-toggle-slide .vers-carte.desktop {
+    left: calc(30% - 12rem);
+    right: unset;
+    top: 60%;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .home-carte .slide.boire::after {
+    top: calc(60% + 2rem);
+    left: calc(33% - 5rem);
+  }
+  .home-carte .slide.manger {
+    padding-left: 22%;
+  }
+}
