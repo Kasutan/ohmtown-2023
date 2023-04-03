@@ -115,6 +115,32 @@ function kasutan_event_affiche_li($post_id) {
 }
 
 
+
+function kasutan_event_affiche_li_home($post_id) {
+	$titre=get_the_title($post_id);
+	$metas=kasutan_event_get_meta($post_id);
+	
+	printf('<li class="event">');
+		//printf('<h3 class="titre-event h4">%s</h3>',$titre);
+
+		if(isset($metas['artistes'])) {
+			printf('<p class="artistes">%s</p>',$metas['artistes']);
+		}
+
+		if(isset($metas['date_texte'])) {
+			printf('<p class="date">%s',date('d.m.Y',strtotime($metas['date_event'])));
+				if(isset($metas['heure'])) printf(' - <span class="heure">%s</span>',$metas['heure']);
+			echo '</p>';
+		}
+		
+		if(isset($metas['avec_single']) && 'oui'===$metas['avec_single']) {
+			printf('<a href="%s" class="bouton outline permalien">en savoir plus</a>',get_the_permalink());
+		}
+		
+	echo '</li>';
+}
+
+
 /******************Colonnes dans l'admin *****************/
 add_filter( 'manage_programmation_posts_columns', 'kasutan_set_custom_edit_programmation_columns' );
 

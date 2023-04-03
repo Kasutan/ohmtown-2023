@@ -192,6 +192,16 @@ class BE_ACF_Customizations {
 			array( 'event','evenement')
 		);
 
+		/*********Bloc home-agenda ***************/
+		$this->helper_register_block_type( 
+			'home-agenda',
+			'Bloc événements à venir pour la Home',
+			'Section avec les 3 événements à venir et un lien vers la page Agenda.',
+			'album', 
+			true, //JS pour toggle volet events passés et filtre par date
+			array( 'event','evenement','agenda')
+		);
+
 		/*********Bloc carte ***************/
 		$this->helper_register_block_type( 
 			'carte',
