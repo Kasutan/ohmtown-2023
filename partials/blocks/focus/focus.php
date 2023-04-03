@@ -24,7 +24,7 @@ $intro=wp_kses_post( get_field('introduction',$post_id ));
 $titre=get_the_title($post_id);
 
 
-printf('<section class="acf focus %s">', $className);
+printf('<section class="acf bloc-focus %s">', $className);
 	printf('<div class="image desktop">%s</div>',get_the_post_thumbnail( $post_id, 'large'));
 	echo '<div class="wrap">';
 		printf('<h2 class="titre-section">%s</h2>',$titre);

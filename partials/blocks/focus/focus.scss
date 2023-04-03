@@ -1,6 +1,6 @@
 @import "./././sass/abstracts/variables-et-mixins";
 
-.focus {
+.bloc-focus {
 	--padding-v:2.4rem;
 	@include bleed-ohm;
 	background-color: var(--wp--preset--color--citron-main);

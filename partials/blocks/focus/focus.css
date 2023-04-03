@@ -1,14 +1,14 @@
-.focus {
+.bloc-focus {
   --padding-v:2.4rem;
   width: calc(100% + 2 * var(--padding-x));
   transform: translateX(calc(-1 * var(--padding-x)));
   background-color: var(--wp--preset--color--citron-main);
   padding: var(--padding-v) var(--padding-x);
 }
-.focus .desktop {
+.bloc-focus .desktop {
   display: none;
 }
-.focus .titre-section {
+.bloc-focus .titre-section {
   font-family: var(--font-texte);
   font-size: var(--wp--custom--typography--font-size--huge);
   font-weight: 700;
@@ -16,72 +16,72 @@
   margin-bottom: 4px;
   text-transform: unset;
 }
-.focus .sous-titre {
+.bloc-focus .sous-titre {
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 1.6rem;
 }
-.focus .image {
+.bloc-focus .image {
   height: 40rem;
   margin-bottom: 3.2rem;
 }
-.focus .image img {
+.bloc-focus .image img {
   border-radius: 16px;
   height: 100%;
 }
-.focus .texte {
+.bloc-focus .texte {
   font-size: 1.4rem;
   margin-bottom: 2rem;
   padding: 0 0.8rem;
 }
-.focus .suite-wrap {
+.bloc-focus .suite-wrap {
   display: flex;
   justify-content: flex-end;
 }
-.focus a.suite {
+.bloc-focus a.suite {
   font-size: 1.6rem;
   margin-right: 3.4rem;
 }
 @media (min-width: 768px) {
-  .focus {
+  .bloc-focus {
     --padding-v:4rem;
     align-items: center;
     column-gap: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .focus .desktop {
+  .bloc-focus .desktop {
     display: block;
   }
-  .focus .mobile {
+  .bloc-focus .mobile {
     display: none;
   }
-  .focus .image {
+  .bloc-focus .image {
     height: 41.5rem;
     margin-bottom: 0;
   }
-  .focus .sous-titre {
+  .bloc-focus .sous-titre {
     margin-bottom: 4px;
   }
-  .focus .texte {
+  .bloc-focus .texte {
     padding: 0 0 1.6rem;
   }
-  .focus a.suite {
+  .bloc-focus a.suite {
     text-decoration: unset;
   }
 }
 @media (min-width: 960px) {
-  .focus {
+  .bloc-focus {
     --padding-v:8rem;
     column-gap: 4rem;
     grid-template-columns: 2fr 1fr;
   }
-  .focus .titre-section {
+  .bloc-focus .titre-section {
     max-width: 20rem;
   }
 }
 @media (min-width: 1440px) {
-  .focus {
+  .bloc-focus {
     column-gap: 5.6rem;
   }
 }
