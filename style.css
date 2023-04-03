@@ -357,6 +357,10 @@ body .entry-content {
   padding: 0 var(--padding-x) 1px;
 }
 
+.home .site-container .entry-content {
+  padding-top: 0;
+}
+
 .alignfull, .bleed-container {
   width: 100vw;
   margin-left: 50%;

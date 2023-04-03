@@ -198,8 +198,18 @@ class BE_ACF_Customizations {
 			'Bloc événements à venir pour la Home',
 			'Section avec les 3 événements à venir et un lien vers la page Agenda.',
 			'album', 
-			true, //JS pour toggle volet events passés et filtre par date
-			array( 'event','evenement','agenda')
+			false, 
+			array( 'event','evenement','agenda','accueil')
+		);
+
+		/*********Bloc home-logo ***************/
+		$this->helper_register_block_type( 
+			'home-logo',
+			'Bloc logo pour la Home',
+			'Section avec logo sur fond blanc.',
+			'album', 
+			false, 
+			array( 'logo','accueil')
 		);
 
 		/*********Bloc carte ***************/

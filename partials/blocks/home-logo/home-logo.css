@@ -1,0 +1,13 @@
+.home-logo {
+  width: calc(100% + 2 * var(--padding-x));
+  transform: translateX(calc(-1 * var(--padding-x)));
+  display: flex;
+  justify-content: center;
+  padding: 1.6rem 0;
+  padding-top: clamp(1.6rem, 5.55vw, 8rem);
+  padding-bottom: clamp(1.6rem, 9vw, 13rem);
+}
+.home-logo .image {
+  width: 24rem;
+  width: clamp(24rem, 30vw, 43rem);
+}

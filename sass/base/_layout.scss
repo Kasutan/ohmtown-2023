@@ -91,6 +91,12 @@ body .entry-content {
 	//TODO padding bottom nul si footer blanc, 2.4/6.4 rem (fluide) sinon
 }
 
+.home .site-container {
+	.entry-content {
+		padding-top:0;
+	}
+}
+
 
 .alignfull , .bleed-container {
 	@include bleed;
