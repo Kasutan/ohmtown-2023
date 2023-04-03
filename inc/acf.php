@@ -252,6 +252,16 @@ class BE_ACF_Customizations {
 			array( 'lieu','privatisation')
 		);
 
+		/*********Bloc home-lieu  ***************/
+		$this->helper_register_block_type( 
+			'home-lieu',
+			'Bloc Le lieu pour page Home',
+			'Section avec deux diaporamas automatiques et un lien vers la page Lieu',
+			'album', 
+			true, //défilement des diaporama
+			array( 'lieu','accueil','diaporama')
+		);
+
 		/*********Bloc actualités ***************/
 		$this->helper_register_block_type( 
 			'actualites',
