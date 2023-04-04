@@ -80,7 +80,7 @@
 @media (min-width: 960px) {
   .lieu-intro {
     margin-top: -4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
   }
   .lieu-intro .texte-wrap {
     align-items: flex-end;

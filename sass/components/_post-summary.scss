@@ -15,7 +15,6 @@
 	}
 	
 	.post-summary__title {
-		font-size: 1.6rem;
 		margin-bottom: var(--margin-v);
 		text-transform: unset;
 	}
@@ -38,6 +37,7 @@
 
 
 .post-summary__title {
+	font-size: 1.6rem;
 	line-height: 1.2;
 	margin-bottom: 0;
 	a {

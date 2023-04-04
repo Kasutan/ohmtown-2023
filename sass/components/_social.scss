@@ -3,9 +3,7 @@
 	--size: 3.2rem;
 	--space: 3rem;
 
-	@include bp(lg) {
-		--size:4rem;
-	}
+	
 
 	ul {
 		display: flex;
@@ -43,6 +41,20 @@
 
 		li:last-of-type a {
 			margin-right: 0;
+		}
+	}
+
+	@include bp(lg) {
+		--size:4.4rem;
+
+		li a {
+			background-size: calc(100% * 11/44);
+			&[href*="insta"] {
+				background-size: calc(100% * 21/44);
+			}
+			&[href*="soundcloud"] {
+				background-size: calc(100% * 24/44);
+			}
 		}
 	}
 }

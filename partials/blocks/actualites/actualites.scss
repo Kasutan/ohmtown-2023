@@ -73,6 +73,11 @@
 		.loop {
 			--nb-col:2;
 			--gap:1rem;
+			--ratio:0.95;
+		}
+
+		.post-summary__title {
+			font-size: 2.4rem;
 		}
 	}
 

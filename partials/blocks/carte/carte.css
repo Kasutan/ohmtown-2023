@@ -88,6 +88,7 @@
 }
 .carte .contenu-onglet .nom {
   color: var(--wp--preset--color--black);
+  font-size: 2.4rem;
   grid-column: 1/span 2;
   text-transform: unset;
 }
@@ -168,7 +169,7 @@
   }
   .carte .contenu-onglet .image {
     border-radius: 0;
-    height: 40rem;
+    height: 44rem;
   }
   .carte .contenu-onglet .image.mobile {
     display: none;
@@ -177,7 +178,7 @@
     display: block;
   }
   .carte .contenu-onglet .plats {
-    height: 40rem;
+    height: 44rem;
     overflow: auto;
     padding: 0;
   }
@@ -215,6 +216,6 @@
     flex-basis: 35rem;
   }
   .carte .onglets-wrap {
-    padding: 4rem 8rem;
+    padding: 4rem 6rem;
   }
 }

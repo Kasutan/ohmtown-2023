@@ -65,15 +65,17 @@ body {
 		grid-template-columns: 28rem 1fr;
 
 		.site-main {
-			padding-bottom: 8rem; //TODO fluid
+			padding-bottom: 8rem;
 		}
 
 		.entry-content {
-			padding-top: 4rem;//TODO fluid
+			padding-top: 4rem;
 		}
-
+		.site-header {
+			grid-row: 1 / span 2;
+		}
 		.site-footer {
-			grid-column: 1 / span 2;
+			grid-column: 2;
 		}
 
 	}

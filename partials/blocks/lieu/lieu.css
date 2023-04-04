@@ -9,6 +9,7 @@
 }
 .lieu .titre-col {
   font-family: var(--font-titre);
+  font-size: clamp(3rem, 4.86vw, 7rem);
 }
 .lieu .col {
   padding: 0 0.8rem;
@@ -18,6 +19,9 @@
 }
 .lieu .col-2 {
   margin-bottom: 4rem;
+}
+.lieu .col-1 .texte, .lieu .col-2 .texte {
+  font-size: 1.6rem;
 }
 .lieu #toggle-priv-wrap {
   display: flex;
@@ -48,6 +52,12 @@
 .lieu .priv-panel .titre-col {
   margin-bottom: 1.6rem;
   padding-top: 3.2rem;
+}
+.lieu .priv-panel p {
+  font-size: 1.4rem;
+}
+.lieu h4 {
+  letter-spacing: 0.24em;
 }
 .lieu .fond-blanc {
   background-color: #fff;
@@ -162,6 +172,13 @@
 @media (min-width: 960px) {
   .lieu .pdf h4, .lieu .form h4 {
     font-size: 3.2rem;
+  }
+  .lieu #toggle-priv-wrap .picto {
+    margin-left: 1.6rem;
+    width: 1.2rem;
+  }
+  .lieu .priv-panel p {
+    font-size: 1.6rem;
   }
 }
 @media (min-width: 1440px) {

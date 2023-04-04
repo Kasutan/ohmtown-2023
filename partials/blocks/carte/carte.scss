@@ -84,6 +84,7 @@
 		}
 		.nom {
 			color:var(--wp--preset--color--black);
+			font-size: 2.4rem;
 			grid-column: 1 / span 2;
 			text-transform: unset;
 		}
@@ -178,10 +179,10 @@
 					display: block;
 				}
 				border-radius: 0;
-				height:40rem;
+				height:44rem;
 			}
 			.plats {
-				height: 40rem;
+				height: 44rem;
 				overflow: auto;
 				padding: 0;
 			}
@@ -236,7 +237,7 @@
 			}
 		}
 		.onglets-wrap {
-			padding: 4rem 8rem;
+			padding: 4rem 6rem;
 		}
 	}
 }

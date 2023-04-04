@@ -29,6 +29,9 @@
   }
 }
 @media (min-width: 960px) {
+  .home-actualites .loop {
+    --ratio:0.9375;
+  }
   .home-actualites .actus {
     padding-top: 8rem;
   }

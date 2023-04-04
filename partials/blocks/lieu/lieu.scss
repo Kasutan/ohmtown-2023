@@ -11,6 +11,7 @@
 	
 	.titre-col {
 		font-family: var(--font-titre);
+		font-size: clamp(3rem,4.86vw,7rem);
 	}
 	.col {
 		padding:0 0.8rem;
@@ -20,6 +21,11 @@
 	}
 	.col-2 {
 		margin-bottom: 4rem;
+	}
+	.col-1, .col-2 {
+		.texte {
+			font-size: 1.6rem;
+		}
 	}
 	#toggle-priv-wrap {
 		display: flex;
@@ -57,6 +63,14 @@
 			padding-top:3.2rem;
 
 		}
+
+		p {
+			font-size: 1.4rem;
+		}
+	}
+
+	h4 {
+		letter-spacing: 0.24em;
 	}
 
 	.fond-blanc {
@@ -186,6 +200,17 @@
 			h4 {
 				font-size: 3.2rem;
 			}
+		}
+
+		#toggle-priv-wrap {
+			.picto {
+				margin-left: 1.6rem;
+				width:1.2rem;
+			}
+		}
+
+		.priv-panel p {
+			font-size: 1.6rem;
 		}
 		
 	}

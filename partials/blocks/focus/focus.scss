@@ -78,7 +78,7 @@
 	@include bp(lg) {
 		--padding-v:8rem;
 		column-gap:4rem;
-		grid-template-columns: 2fr 1fr;
+		grid-template-columns: 60% 40%;
 		.titre-section {
 			max-width: 20rem;
 		}
