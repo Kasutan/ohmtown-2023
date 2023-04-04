@@ -21,11 +21,6 @@
 		margin-bottom: 0;
 		margin-right: 32px;
 	}
-	&.volet-ouvert {
-		a.resa.mobile {
-			display: none;
-		}
-	}
 	.menu-toggle {
 		position: relative;
 	}
@@ -54,6 +49,12 @@
 	}
 
 }
+.site-header.volet-ouvert {
+	a.resa.mobile {
+		display: none;
+	}
+}
+	
 
 .logo-header {
 	flex:0 0 var(--taille-logo);

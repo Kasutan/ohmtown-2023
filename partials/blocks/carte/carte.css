@@ -26,6 +26,7 @@
   padding: 4px 8px;
 }
 .carte button.bouton-onglet {
+  background-color: transparent;
   border: none;
   font-size: 1.6rem;
   padding: 0 16px 2px;

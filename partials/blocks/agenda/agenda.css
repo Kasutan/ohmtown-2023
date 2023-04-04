@@ -75,6 +75,7 @@
 }
 .agenda #toggle-events {
   align-items: center;
+  background-color: transparent;
   border: none;
   color: var(--wp--preset--color--sand-900);
   display: flex;
@@ -97,6 +98,7 @@
 @media (min-width: 960px) {
   .agenda #toggle-events {
     font-size: 2.4rem;
+    min-width: 39rem;
   }
 }
 @media (min-width: 960px) {

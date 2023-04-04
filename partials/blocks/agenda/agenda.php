@@ -30,7 +30,7 @@ printf('<section class="acf agenda %s">', $className);
 		?>
 			<form>
 				<label class="screen-reader-text" for="date-filter">Filtrer les événements par date</label>
-				<input type="date" id="date-filter" name="date-filter" />
+				<input type="date" id="date-filter" name="date-filter" placeholder="jj.mm.aaaa" />
 				<button id="date-filter-clear" class="outline clear">Voir tous les événements</button>
 
 			</form>

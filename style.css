@@ -1289,6 +1289,7 @@ a:visited,
 a:hover,
 a:active,
 a:focus {
+  color: black;
   text-decoration: underline;
 }
 
@@ -1609,9 +1610,6 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   margin-bottom: 0;
   margin-right: 32px;
 }
-.inner-header.volet-ouvert a.resa.mobile {
-  display: none;
-}
 .inner-header .menu-toggle {
   position: relative;
 }
@@ -1632,6 +1630,10 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
     margin-bottom: 32px;
     max-width: var(--taille-logo);
   }
+}
+
+.site-header.volet-ouvert a.resa.mobile {
+  display: none;
 }
 
 .logo-header {
@@ -1794,8 +1796,16 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
 .site-footer .footer-top {
   display: flex;
 }
+@media screen and (max-width: 350px) {
+  .site-footer .footer-top {
+    flex-wrap: wrap;
+  }
+  .site-footer .footer-top .logo-footer {
+    margin-bottom: 1rem;
+  }
+}
 .site-footer .logo-footer {
-  flex: 0 0 var(--largeur-logo);
+  flex: 0 1 var(--largeur-logo);
   margin-right: 2.4rem;
 }
 .site-footer .main-footer {

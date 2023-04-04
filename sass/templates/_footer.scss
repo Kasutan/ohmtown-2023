@@ -26,10 +26,16 @@
 	}
 	.footer-top {
 		display: flex;
+		@media screen and (max-width:350px) {
+			flex-wrap: wrap;
+			.logo-footer {
+				margin-bottom: 1rem;
+			}
+		}
 	}
 
 	.logo-footer {
-		flex:0 0 var(--largeur-logo);
+		flex:0 1 var(--largeur-logo);
 		margin-right: 2.4rem;
 	}
 
