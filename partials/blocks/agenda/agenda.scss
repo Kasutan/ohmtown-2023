@@ -12,8 +12,16 @@
 		form {
 			display: flex;
 			flex-direction: column;
+			input.form-control {
+				background-image: url('calendrier.svg');
+				background-repeat: no-repeat;
+				background-position-x:calc(100% - 20px);
+				background-position-y:center;
+				font-size: 16px;
+			}
 		}
 		button.outline.clear {
+			background-color: transparent;
 			display: none;
 			margin-top:1.6rem;
 			padding:3px 16px 5px;

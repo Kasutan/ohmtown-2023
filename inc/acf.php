@@ -188,7 +188,7 @@ class BE_ACF_Customizations {
 			'Bloc agenda',
 			'Section avec les événements à venir, un volet escamotable pour les événements passés et un filtre par date.',
 			'album', 
-			true, //JS pour toggle volet events passés et filtre par date
+			false, //JS pour datepicker, toggle volet events passés et filtre par date déplacé dans répertoire global js
 			array( 'event','evenement')
 		);
 

@@ -9,6 +9,14 @@
 */
 
 
+wp_enqueue_style( 'envia-flatpickr', get_template_directory_uri() . '/lib/flatpickr/flatpickr.min.css',array(),'4');
+
+wp_enqueue_script( 'kasutan-flatpickr', get_template_directory_uri() . '/lib/flatpickr/flatpickr.js',array('jquery'),'4',true);
+	
+wp_enqueue_script( 'kasutan-flatpickr-fr', get_template_directory_uri() . '/lib/flatpickr/fr.js',array('jquery'),'4',true);
+
+wp_enqueue_script( 'kasutan-agenda', get_template_directory_uri() . '/js/min/agenda.js', array('jquery','kasutan-flatpickr','kasutan-flatpickr-fr'), '', true );
+
 if(array_key_exists('className',$block)) {
 	$className=esc_attr($block["className"]);
 } else $className='';
@@ -30,7 +38,7 @@ printf('<section class="acf agenda %s">', $className);
 		?>
 			<form>
 				<label class="screen-reader-text" for="date-filter">Filtrer les événements par date</label>
-				<input type="date" id="date-filter" name="date-filter" placeholder="jj.mm.aaaa" />
+				<input type="text" id="date-filter" name="date-filter" placeholder="jj.mm.aaaa" />
 				<button id="date-filter-clear" class="outline clear">Voir tous les événements</button>
 
 			</form>

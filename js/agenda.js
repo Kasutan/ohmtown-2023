@@ -5,7 +5,6 @@
 
 
 
-
 		/*******************Toggle événements passés ********************/
 		var bouton = $('#toggle-events');
 		var wrap = $('#toggle-events-wrap');
@@ -24,10 +23,21 @@
 
 
 		/*******************Filtre par date ********************/
+
 		var input=$('#date-filter');
 		var listes=$('ul.events');
 		var bloc=$('.acf.agenda');
 
+
+		//https://flatpickr.js.org/examples/
+		flatpickr.localize(flatpickr.l10ns.fr);
+		$('#date-filter').flatpickr({
+			altInput: true,
+			altFormat: "d.m.Y",
+			dateFormat: "Y-m-d",
+			disableMobile: true //utiliser flatpicker à la place du date picker natif en mobile aussi
+		});
+		
 		$(input).change(function(e) {
 			var val=$(this).val();
 			setTimeout(function() {
@@ -67,6 +77,7 @@
 
 				//On vide l'input date
 				$(input).val('');
+				$('.acf.agenda .form-control').val('');
 
 				//On ouvre le volet des événements passés s'il n'est pas déjà ouvert
 				if(!(wrap).hasClass('toggled')) {
