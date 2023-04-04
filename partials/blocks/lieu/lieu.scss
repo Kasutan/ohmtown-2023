@@ -11,7 +11,10 @@
 	
 	.titre-col {
 		font-family: var(--font-titre);
-		font-size: clamp(3rem,4.86vw,7rem);
+		font-size: 3rem;
+		@supports(font-size: clamp(1rem,1vw,2rem)) {
+			font-size: clamp(3rem,4.86vw,7rem);
+		}
 	}
 	.col {
 		padding:0 0.8rem;
@@ -110,7 +113,7 @@
 
 	.form {
 		border-top: 1px dashed #D18300;
-		@include border-custom;
+		@include border-custom; 
 		padding-top:2.4rem;
 	}
 

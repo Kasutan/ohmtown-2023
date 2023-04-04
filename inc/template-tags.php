@@ -142,11 +142,11 @@ function kasutan_page_banniere() {
 
 
 	$image_id=esc_attr(get_field('banniere'));
-	$opacity=esc_attr(get_field('banniere_opacite'));
+	$opacity=intval(esc_attr(get_field('banniere_opacite')));
 	if(!$opacity) {
 		$opacity='60'; //defaut
 	}
-	$opacity.='%';
+	$opacity=$opacity / 100;
 	$style_filtre=sprintf('style="opacity:%s"',$opacity);
 	
 

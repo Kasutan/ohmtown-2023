@@ -132,9 +132,10 @@
 		width:100%;
 	}
 	.filtre {
-		background-color: var(--wp--preset--color--noir);
+		background-color: #000;
 		height:100%;
 		left:0;
+		opacity: 0.6;
 		position: absolute;
 		top:0;
 		width:100%;

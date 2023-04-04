@@ -99,7 +99,7 @@
 		}
 		.texte {
 			border-top: 1px dashed #D18300;
-			@include border-custom();
+			@include border-custom(); 
 
 			font-size: 1.6rem;
 			font-weight: 700;

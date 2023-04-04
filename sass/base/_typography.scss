@@ -89,14 +89,20 @@ h2,
 
 h1,
 .h1 {
-	font-size: var(--wp--custom--typography--font-size--colossal);
+	font-size: 6rem;
+	@supports(font-size: clamp(1rem,1vw,2rem)) {
+		font-size: var(--wp--custom--typography--font-size--colossal);
+	}
 	line-height: 1;
 	margin: 0;
 }
 
 h2,
 .h2 {
-	font-size: var(--wp--custom--typography--font-size--gigantic);
+	font-size: 3.2rem;
+	@supports(font-size: clamp(1rem,1vw,2rem)) {
+		font-size: var(--wp--custom--typography--font-size--gigantic);
+	}
 	line-height: 2.3; 
 	margin : 0 0 0.4rem;
 	margin-bottom: clamp(0.4rem,1.11rem,1.6rem);
@@ -105,7 +111,10 @@ h2,
 h3,
 .h3 {
 	color:#272216;
-	font-size: var(--wp--custom--typography--font-size--huge);
+	font-size: 2.4rem;
+	@supports(font-size: clamp(1rem,1vw,2rem)) {
+		font-size: var(--wp--custom--typography--font-size--huge);
+	}
 	font-weight: 700;
 	line-height: 1.32;
 	margin: 0 0 0.4rem;
@@ -121,7 +130,10 @@ h5,
 h6,
 .h6 {
 	color:var(--wp--preset--color--noir);
-	font-size: var(--wp--custom--typography--font-size--large);
+	font-size: 1.6rem;
+	@supports(font-size: clamp(1rem,1vw,2rem)) {
+		font-size: var(--wp--custom--typography--font-size--large);
+	}
 	font-weight: 700;
 	line-height: 1.32;
 	margin: 0 0 0.4rem;

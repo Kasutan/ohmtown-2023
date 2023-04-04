@@ -10,11 +10,16 @@
 }
 .bloc-focus .titre-section {
   font-family: var(--font-texte);
-  font-size: var(--wp--custom--typography--font-size--huge);
+  font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 4px;
   text-transform: unset;
+}
+@supports (font-size: clamp(1rem, 1vw, 2rem)) {
+  .bloc-focus .titre-section {
+    font-size: var(--wp--custom--typography--font-size--huge);
+  }
 }
 .bloc-focus .sous-titre {
   font-size: 1.6rem;

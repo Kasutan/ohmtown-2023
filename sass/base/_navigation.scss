@@ -185,7 +185,10 @@ button.menu-toggle {
 		}
 		a {
 			color:var(--wp--preset--color--blanc);
-			font-size: var(--wp--custom--typography--font-size--huge);
+			font-size: 24px; //ios 13
+			@supports(font-size: clamp(1rem,1vw,2rem)) {
+				font-size: var(--wp--custom--typography--font-size--huge);
+			}
 			display: block;
 			padding:1.6rem 3.2rem;
 			text-align: center;

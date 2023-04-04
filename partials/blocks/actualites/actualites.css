@@ -16,11 +16,16 @@
 }
 .actualites .titre-section {
   font-family: var(--font-texte);
-  font-size: var(--wp--custom--typography--font-size--huge);
+  font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: var(--margin-v);
   text-transform: unset;
+}
+@supports (font-size: clamp(1rem, 1vw, 2rem)) {
+  .actualites .titre-section {
+    font-size: var(--wp--custom--typography--font-size--huge);
+  }
 }
 .actualites .sous-titre {
   font-size: 1.6rem;

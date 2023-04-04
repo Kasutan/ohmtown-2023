@@ -499,27 +499,45 @@ h2,
 
 h1,
 .h1 {
-  font-size: var(--wp--custom--typography--font-size--colossal);
+  font-size: 6rem;
   line-height: 1;
   margin: 0;
+}
+@supports (font-size: clamp(1rem, 1vw, 2rem)) {
+  h1,
+  .h1 {
+    font-size: var(--wp--custom--typography--font-size--colossal);
+  }
 }
 
 h2,
 .h2 {
-  font-size: var(--wp--custom--typography--font-size--gigantic);
+  font-size: 3.2rem;
   line-height: 2.3;
   margin: 0 0 0.4rem;
   margin-bottom: 1.11rem;
+}
+@supports (font-size: clamp(1rem, 1vw, 2rem)) {
+  h2,
+  .h2 {
+    font-size: var(--wp--custom--typography--font-size--gigantic);
+  }
 }
 
 h3,
 .h3 {
   color: #272216;
-  font-size: var(--wp--custom--typography--font-size--huge);
+  font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.32;
   margin: 0 0 0.4rem;
   text-transform: uppercase;
+}
+@supports (font-size: clamp(1rem, 1vw, 2rem)) {
+  h3,
+  .h3 {
+    font-size: var(--wp--custom--typography--font-size--huge);
+  }
 }
 
 h4,
@@ -529,10 +547,20 @@ h5,
 h6,
 .h6 {
   color: var(--wp--preset--color--noir);
-  font-size: var(--wp--custom--typography--font-size--large);
+  font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.32;
   margin: 0 0 0.4rem;
+}
+@supports (font-size: clamp(1rem, 1vw, 2rem)) {
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    font-size: var(--wp--custom--typography--font-size--large);
+  }
 }
 
 p {
@@ -1453,12 +1481,17 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
 }
 .inner-volet .nav-menu a {
   color: var(--wp--preset--color--blanc);
-  font-size: var(--wp--custom--typography--font-size--huge);
+  font-size: 24px;
   display: block;
   padding: 1.6rem 3.2rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+@supports (font-size: clamp(1rem, 1vw, 2rem)) {
+  .inner-volet .nav-menu a {
+    font-size: var(--wp--custom--typography--font-size--huge);
+  }
 }
 .inner-volet a.resa {
   font-size: 2.4rem;
@@ -1712,9 +1745,10 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   width: 100%;
 }
 .page-banniere .filtre {
-  background-color: var(--wp--preset--color--noir);
+  background-color: #000;
   height: 100%;
   left: 0;
+  opacity: 0.6;
   position: absolute;
   top: 0;
   width: 100%;
@@ -2043,11 +2077,15 @@ form.search-form input.search-submit {
 }
 .single .single-title {
   font-size: 3.2rem;
-  font-size: clamp(3.2rem, 2.77vw, 4rem);
   font-family: var(--font-texte);
   font-weight: 700;
   margin-bottom: var(--margin-v);
   text-transform: unset;
+}
+@supports (font-size: clamp(1rem, 1vw, 2rem)) {
+  .single .single-title {
+    font-size: clamp(3.2rem, 2.77vw, 4rem);
+  }
 }
 .single .sous-titre {
   font-size: 1.6rem;

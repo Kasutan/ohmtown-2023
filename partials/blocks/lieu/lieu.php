@@ -63,7 +63,7 @@ printf('<section class="acf lieu %s">', $className);
 					printf('<div class="image desktop">%s</div>',wp_get_attachment_image( $image_desktop, 'large'));
 				}
 				printf('<p>%s</p>',$texte_pdf);
-				printf('<a href="%s" class="bouton secondaire sans-fleche">',$url_pdf);
+				printf('<a href="%s" class="bouton secondaire sans-fleche" target="_blank" rel="noopener noreferrer">',$url_pdf);
 				?>
 					<span class="picto">
 					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

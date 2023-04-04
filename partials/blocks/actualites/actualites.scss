@@ -11,7 +11,10 @@
 	}
 	.titre-section {
 		font-family: var(--font-texte);
-		font-size: var(--wp--custom--typography--font-size--huge);
+		font-size: 2.4rem;
+		@supports(font-size: clamp(1rem,1vw,2rem)) {
+			font-size: var(--wp--custom--typography--font-size--huge);
+		}
 		font-weight: 700;
 		line-height: 1.2;
 		margin-bottom: var(--margin-v);
