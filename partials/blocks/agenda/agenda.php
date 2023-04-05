@@ -98,7 +98,7 @@ printf('<section class="acf agenda %s">', $className);
 			<?php
 		echo '</button></div>';
 
-		echo '<div  id="past-events" aria-expanded="false">';
+		echo '<div id="past-events" aria-expanded="false" role="region">';
 			echo '<div class="row">';
 				printf('<h2 class="titre-section h3">%s</h2>',$titre_passe);
 			echo '</div>';

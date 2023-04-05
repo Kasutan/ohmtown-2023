@@ -37,7 +37,7 @@ printf('<section class="acf lieu %s">', $className);
 			printf('<h3 class="titre-col">%s</h3>',$titre[$i]);
 			printf('<p class="texte">%s</p>',$texte[$i]);
 			if($i===2) {
-				echo '<div id="toggle-priv-wrap"><button id="toggle-priv" aria-controls="priv-panel" aria-expanded="false" class="secondaire">';
+				echo '<div id="toggle-priv-wrap"><button id="toggle-priv" aria-controls="priv-panel" role="region" aria-expanded="false" class="secondaire">';
 					echo $label_priv;
 					?>
 					<span class="picto">

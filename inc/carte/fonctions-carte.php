@@ -12,7 +12,7 @@ function kasutan_carte_affiche_li($post_id) {
 	echo '<li class="elem-carte">';
 			printf('<h3 class="nom">%s</h3>',$nom);
 			printf('<div class="desc">%s</div>',$desc);
-			if ($prix) printf('<div class="prix">%s€</prix>',$prix);
+			if ($prix) printf('<div class="prix">%s€</div>',$prix);
 	echo '</li>';
 }
 

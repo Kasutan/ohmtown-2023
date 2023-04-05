@@ -135,7 +135,7 @@ function kasutan_page_banniere() {
 	}
 
 	if(!function_exists('get_field')) {
-		echo '<a href="/" class="retour">< Retour</a>';
+		echo '<a href="/" class="retour">&lt; Retour</a>';
 		printf('<h1>%s</h1>',$titre);
 		return;
 	}
@@ -161,13 +161,13 @@ function kasutan_page_banniere() {
 			//Filtre dont l'opacité vient d'une option de la publication
 			printf('<div class="filtre" %s></div>',$style_filtre);
 
-			echo '<a href="/" class="retour">< Retour</a>';
+			echo '<a href="/" class="retour">&lt; Retour</a>';
 
 			printf('<h1 class="titre-banniere">%s</h1>',$titre);
 
 		echo '</div>';
 	} else {
-		echo '<a href="/" class="retour">< Retour</a>';
+		echo '<a href="/" class="retour">&lt; Retour</a>';
 		printf('<h1>%s</h1>',$titre);
 	}
 }
@@ -203,13 +203,13 @@ function kasutan_single_banniere() {
 		printf('<div class="page-banniere">');
 			echo wp_get_attachment_image( $image_id, 'banniere',false,array('decoding'=>'async','loading'=>'eager'));
 
-			echo '<a href="/" class="retour">< Retour</a>';
+			echo '<a href="/" class="retour">&lt; Retour</a>';
 
 			printf('<span class="titre-banniere h1">%s</span>',$titre_banniere);
 
 		echo '</div>';
 	} else {
-		echo '<a href="/" class="retour">< Retour</a>';
+		echo '<a href="/" class="retour">&lt; Retour</a>';
 	}
 	
 }

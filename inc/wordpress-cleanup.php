@@ -36,7 +36,6 @@ add_filter( 'http_request_args', 'ea_dont_update_theme', 5, 2 );
  *
  */
 function ea_header_meta_tags() {
-	echo '<meta charset="' . get_bloginfo( 'charset' ) . '">';
 	echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
 	echo '<link rel="profile" href="http://gmpg.org/xfn/11">';
 	echo '<link rel="pingback" href="' . get_bloginfo( 'pingback_url' ) . '">';
