@@ -1,0 +1,63 @@
+{
+    "key": "group_642ced1fe6215",
+    "title": "Bloc jobs",
+    "fields": [
+        {
+            "key": "field_642ced1feafe0",
+            "label": "Bloc jobs",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Section avec un titre (pour le SEO), toutes les publications de type Job et un formulaire de candidature",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_642ced1feb019",
+            "label": "Titre de la section",
+            "name": "titre",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Pour le SEO et les lecteurs d'écran uniquement",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/jobs"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1680665986
+}

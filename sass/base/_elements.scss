@@ -18,15 +18,8 @@ hr {
 }
 
 .entry-content ul:not([class]) {
-	li {
-		margin-bottom: 1em;
-		&::before {
-			content: '■';
-			color:var(--wp--preset--color--tertiaire);
-			display: inline-block;
-			margin-right: 4px;
-		}
-	}
+	list-style: disc;
+	padding-left: 1.2rem;
 }
 /*
 ul:not([class]),

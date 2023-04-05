@@ -1,0 +1,33 @@
+.jobs {
+  width: calc(100% + 2 * var(--padding-x));
+  transform: translateX(calc(-1 * var(--padding-x)));
+  --margin-v:4px;
+  background-color: var(--wp--preset--color--sand-50);
+  margin-top: -2.4rem;
+}
+.jobs .actus {
+  padding: 4rem 0 0;
+}
+.jobs .loop {
+  --largeur-vignette:20rem;
+  --nb-col:3;
+}
+@media (min-width: 768px) {
+  .jobs {
+    padding: 0 var(--padding-x);
+  }
+  .jobs .loop {
+    --largeur-vignette:1fr;
+  }
+}
+@media (min-width: 960px) {
+  .jobs {
+    margin-top: -4rem;
+  }
+  .jobs .loop {
+    --ratio:0.9375;
+  }
+  .jobs .actus {
+    padding-top: 8rem;
+  }
+}

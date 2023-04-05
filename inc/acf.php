@@ -292,6 +292,16 @@ class BE_ACF_Customizations {
 			array( 'focus','blog','article')
 		);
 
+		/*********Bloc jobs***************/
+		$this->helper_register_block_type( 
+			'jobs',
+			'Bloc jobs',
+			'Section avec un titre (pour le SEO), toutes les publications de type Job et un formulaire de candidature',
+			'album', 
+			false,
+			array( 'job','candidature')
+		);
+
 		/*********Bloc vide ***************/
 		$this->helper_register_block_type( 
 			'vide',
