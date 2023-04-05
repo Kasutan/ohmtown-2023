@@ -364,6 +364,11 @@ body .entry-content {
   padding-top: 0;
 }
 
+@media (min-width: 1920px) {
+  .entry-content {
+    max-width: 164rem;
+  }
+}
 .alignfull, .bleed-container {
   width: 100vw;
   margin-left: 50%;

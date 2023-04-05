@@ -60,6 +60,7 @@
   }
   .lieu-intro .texte-wrap .texte {
     flex-basis: 50%;
+    flex-grow: 1;
   }
   .lieu-intro .texte-wrap h2.titre-section {
     flex-basis: 30rem;

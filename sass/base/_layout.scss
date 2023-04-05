@@ -90,12 +90,17 @@ body {
 
 body .entry-content {
 	padding: 0 var(--padding-x) 1px;
-	//TODO padding bottom nul si footer blanc, 2.4/6.4 rem (fluide) sinon
 }
 
 .home .site-container {
 	.entry-content {
 		padding-top:0;
+	}
+}
+
+@include bp(xxl) {
+	.entry-content {
+		max-width: 164rem;
 	}
 }
 
