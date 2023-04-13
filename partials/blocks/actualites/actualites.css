@@ -11,6 +11,9 @@
   }*/
   /**************Variante du bloc******************/
 }
+.actualites.temp-hidden {
+  display: none;
+}
 .actualites .intro {
   padding: 0 calc(var(--padding-x) + 0.8rem) 2.4rem;
 }
@@ -86,6 +89,9 @@
 }
 .actualites.layout-2 {
   margin-bottom: 0;
+}
+.actualites.layout-2.temp-hidden {
+  display: none;
 }
 .actualites.layout-2 .intro .texte {
   border-bottom: solid 6px var(--wp--preset--color--jaune-400);

@@ -10,7 +10,7 @@
 
 //On récupère une éventuelle info sur le tag html passée en $args de get_template_part
 $tag='li';
-$suite="Lire l\'article";
+$suite="Lire l'article";
 
 if(!empty($args) && array_key_exists('tag',$args)) {
 	$tag=$args['tag'];

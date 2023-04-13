@@ -5,6 +5,9 @@
   background-color: var(--wp--preset--color--citron-main);
   padding: var(--padding-v) var(--padding-x);
 }
+.bloc-focus.temp-hidden {
+  display: none;
+}
 .bloc-focus .desktop {
   display: none;
 }

@@ -1,6 +1,9 @@
 @import "./././sass/abstracts/variables-et-mixins";
 
 .actualites {
+	&.temp-hidden {
+		display: none;
+	}
 	@include bleed-ohm;
 	--margin-v:4px;
 
@@ -93,6 +96,9 @@
 
 	/**************Variante du bloc******************/
 	&.layout-2 {
+		&.temp-hidden {
+			display: none;
+		}
 		margin-bottom: 0;
 		.intro .texte {
 			border-bottom:solid 6px var(--wp--preset--color--jaune-400);

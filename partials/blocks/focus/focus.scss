@@ -1,6 +1,9 @@
 @import "./././sass/abstracts/variables-et-mixins";
 
 .bloc-focus {
+	&.temp-hidden {
+		display: none;
+	}
 	--padding-v:2.4rem;
 	@include bleed-ohm;
 	background-color: var(--wp--preset--color--citron-main);
