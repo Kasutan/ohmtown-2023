@@ -50,10 +50,11 @@ add_action('tha_entry_bottom','kasutan_single_entry_bottom');
 function kasutan_single_entry_bottom(){
 	$post_type=get_post_type();
 	
-	$labels=$blocs=false;
+	$labels=$blocs=$form=false;
 	if(function_exists('get_field')) {
 		$labels=get_field('ohm_label_partage','option');
 		$blocs=get_field('ohm_bloc_newsletter','option');
+		$form=get_field('ohm_job_form','option');
 	}
 
 	if($labels && function_exists('kasutan_espaces_inseccables') && function_exists('kasutan_boutons_partage')) {
@@ -67,7 +68,14 @@ function kasutan_single_entry_bottom(){
 
 
 	if($post_type==="jobs") {
-		echo '<div class="form">Formulaire de candidature avec titre pré-rempli</div>'; 
+		if($form && isset($form['form'])) {
+			echo '<div class="form">';
+				if(isset($form['titre'])) printf('<h2>%s</h2>',$form['titre']);
+				if(isset($form['texte'])) printf('<p>%s</p>',$form['texte']);
+				echo do_shortcode($form['form']);
+			echo '</div>'; 
+
+		}
 	} else {
 		//Event ou article de blog, on affiche un bloc réutilisable et un formulaire d'inscription à la newsletter
 

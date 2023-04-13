@@ -152,6 +152,22 @@
 			font-size: 1.4rem;
 			margin-bottom: 3.6rem;
 		}
+		.forminator-ui.forminator-design--default {
+			.forminator-textarea,
+			.forminator-input,
+			.upload {
+				background-color: #fff !important;
+			}
+		}
+
+		@include bp(md) {
+			padding:4rem;
+		}
+
+		@include bp(lg) {
+			--p:clamp(4rem,5.5vw,8rem);
+			padding:var(--p) var(--p) 4rem;
+		}
 	}
 
 	@include bp(lg) {

@@ -19,7 +19,6 @@ $texte_none=wp_kses_post( get_field('texte_none') );
 if(!$texte_none) {
 	$texte_none='Aucune offre actuellement.';
 }
-//TODO champs pour la partie candidature
 
 $titre_form=wp_kses_post( get_field('titre_form') );
 $texte_form=wp_kses_post( get_field('texte_form') );

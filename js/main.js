@@ -72,16 +72,16 @@
 			$("#volet-navigation").removeAttr('aria-expanded');
 		}
 		
-
-		/****************** Helpers formulaire *************************/	
 		
-		var colForm=$('.forminator-col.pleine-largeur');
-		if(colForm.length > 0) {
-			$(colForm).each(function(index) {
-				$(this).parent('.forminator-row').addClass('pleine-largeur');
-			});
+		/************ Single Job : copier nom du job dans input intitulé du poste **************/
+		if($('body').hasClass('single-jobs')) {
+			var titre=$('.single-title').html();
+			var inputTitre=$('.id-poste input');
+			if(inputTitre.length > 0) {
+				$(inputTitre).val(titre);
+			}
 		}
-		
+
 
 	}); //fin document ready
 })( jQuery );
@@ -90,7 +90,7 @@
 Animations
 =================================================*/
 //Only Use the IntersectionObserver if it is supported
-
+/*
 if ('IntersectionObserver' in window) {
 	const config = {
 		//rootMargin: '50px 20px 75px 30px',
@@ -133,4 +133,4 @@ if ('IntersectionObserver' in window) {
 	//if Intersection Observer is not supported, add classes right away
 	jQuery('.js-animate-on-visible-cascade').addClass('cascade'); 
 	jQuery('.js-animate-on-visible').addClass('fade-in');
-}
+}*/
