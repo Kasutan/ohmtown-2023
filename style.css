@@ -1077,7 +1077,9 @@ body .forminator-ui.forminator-custom-form[data-design=default] .forminator-inpu
   padding-right: 51px;
 }
 
-body .forminator-ui#forminator-module-305.forminator-design--default .forminator-input::placeholder {
+body .forminator-ui#forminator-module-305.forminator-design--default .forminator-input::placeholder,
+body .forminator-ui#forminator-module-565.forminator-design--default .forminator-input::placeholder,
+body .forminator-ui#forminator-module-565.forminator-design--default .forminator-textarea::placeholder {
   color: #000000;
   opacity: 1 !important;
 }
@@ -1119,7 +1121,7 @@ body .forminator-ui.forminator-custom-form[data-design=default] .forminator-text
   justify-content: flex-end;
 }
 
-body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button {
+body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button-submit {
   background-color: var(--wp--preset--color--citron-main);
   border: none;
   border-radius: 8px;
@@ -1136,34 +1138,99 @@ body .forminator-ui.forminator-custom-form[data-design=default] .forminator-butt
   padding: 8px 8px 12px;
   padding-left: 4.2rem;
 }
-body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:focus, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:hover, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:active {
+body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button-submit:focus, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button-submit:hover, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button-submit:active {
   background-color: var(--wp--preset--color--citron-200);
   box-shadow: 4px 4px 2px rgba(253, 226, 56, 0.75);
   outline-color: transparent;
 }
-body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:active {
+body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button-submit:active {
   box-shadow: 0px 2px 0px #FDE238;
 }
-body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:disabled, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button.disabled {
+body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button-submit:disabled, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button-submit.disabled {
   background-color: var(--wp--preset--color--citron-main);
   box-shadow: none;
   color: var(--wp--preset--color--gray-400);
   cursor: default;
 }
 @media (min-width: 960px) {
-  body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button {
+  body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button-submit {
     border-radius: 16px;
     box-shadow: 10px 9px 4px rgba(253, 226, 56, 0.75);
     font-size: 1.6rem;
     padding: 12px 12px 16px;
     padding-left: 4.2rem;
   }
-  body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:focus, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:hover, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:active {
+  body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button-submit:focus, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button-submit:hover, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button-submit:active {
     box-shadow: 10px 9px 4px rgba(253, 226, 56, 0.75);
   }
-  body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button:active {
+  body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button-submit:active {
     box-shadow: 1px 4px 0px #FDE238;
   }
+}
+
+body .forminator-ui.forminator-custom-form[data-design=default] .forminator-file-upload {
+  flex-direction: column;
+}
+
+body .forminator-ui#forminator-module-565.forminator-design--default .forminator-button-upload {
+  background-color: transparent;
+  --color:var(--wp--preset--color--sand-900);
+  border: solid 1px;
+  border-color: var(--color);
+  border-radius: 100px;
+  color: var(--color);
+  display: block;
+  margin: 0 auto 1rem;
+  width: 22rem;
+}
+body .forminator-ui#forminator-module-565.forminator-design--default .forminator-button-upload:focus, body .forminator-ui#forminator-module-565.forminator-design--default .forminator-button-upload:hover {
+  --color:var(--wp--preset--color--jaune-800);
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--color);
+}
+body .forminator-ui#forminator-module-565.forminator-design--default .forminator-button-upload:active {
+  --color:var(--wp--preset--color--marron-main);
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--color);
+}
+body .forminator-ui#forminator-module-565.forminator-design--default .forminator-button-upload:disabled, body .forminator-ui#forminator-module-565.forminator-design--default .forminator-button-upload.disabled {
+  --color:var(--wp--preset--color--gray-400);
+  cursor: default;
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--color);
+}
+
+.forminator-ui#forminator-module-565.forminator-design--default .upload {
+  background-color: var(--wp--preset--color--sand-50);
+  border: 1px dashed #D18300;
+  border-radius: 16px;
+  padding: 1.6rem 2.4rem;
+  text-align: center;
+}
+.forminator-ui#forminator-module-565.forminator-design--default .upload label.forminator-label {
+  border: 0;
+  clip: unset;
+  -webkit-clip-path: unset;
+          clip-path: unset;
+  color: #000;
+  font-size: 1.4rem;
+  height: unset;
+  margin: 0 0 1rem;
+  overflow: unset;
+  padding: 0;
+  position: relative !important;
+  width: unset;
+  word-wrap: unset !important;
+}
+.forminator-ui#forminator-module-565.forminator-design--default .upload .forminator-description {
+  color: #000;
+  display: block;
+}
+.forminator-ui#forminator-module-565.forminator-design--default .upload span[data-empty-text] {
+  color: #000;
 }
 
 .temp .forminator-custom-form {

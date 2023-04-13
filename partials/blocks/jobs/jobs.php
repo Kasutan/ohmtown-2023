@@ -21,6 +21,11 @@ if(!$texte_none) {
 }
 //TODO champs pour la partie candidature
 
+$titre_form=wp_kses_post( get_field('titre_form') );
+$texte_form=wp_kses_post( get_field('texte_form') );
+$form=wp_kses_post( get_field('form') );
+
+
 $args_template=array('suite'=>"en savoir plus"); // Si besoin : dynamique
 
 printf('<section class="acf jobs %s">', $className);
@@ -46,13 +51,18 @@ printf('<section class="acf jobs %s">', $className);
 
 
 	} else {
-		printf('<p>%s</p>',$texte_none);
+		printf('<p class="none">%s</p>',$texte_none);
 	}
 				
 	wp_reset_postdata(  );
 
 	echo '</div>'; //fin .actus
 
-	echo '<p style="font-size:3rem;padding:4rem 0">TODO formulaire de candidature ici</p>';
+	echo '<div class="form">';
+		printf('<h2>%s</h2>',$titre_form);
+		printf('<p>%s</p>',$texte_form);
+		echo $form;
+	echo '</div>';
+
 echo '</section>';
 	

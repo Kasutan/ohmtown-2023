@@ -59,7 +59,67 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
-        }
+        },
+		{
+			"key": "field_642452f71ffe3",
+			"label": "Titre du bloc formulaire",
+			"name": "titre_form",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6424533c14ec1",
+			"label": "Texte du bloc formulaire",
+			"name": "texte_form",
+			"aria-label": "",
+			"type": "textarea",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"maxlength": "",
+			"rows": 5,
+			"placeholder": "",
+			"new_lines": "br"
+		},
+		{
+			"key": "field_642453f081de9",
+			"label": "Code court du formulaire",
+			"name": "form",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		}
     ],
     "location": [
         [
