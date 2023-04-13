@@ -25,12 +25,14 @@
 		}
 	}
 	input:checked + label {
+		color:var(--wp--preset--color--orange-main);
 		font-weight: 700;
 	}
 
 	@include bp(lg) {
 		justify-content: center;
 		margin-bottom:2rem;
+		padding-top: 4rem;
 		label {
 			padding:0.5rem 2.5rem;
 		}

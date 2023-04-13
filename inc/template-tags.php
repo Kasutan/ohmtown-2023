@@ -125,9 +125,20 @@ function kasutan_page_titre() {
 *
 */
 function kasutan_page_banniere() {
-	$titre=get_the_title();
 
-	
+	if( is_home() ) {
+		$titre = get_the_title( get_option( 'page_for_posts' ) );
+
+	} elseif( is_search() ) {
+		$titre = 'Résultats de recherche';
+
+	} elseif( is_archive() ) {
+		$titre = get_the_archive_title();
+	} else {
+		//Single
+		$titre=get_the_title();
+
+	}
 
 	if(is_front_page(  )) {
 		printf('<h1 class="screen-reader-text">%s</h1>',$titre);
@@ -277,7 +288,7 @@ function kasutan_affiche_filtre_articles() {
 		);
 		?>
 		<input type="radio" id="toutes" name="filtre-categorie" value="toutes" checked>
-		<label for="toutes" class="toutes">Toutes</label>
+		<label for="toutes" class="toutes">Tous les articles</label>
 		<?php
 		foreach($terms as $term) : 
 			$pictos=$classe='';

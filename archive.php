@@ -19,6 +19,7 @@ function ea_archive_body_class( $classes ) {
 }
 add_filter( 'body_class', 'ea_archive_body_class' );
 
+
 /**
  * Archive Header
  *
@@ -26,26 +27,8 @@ add_filter( 'body_class', 'ea_archive_body_class' );
 add_action( 'tha_content_while_before', 'ea_archive_header' );
 function ea_archive_header() {
 
-	$title = false;
-
-	if( is_home() ) {
-		$title = get_the_title( get_option( 'page_for_posts' ) );
-
-	} elseif( is_search() ) {
-		$title = 'Résultats de recherche';
-
-	} elseif( is_archive() ) {
-		$title = get_the_archive_title();
-	}
-
-	if( empty( $title ) )
-		return;
-
-
 	echo '<header class="entry-header">';
-	do_action ('ea_archive_header_before' );
-		echo '<h1 class="entry-title">' . $title . '</h1>';
-	do_action ('ea_archive_header_after' );
+		kasutan_page_banniere();
 	echo '</header>';
 
 	echo '<div class="container">';
@@ -60,8 +43,6 @@ function ea_archive_header() {
 
 }
 
-// Banniere
-add_action( 'ea_archive_header_before', 'kasutan_page_banniere', 5 );
 
 
 // Fermer balise loop

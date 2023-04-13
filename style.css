@@ -1896,7 +1896,7 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1250px) {
   .site-footer {
     --largeur-logo:12rem;
     padding: 3.4rem var(--padding-x) 5.4rem;
@@ -1979,11 +1979,20 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   }
 }
 
-.blog h1.entry-title {
-  color: var(--wp--preset--color--primaire);
+.blog .loop {
+  --nb-col:1;
+  justify-content: center;
 }
-.blog h1.entry-title::before {
-  background-image: url("icons/picto-fruit-rouge.png");
+@media (min-width: 500px) {
+  .blog .loop {
+    --nb-col:2;
+    --largeur-vignette: 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .blog .loop {
+    --nb-col:3;
+  }
 }
 
 form.search-form {
@@ -2318,12 +2327,14 @@ form.search-form input.search-submit {
   text-decoration: underline;
 }
 .filtre-archive input:checked + label {
+  color: var(--wp--preset--color--orange-main);
   font-weight: 700;
 }
 @media (min-width: 960px) {
   .filtre-archive {
     justify-content: center;
     margin-bottom: 2rem;
+    padding-top: 4rem;
   }
   .filtre-archive label {
     padding: 0.5rem 2.5rem;
