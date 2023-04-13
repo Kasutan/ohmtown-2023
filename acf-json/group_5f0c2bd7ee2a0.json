@@ -25,7 +25,7 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "preview_size": "thumbnail"
+            "preview_size": "medium"
         },
         {
             "key": "field_63bd3e8fc525b",
@@ -67,6 +67,23 @@
             "max_size": "",
             "mime_types": "jpg, jpeg",
             "preview_size": "medium"
+        },
+        {
+            "key": "field_64383cf830b90",
+            "label": "Réservation : cible du bouton",
+            "name": "ohm_resa_cible",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         },
         {
             "key": "field_6415d7dfb7747",
@@ -145,5 +162,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679509835
+    "modified": 1681407258
 }

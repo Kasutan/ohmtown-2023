@@ -19,20 +19,20 @@ add_filter( 'body_class', function( $classes ) {
 add_action('tha_header_top','kasutan_header_top');
 function kasutan_header_top() {
 	echo '<div class="inner-header">';
-	$logo=$resa_mobile=$resa_desktop='';
+	$logo=$resa_mobile=$resa_desktop=$resa_url='';
 	if(function_exists('get_field')) {
 		$logo=esc_attr(get_field('ohm_logo_header','option'));
 		$resa_mobile=esc_attr(get_field('ohm_resa_label_mobile','option'));
 		$resa_desktop=esc_attr(get_field('ohm_resa_label_desktop','option'));
-		//TODO script ou cible du bouton de résa
+		$resa_url=esc_url(get_field('ohm_resa_cible','option'));
 	}
 
 	if($logo) {
 		printf('<div class="logo-header"><a href="/" class="logo-link">%s</a></div>', wp_get_attachment_image( $logo,'thumbnail'));
 	}
 
-	if($resa_mobile) {
-		kasutan_bouton_resa($resa_mobile,'mobile');
+	if($resa_mobile && $resa_url) {
+		kasutan_bouton_resa($resa_mobile,$resa_url,'mobile');
 	}
 
 	?>
@@ -54,8 +54,8 @@ function kasutan_header_top() {
 		</nav>
 		<?php
 
-		if($resa_desktop) {
-			kasutan_bouton_resa($resa_desktop,'sans-fleche');
+		if($resa_desktop && $resa_url) {
+			kasutan_bouton_resa($resa_desktop, $resa_url, 'sans-fleche');
 		}
 
 		if( has_nav_menu( 'social' ) ) {
@@ -66,9 +66,9 @@ function kasutan_header_top() {
 	echo '</div>'; //fin inner-header;
 }
 
-function kasutan_bouton_resa($label,$classe='') {
-	//TODO script ou cible du bouton de résa
-	printf('<a href="https://www.overfull.fr/" class="resa bouton primaire %s" target="_blank" rel="noopener noreferrer">%s</a>',
+function kasutan_bouton_resa($label,$url,$classe='') {
+	printf('<a href="%s" class="resa bouton primaire %s" target="_blank" rel="noopener noreferrer">%s</a>',
+		$url,
 		$classe,
 		$label
 	);
