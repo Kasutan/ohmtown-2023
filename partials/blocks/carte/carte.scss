@@ -12,7 +12,7 @@
 			margin-bottom: 0;
 		}
 		h2.titre-section {
-			line-height: 1.2;
+			line-height: 1;
 			text-align: right;
 		}
 		.intro-section {
@@ -118,6 +118,10 @@
 			> .intro-section {
 				flex-grow:1;
 				font-size: 1.6rem;
+			}
+			h2.titre-section {
+				position: relative;
+				top: 0.8vw;
 			}
 		}
 
@@ -235,6 +239,9 @@
 		.row {
 			> .titre-section {
 				flex-basis: 35rem;
+			}
+			h2.titre-section {
+				top:11px;
 			}
 		}
 		.onglets-wrap {

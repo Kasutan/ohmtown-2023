@@ -10,7 +10,7 @@
   margin-bottom: 0;
 }
 .carte .row h2.titre-section {
-  line-height: 1.2;
+  line-height: 1;
   text-align: right;
 }
 .carte .row .intro-section {
@@ -124,6 +124,10 @@
     flex-grow: 1;
     font-size: 1.6rem;
   }
+  .carte .row h2.titre-section {
+    position: relative;
+    top: 0.8vw;
+  }
   .carte .onglets-wrap-decor {
     position: relative;
   }
@@ -217,6 +221,9 @@
 @media (min-width: 1440px) {
   .carte .row > .titre-section {
     flex-basis: 35rem;
+  }
+  .carte .row h2.titre-section {
+    top: 11px;
   }
   .carte .onglets-wrap {
     padding: 4rem 6rem;
