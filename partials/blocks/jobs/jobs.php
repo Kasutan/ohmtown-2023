@@ -15,6 +15,10 @@ if(array_key_exists('className',$block)) {
 
 
 $titre=wp_kses_post( get_field('titre') );
+$texte_none=wp_kses_post( get_field('texte_none') );
+if(!$texte_none) {
+	$texte_none='Aucune offre actuellement.';
+}
 //TODO champs pour la partie candidature
 
 $args_template=array('suite'=>"en savoir plus"); // Si besoin : dynamique
@@ -42,7 +46,7 @@ printf('<section class="acf jobs %s">', $className);
 
 
 	} else {
-		echo '<p>Aucun job actuellement.</p>'; //TODO dynamique
+		printf('<p>%s</p>',$texte_none);
 	}
 				
 	wp_reset_postdata(  );
