@@ -166,6 +166,7 @@
     display: block;
   }
   .lieu .form {
+    border-image: unset;
     border-top: none;
     padding-top: 0;
   }

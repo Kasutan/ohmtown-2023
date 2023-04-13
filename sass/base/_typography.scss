@@ -103,7 +103,7 @@ h2,
 	@supports(font-size: clamp(1rem,1vw,2rem)) {
 		font-size: var(--wp--custom--typography--font-size--gigantic);
 	}
-	line-height: 2.3; 
+	line-height: 1.2; 
 	margin : 0 0 0.4rem;
 	margin-bottom: clamp(0.4rem,1.11rem,1.6rem);
 }

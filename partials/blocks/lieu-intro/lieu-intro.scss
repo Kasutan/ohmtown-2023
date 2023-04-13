@@ -69,6 +69,8 @@
 				flex-basis:30rem;
 				text-align: right;
 				margin-bottom: 0;
+				position: relative;
+				top: 0.8vw;
 			}
 		}
 		.image {
@@ -92,5 +94,10 @@
 			
 		}
 		
+	}
+	@include bp(xl) {
+		.texte-wrap h2.titre-section {
+			top:11px;
+		}
 	}
 }

@@ -7,10 +7,10 @@
 		var cible=$('#privatisation');
 		var wrap=$('#toggle-priv-wrap');
 		$(bouton).click(function(){
-			togglePriv();
+			togglePriv(true);
 		})
 
-		function togglePriv() {
+		function togglePriv(anim) {
 			if((wrap).hasClass('toggled')) {
 				$(bouton).attr('aria-expanded',"false");
 				$(cible).attr('aria-expanded',"false");
@@ -18,7 +18,11 @@
 				$(bouton).attr('aria-expanded',"true");
 				$(cible).attr('aria-expanded',"true");
 			}
-			$(cible).slideToggle();
+			if(anim) {
+				$(cible).slideToggle();
+			} else {
+				$(cible).toggle();
+			}
 			$(wrap).toggleClass('toggled');
 		}
 
@@ -26,11 +30,23 @@
 
 		const hash = window.location.hash;
 		if(hash.indexOf('privatisation') >= 0) {
-			togglePriv();
-			$('html, body').animate({
-				scrollTop: $(cible).offset().top - 80
-				}, 1000);
+			togglePriv(false);
+			$(document).scrollTop( $(cible).offset().top - 80); // sans animation
 		}
+
+		/**********Ouvrir bloc privatiser si on clique sur "privatisation" depuis la page le lieu ********/
+		$('.current-menu-item a').click(function(e) {
+			//Si le volet n'est pas déjà ouvert, on l'ouvre
+			if(!(wrap).hasClass('toggled')) {
+				$(bouton).attr('aria-expanded',"true");
+				$(cible).attr('aria-expanded',"true");
+				$(cible).show();
+				$(wrap).addClass('toggled');
+			}
+			//On place la fenêtre au bon endroit, sans animation
+			$(document).scrollTop( $(cible).offset().top - 80); 
+
+		})
 
 
 	}); //fin document ready

@@ -66,6 +66,8 @@
     flex-basis: 30rem;
     text-align: right;
     margin-bottom: 0;
+    position: relative;
+    top: 0.8vw;
   }
   .lieu-intro .image {
     height: unset;
@@ -85,5 +87,10 @@
   }
   .lieu-intro .texte-wrap {
     align-items: flex-end;
+  }
+}
+@media (min-width: 1440px) {
+  .lieu-intro .texte-wrap h2.titre-section {
+    top: 11px;
   }
 }

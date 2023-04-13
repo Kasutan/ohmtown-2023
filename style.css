@@ -518,7 +518,7 @@ h1,
 h2,
 .h2 {
   font-size: 3.2rem;
-  line-height: 2.3;
+  line-height: 1.2;
   margin: 0 0 0.4rem;
   margin-bottom: 1.11rem;
 }
@@ -920,7 +920,7 @@ input[type=submit] {
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  scroll-behavior: unset;
 }
 
 *,
