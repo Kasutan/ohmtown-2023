@@ -111,7 +111,7 @@
             "name": "cat",
             "aria-label": "",
             "type": "taxonomy",
-            "instructions": "Les 2 ou 3 articles les plus récents dans cette catégorie seront affichés dans le bloc.\r\nAttention à placer chaque article dans une seule catégorie à la fois pour ne pas l'afficher plusieurs fois dans les différents blocs de la page Blog.",
+            "instructions": "Les 2 articles les plus récents dans cette catégorie seront affichés dans le bloc.\r\nAttention à placer chaque article dans une seule catégorie à la fois pour ne pas l'afficher plusieurs fois dans les différents blocs de la page Blog.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -127,6 +127,22 @@
             "field_type": "radio",
             "allow_null": 0,
             "multiple": 0
+        },
+        {
+            "key": "field_64384840c6958",
+            "label": "Lien vers la page avec tous les articles",
+            "name": "lien",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -147,5 +163,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1680282994
+    "modified": 1681410170
 }

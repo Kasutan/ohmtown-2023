@@ -19,6 +19,7 @@ $sous_titre=wp_kses_post( get_field('sous-titre') );
 $texte=wp_kses_post( get_field('texte') );
 $cat=esc_attr(get_field('cat'));
 $layout=esc_attr(get_field('layout'));
+$lien=get_field('lien');
 
 printf('<section class="acf actualites layout-%s %s">', $layout, $className);
 	echo '<div class="intro">';
@@ -46,12 +47,10 @@ printf('<section class="acf actualites layout-%s %s">', $layout, $className);
 
 		echo '</ul></div>'; //fin .slider
 
-		//TODO : lien vers page blog (toutes les actus)
-		/*
+		
 		if($lien) {
-			printf('<a href="%s" class="bouton secondaire">%s</a>',$lien['url'],$lien['title']);
-		}*/
-		//echo '<div class="plus-wrap"><a href="#" class="bouton secondaire plus">Plus d\'articles</a></div>';
+			printf('<div class="plus-wrap"><a href="%s" class="bouton secondaire">%s</a></div>',$lien['url'],$lien['title']);
+		}
 
 	} else {
 		echo '<p>Aucune actualité dans cette catégorie.</p>';

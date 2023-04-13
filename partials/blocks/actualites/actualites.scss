@@ -40,12 +40,12 @@
 
 	}
 
-	/*
+	
 	.plus-wrap {
 		display: flex;
 		justify-content: flex-end;
-		padding-right: var(--padding-x);
-	}*/
+		margin-top: 4rem;
+	}
 
 	@include bp(sm) {
 		.actus {

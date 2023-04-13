@@ -3,12 +3,6 @@
   transform: translateX(calc(-1 * var(--padding-x)));
   --margin-v:4px;
   margin-bottom: 2.4rem;
-  /*
-  .plus-wrap {
-  	display: flex;
-  	justify-content: flex-end;
-  	padding-right: var(--padding-x);
-  }*/
   /**************Variante du bloc******************/
 }
 .actualites.temp-hidden {
@@ -43,6 +37,11 @@
   background-color: var(--wp--preset--color--citron-main);
   padding: 4rem 0 2.4rem;
   padding-left: calc(var(--padding-x) + 1.6rem);
+}
+.actualites .plus-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4rem;
 }
 @media (min-width: 500px) {
   .actualites .actus {
