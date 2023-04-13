@@ -8,7 +8,7 @@
             "name": "banniere",
             "aria-label": "",
             "type": "image",
-            "instructions": "Format JPG, minimum 1640px de large et 620px de haut pour une page ordinaire (315px de haut pour les articles, événements et jobs). TODO couleur ou N&B ?",
+            "instructions": "Format JPG, minimum 1640px de large et 620px de haut pour une page ordinaire (315px de haut pour les articles, événements et jobs).",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -139,5 +139,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679940127
+    "modified": 1681408437
 }

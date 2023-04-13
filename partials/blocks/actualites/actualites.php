@@ -46,7 +46,7 @@ printf('<section class="acf actualites layout-%s %s">', $layout, $className);
 
 		echo '</ul></div>'; //fin .slider
 
-		//TODO : identifier à quoi sert ce bouton ? faire défiler le slider ou ouvrir une nouvelle page ? Archive de la catégorie ? Copier/coller du bloc sur la page d'accueil ?
+		//TODO : lien vers page blog (toutes les actus)
 		/*
 		if($lien) {
 			printf('<a href="%s" class="bouton secondaire">%s</a>',$lien['url'],$lien['title']);

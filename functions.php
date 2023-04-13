@@ -37,7 +37,6 @@ include_once( get_template_directory() . '/inc/carte/fonctions-carte.php' );
 include_once( get_template_directory() . '/inc/jobs/cpt-jobs.php' );
 include_once( get_template_directory() . '/inc/jobs/fonctions-jobs.php' );
 
-//TODO : CPT et tax pour les menus
 
 // Plugin Support
 include_once( get_template_directory() . '/inc/acf.php' );

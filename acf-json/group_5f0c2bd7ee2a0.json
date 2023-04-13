@@ -49,7 +49,7 @@
             "name": "ohm_bg_image",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "Format JPG, minimum 1640px de large et 620px de haut",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -162,5 +162,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681407258
+    "modified": 1681408458
 }

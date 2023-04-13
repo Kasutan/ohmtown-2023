@@ -38,8 +38,7 @@
 				if(navigator && navigator.clipboard && navigator.clipboard.writeText) {
 					navigator.clipboard.writeText(text).then( () => {
 						/* success */
-						//TODO tester avec site en ligne
-						console.log('Lien copié dans le presse-papier :',text);
+
 						$(this).find('.avant').hide();
 						$(this).find('.apres').show();
 						},
