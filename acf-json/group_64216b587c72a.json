@@ -21,6 +21,26 @@
             "placeholder": "",
             "prepend": "",
             "append": "€"
+        },
+        {
+            "key": "field_643818a1ec6d8",
+            "label": "Mettre en avant ce plat\/cette boisson ?",
+            "name": "mise_en_avant",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Oui, mettre en avant",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -41,5 +61,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679911890
+    "modified": 1681398062
 }

@@ -82,6 +82,12 @@
 			display: grid;
 			grid-template-columns: 1fr 6rem;
 			margin-bottom: 1.8rem;
+			padding:4px;
+
+			&.en-avant {
+				background-color: var(--wp--preset--color--marron-100);
+				border-radius: 1.6rem;
+			}
 		}
 		.nom {
 			color:var(--wp--preset--color--black);
@@ -195,13 +201,8 @@
 			.elem-carte {
 				border-radius: 16px;
 				margin-bottom: 1.4rem;
-				padding:4px;
 				padding-right:2rem;
 
-				&:first-of-type {
-					background-color: var(--wp--preset--color--marron-100);
-					border-radius: 1.6rem;
-				}
 			}
 
 			.texte {

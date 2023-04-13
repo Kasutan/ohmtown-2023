@@ -87,6 +87,11 @@
   display: grid;
   grid-template-columns: 1fr 6rem;
   margin-bottom: 1.8rem;
+  padding: 4px;
+}
+.carte .contenu-onglet .elem-carte.en-avant {
+  background-color: var(--wp--preset--color--marron-100);
+  border-radius: 1.6rem;
 }
 .carte .contenu-onglet .nom {
   color: var(--wp--preset--color--black);
@@ -192,12 +197,7 @@
   .carte .contenu-onglet .elem-carte {
     border-radius: 16px;
     margin-bottom: 1.4rem;
-    padding: 4px;
     padding-right: 2rem;
-  }
-  .carte .contenu-onglet .elem-carte:first-of-type {
-    background-color: var(--wp--preset--color--marron-100);
-    border-radius: 1.6rem;
   }
   .carte .contenu-onglet .texte {
     grid-column: 1/span 2;
