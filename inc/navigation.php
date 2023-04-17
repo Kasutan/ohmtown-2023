@@ -28,56 +28,6 @@ class etcode_sublevel_walker extends Walker_Nav_Menu
 }
 
 
-/**
-* Navigation
-*
-*/
-//add_action( 'tha_header_bottom', 'ea_site_header', 10 );
-
-
-function ea_site_header() {
-	echo '<div class="header-navigation">';
-
-
-		//Navigation mobile
-		kasutan_mobile_nav();
-
-		//Navigation desktop
-		echo '<nav id="site-navigation" class="nav-main" aria-label="menu principal">';
-			if( has_nav_menu( 'primary' ) ) {
-				wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class' => 'nav-primary' ) );
-			}
-			
-		echo '</nav>';
-	echo '</div>';
-}
-
-
-function kasutan_mobile_nav() {
-	?>
-	<button class="menu-toggle picto" id="menu-toggle" aria-controls="volet-navigation"  aria-label="Menu">
-		<?php echo kasutan_picto(array('icon'=>'menu', 'class'=>'menu', 'size'=>'28'));?>
-		<?php echo kasutan_picto(array('icon'=>'close', 'class' => 'fermer-menu','size'=>'28'));?>
-	</button>
-	<div class="volet-navigation"  id="volet-navigation">
-		<?php
-		if( class_exists('etcode_sublevel_walker') ) {
-			wp_nav_menu( array(
-				'theme_location' => 'primary',
-				'menu_id'        => 'menu-mobile',
-				'walker' => new etcode_sublevel_walker,
-				'menu_class'=>'menu-mobile',
-			) );
-		} else {
-			wp_nav_menu( array(
-				'theme_location' => 'primary',
-				'menu_id'        => 'menu-mobile',
-				'menu_class'=>'menu-mobile',
-			) );
-		}
-	echo '</div>'; //Fin volet navigation
-}
-
 
 /**
  * Archive Paginated Navigation
