@@ -1139,7 +1139,7 @@ body .forminator-ui.forminator-custom-form[data-design=default] .forminator-butt
   padding-left: 4.2rem;
 }
 body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button-submit:focus, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button-submit:hover, body .forminator-ui.forminator-custom-form[data-design=default] .forminator-button-submit:active {
-  background-color: var(--wp--preset--color--citron-200);
+  background-color: var(--wp--preset--color--citron-200) !important;
   box-shadow: 4px 4px 2px rgba(253, 226, 56, 0.75);
   outline-color: transparent;
 }
@@ -1314,33 +1314,6 @@ a:focus-visible {
 }
 
 /*--------------------------------------------------------------
-## Fil d'ariane
---------------------------------------------------------------*/
-p.fil-ariane {
-  align-items: center;
-  display: flex;
-  color: var(--wp--preset--color--primaire);
-  flex-wrap: wrap;
-  font-size: calc(12 * var(--taille-texte) / 15);
-  margin-top: 14px;
-  text-transform: uppercase;
-}
-p.fil-ariane a {
-  color: var(--wp--preset--color--primaire);
-  font-weight: 400;
-  text-decoration: none;
-}
-p.fil-ariane a:hover, p.fil-ariane a:focus {
-  text-decoration: underline;
-}
-p.fil-ariane .sep {
-  display: inline-block;
-  margin: 0 0.5ch;
-  position: relative;
-  top: 1px;
-}
-
-/*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
 /*Logique pour afficher/masquer le volet de navigation*/
@@ -1462,6 +1435,10 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   .inner-volet .nav-menu a {
     font-size: var(--wp--custom--typography--font-size--huge);
   }
+}
+.inner-volet .nav-menu a:focus-visible {
+  outline-color: var(--wp--preset--color--orange-main);
+  outline-offset: -5px;
 }
 .inner-volet a.resa {
   font-size: 2.4rem;
@@ -2536,6 +2513,10 @@ form.search-form input.search-submit {
   }
   .nav-social li a[href*=soundcloud] {
     background-size: 54.5454545455%;
+  }
+  .nav-social li a:focus-visible {
+    outline-color: var(--wp--preset--color--orange-main);
+    outline-offset: 5px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -55,6 +55,10 @@
 			&[href*="soundcloud"] {
 				background-size: calc(100% * 24/44);
 			}
+			&:focus-visible {
+				outline-color:var(--wp--preset--color--orange-main);
+				outline-offset: 5px;
+			}
 		}
 	}
 }

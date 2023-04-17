@@ -36,33 +36,7 @@ a:focus-visible {
 	}
 }
 
-/*--------------------------------------------------------------
-## Fil d'ariane
---------------------------------------------------------------*/
-p.fil-ariane {
-	align-items: center;
-	display:flex;
-	color:var(--wp--preset--color--primaire);
-	flex-wrap: wrap;
-	@include fs(12);
-	margin-top: 14px;
-	text-transform: uppercase;
-	a {
-		color:var(--wp--preset--color--primaire);
-		font-weight: 400;
-		text-decoration: none;
-		&:hover, &:focus {
-			text-decoration: underline;
-		}
-	}
 
-	.sep {
-		display: inline-block;
-		margin:0 0.5ch;
-		position: relative;
-		top:1px;
-	}
-}
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -194,7 +168,10 @@ button.menu-toggle {
 			text-align: center;
 			text-decoration: none;
 			text-transform: uppercase;
-		
+			&:focus-visible {
+				outline-color:var(--wp--preset--color--orange-main);
+				outline-offset: -5px;
+			}
 		}
 	}
 

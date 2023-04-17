@@ -56,6 +56,7 @@ function kasutan_main_footer() {
 				if(!$ouverture) $ouverture='-';
 				if(!$fermeture) $fermeture='-';
 				
+				//TODO tabindex ?
 				printf('<li class="horaire"><strong class="jour">%s</strong>',$jour);
 				if($ouverture) printf('<span>%s</span>',$ouverture);
 				if($fermeture) printf('<span>%s</span>',$fermeture);

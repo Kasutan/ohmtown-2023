@@ -56,12 +56,11 @@ printf('<section class="acf carte %s">', $className);
 			$image_desktop=esc_attr(get_sub_field('image_desktop'));
 			$texte=wp_kses_post(get_sub_field('texte'));
 			
-			$boutons.=sprintf('<li role="presentation"><button id="tab-%s" role="tab" tabindex="-1" class="bouton-onglet" %s>%s</button></li>',$cat_id,$attr_bouton,$cat->name);
+			$boutons.=sprintf('<li role="presentation"><button id="tab-%s" role="tab" class="bouton-onglet" %s>%s</button></li>',$cat_id,$attr_bouton,$cat->name);
 			
 
 			ob_start();
 
-			//TODO vérif accessibilité
 			printf('<section class="contenu-onglet" role="tabpanel" aria-labelledby="tab-%s" tabindex="0" %s>',$cat_id,$attr_panel);
 				printf('<div class="image mobile">%s</div>',wp_get_attachment_image( $image_mobile, 'medium_large'));
 				printf('<div class="image desktop">%s</div>',wp_get_attachment_image( $image_desktop, 'medium_large'));
