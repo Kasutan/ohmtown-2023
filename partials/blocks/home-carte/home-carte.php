@@ -25,7 +25,7 @@ printf('<section class="acf home-carte %s">', $className);
 		if($options) {
 			printf('<div class="slide slide-%s %s">',$index,$key);
 				$image=esc_attr($options['image']);
-				if($image) printf('<div class="image">%s</div>',wp_get_attachment_image( $image, 'medium_large'));
+				if($image) printf('<div class="image">%s</div>',wp_get_attachment_image( $image, 'large'));
 				printf('<h2 class="titre-slide">%s</h2>',wp_kses_post($options['titre']));
 				printf('<p class="texte"><span class="highlight">%s</span></p>',wp_kses_post($options['texte']));
 				if($lien) {

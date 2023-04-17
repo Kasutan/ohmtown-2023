@@ -756,7 +756,7 @@ button.primaire.disabled {
   .is-style-fill .wp-element-button,
   a.bouton.primaire,
   button.primaire {
-    box-shadow: 10px 9px 4px var(--wp--preset--color--orange-800);
+    box-shadow: 7px 7px 8px var(--wp--preset--color--orange-800);
     font-size: 2.4rem;
   }
   .is-style-fill .wp-element-button:active,
@@ -828,7 +828,7 @@ input[type=submit].disabled {
   input[type=button],
   input[type=reset],
   input[type=submit] {
-    box-shadow: 10px 9px 4px rgba(253, 226, 56, 0.75);
+    box-shadow: 7px 7px 8px rgba(253, 226, 56, 0.75);
   }
   .is-style-secondaire .wp-element-button:active,
   a.bouton.secondaire:active,
@@ -1632,6 +1632,8 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
     margin-right: auto;
     margin-bottom: 32px;
     max-width: var(--taille-logo);
+    position: relative;
+    left: -12px;
   }
 }
 

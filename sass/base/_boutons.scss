@@ -50,7 +50,7 @@ button.primaire {
 	}
 
 	@include bp(lg) {
-		box-shadow:  10px 9px 4px var(--wp--preset--color--orange-800);
+		box-shadow:  7px 7px 8px var(--wp--preset--color--orange-800);
 		font-size: 2.4rem;
 		&:active {
 			box-shadow: 1px 4px 0px var(--wp--preset--color--orange-800);
@@ -88,7 +88,7 @@ input[type="submit"] {
 	}
 
 	@include bp(lg) {
-		box-shadow:  10px 9px 4px rgba(253, 226, 56, 0.75);
+		box-shadow:   7px 7px 8px rgba(253, 226, 56, 0.75);
 		&:active {
 			box-shadow: 1px 4px 0px #FDE238;
 		}

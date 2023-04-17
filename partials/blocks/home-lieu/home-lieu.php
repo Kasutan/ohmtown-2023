@@ -36,7 +36,7 @@ printf('<section class="acf home-lieu %s">', $className);
 				if($j==0) {
 					$classe="visible";
 				}
-				printf('<div class="image %s">%s</div>',$classe,wp_get_attachment_image( $image, 'medium_large'));
+				printf('<div class="image %s">%s</div>',$classe,wp_get_attachment_image( $image, 'large'));
 				$j++;
 			}
 			echo '</div>';
