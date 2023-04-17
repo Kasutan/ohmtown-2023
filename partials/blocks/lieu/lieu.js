@@ -12,11 +12,9 @@
 
 		function togglePriv(anim) {
 			if((wrap).hasClass('toggled')) {
-				$(bouton).attr('aria-expanded',"false");
-				$(cible).attr('aria-expanded',"false");
+				$(bouton).attr('aria-expanded',"false"); 
 			} else {
 				$(bouton).attr('aria-expanded',"true");
-				$(cible).attr('aria-expanded',"true");
 			}
 			if(anim) {
 				$(cible).slideToggle();
@@ -39,7 +37,6 @@
 			//Si le volet n'est pas déjà ouvert, on l'ouvre
 			if(!(wrap).hasClass('toggled')) {
 				$(bouton).attr('aria-expanded',"true");
-				$(cible).attr('aria-expanded',"true");
 				$(cible).show();
 				$(wrap).addClass('toggled');
 			}

@@ -28,7 +28,6 @@
 	}
 
 
-	volet.setAttribute( 'aria-expanded', 'false' );
 	button.setAttribute( 'aria-expanded', 'false' );
 
 
@@ -37,12 +36,10 @@
 			volet.className = volet.className.replace( ' toggled', '' );
 			header.className = header.className.replace( ' volet-ouvert', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
-			volet.setAttribute( 'aria-expanded', 'false' );
 		} else {
 			volet.className += ' toggled';
 			header.className += ' volet-ouvert';
 			button.setAttribute( 'aria-expanded', 'true' );
-			volet.setAttribute( 'aria-expanded', 'true' );
 		}
 	};
 

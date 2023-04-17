@@ -37,11 +37,11 @@ printf('<section class="acf lieu %s">', $className);
 			printf('<h3 class="titre-col">%s</h3>',$titre[$i]);
 			printf('<p class="texte">%s</p>',$texte[$i]);
 			if($i===2) {
-				echo '<div id="toggle-priv-wrap"><button id="toggle-priv" aria-controls="priv-panel" role="region" aria-expanded="false" class="secondaire">';
+				echo '<div id="toggle-priv-wrap"><button id="toggle-priv" aria-expanded="false" class="secondaire">';
 					echo $label_priv;
 					?>
 					<span class="picto">
-						<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
 						<path d="M1.5 1.42847L9.5 10.5713L17.5 1.42847" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg>
 					</span>
@@ -51,7 +51,7 @@ printf('<section class="acf lieu %s">', $className);
 		echo '</div>';
 	}
 
-	echo '<div id="privatisation" class="priv-panel" aria-expanded="false">';
+	echo '<div id="privatisation" class="priv-panel" >';
 		printf('<h3 class="titre-col">%s</h3>',$titre_priv);
 		echo '<div class="fond-blanc">';
 			echo '<div class="pdf">';
@@ -63,6 +63,7 @@ printf('<section class="acf lieu %s">', $className);
 					printf('<div class="image desktop">%s</div>',wp_get_attachment_image( $image_desktop, 'large'));
 				}
 				printf('<p>%s</p>',$texte_pdf);
+				if($url_pdf && $label_pdf) :
 				printf('<a href="%s" class="bouton secondaire sans-fleche" target="_blank" rel="noopener noreferrer">',$url_pdf);
 				?>
 					<span class="picto">
@@ -72,6 +73,7 @@ printf('<section class="acf lieu %s">', $className);
 					</span>
 				<?php
 				printf('%s</a>',$label_pdf);
+				endif;
 			echo '</div>';
 
 			echo '<div class="form">';

@@ -15,7 +15,7 @@ function kasutan_footer_top() {
 	}
 	echo '<div class="footer-top">';
 		if($logo) {
-			printf('<div class="logo-footer"><a href="/" class="logo-link">%s</a></div>', wp_get_attachment_image( $logo,'thumbnail'));
+			printf('<div class="logo-footer"><a href="/" class="logo-link" title="Accueil">%s</a></div>', wp_get_attachment_image( $logo,'thumbnail'));
 		}
 		if(is_active_sidebar('newsletter-footer')) {
 			dynamic_sidebar( 'newsletter-footer' );
