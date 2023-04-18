@@ -61,15 +61,19 @@ function kasutan_main_footer() {
 				$info_supplementaire=wp_kses_post(get_sub_field('info_supplementaire'));
 				if(!$ouverture) $ouverture='-';
 				if(!$fermeture) $fermeture='-';
+				if(!$info_supplementaire) $info_supplementaire='&nbsp;';
 
-				//TODO fonction pour rendre les horaires lisibles
-				//remplacer . par h
-				//enlever 00 après .
-				//enlever premier 0 devant les horaires à un seul chiffre
+				if(function_exists('kasutan_forme_heure_pour_sr')) {
+					$ouverture_formatee=kasutan_formate_heure_pour_sr($ouverture);
+					$fermeture_formatee=kasutan_formate_heure_pour_sr($fermeture);
+				} else {
+					$ouverture_formatee=$ouverture;
+					$fermeture_formatee=$fermeture;
+				}
 				
 				printf('<li class="horaire"><strong class="jour"><span aria-hidden="true">%s</span><span class="screen-reader-text">%s</span></strong>',$jour,$jour_entier);
-				if($ouverture) printf('<span aria-hidden="true">%s</span><span class="screen-reader-text">%s</span>',$ouverture,str_replace('.','h',$ouverture));
-				if($fermeture) printf('<span aria-hidden="true">%s</span><span class="screen-reader-text">%s</span>',$fermeture,str_replace('.','h',$fermeture));
+				if($ouverture) printf('<span aria-hidden="true">%s</span><span class="screen-reader-text">%s</span>',$ouverture,$ouverture_formatee);
+				if($fermeture) printf('<span aria-hidden="true">%s</span><span class="screen-reader-text">%s</span>',$fermeture,$fermeture_formatee);
 				if($info_supplementaire) printf('<span class="info">%s</span>',$info_supplementaire);
 
 				echo '</li>';
@@ -116,6 +120,16 @@ function kasutan_main_footer() {
 	echo '</div>';
 }
 
+function kasutan_formate_heure_pour_sr($heure) {
+	$heure=str_replace('.00','h',$heure); //enlever deux derniers zéro
+	$heure=str_replace('.','h',$heure); //remplacer . par h
+	if(!strpos($heure,"00h")) {
+		//Si l'heure n'est pas minuit, enlever le premier zéro
+		$heure=ltrim($heure,"0");
+	}
+
+	return $heure;
+}
 
 /**
 * Copyright
