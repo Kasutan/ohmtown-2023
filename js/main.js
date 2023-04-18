@@ -25,6 +25,13 @@
 				}
 			});
 		}
+
+		/********* Ouvrir popup de réservation **********/
+		$('.iframe').modaal({
+			type:'iframe',
+			width:400,
+			height:800
+		});
 		
 
 		/****************** Copier le lien single au clic sur un bouton *************************/	

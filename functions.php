@@ -209,7 +209,10 @@ function kasutan_scripts() {
 
 	wp_enqueue_script( 'ohmtown-owl-carousel',get_template_directory_uri() . '/lib/owlcarousel/owl.carousel.min.js', array('jquery'), '2.3.4', true );
 
-	wp_enqueue_script( 'ohmtown-scripts', get_template_directory_uri() . '/js/min/main.js', array('jquery','ohmtown-owl-carousel'), '', true );
+	wp_register_script( 'ohmtown-modaal',get_template_directory_uri() . '/lib/modaal/modaal.min.js', array('jquery'), '0.4.4', true );
+
+
+	wp_enqueue_script( 'ohmtown-scripts', get_template_directory_uri() . '/js/min/main.js', array('jquery','ohmtown-owl-carousel','ohmtown-modaal'), '', true );
 
 	//scripts pour le filtre des actus
 	if(is_home()) {

@@ -67,7 +67,7 @@ function kasutan_header_top() {
 }
 
 function kasutan_bouton_resa($label,$url,$classe='') {
-	printf('<a href="%s" class="resa bouton primaire %s" target="_blank" rel="noopener noreferrer">%s</a>',
+	printf('<a href="%s" class="iframe resa bouton primaire %s" target="_blank" rel="noopener noreferrer">%s</a>',
 		$url,
 		$classe,
 		$label
