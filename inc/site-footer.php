@@ -41,6 +41,7 @@ function kasutan_main_footer() {
 
 	}
 	
+	$jours_entiers=array("Lun."=>"Lundi","Mar."=>"Mardi","Mer."=>"Mercredi",'Jeu.' => "Jeudi","Ven."=>"Vendredi","Sam."=>"Samedi","Dim."=>"Dimanche");
 
 	echo '<div class="main-footer">';
 		//Horaires
@@ -49,16 +50,26 @@ function kasutan_main_footer() {
 			if($label_horaires) printf('<p><strong>%s</strong></p>',$label_horaires);
 			echo '<ul class="horaires" >';
 			while(have_rows('ohm_horaires','option')) : the_row();
-				$jour=esc_attr(get_sub_field('jour'));
-				$ouverture=esc_attr(get_sub_field('ouverture'));
-				$fermeture=esc_attr(get_sub_field('fermeture'));
-				$info_supplementaire=esc_attr(get_sub_field('info_supplementaire'));
+				$jour=wp_kses_post(get_sub_field('jour'));
+				if(isset($jours_entiers[$jour])) {
+					$jour_entier=$jours_entiers[$jour];
+				} else {
+					$jour_entier=$jour;
+				}
+				$ouverture=wp_kses_post(get_sub_field('ouverture'));
+				$fermeture=wp_kses_post(get_sub_field('fermeture'));
+				$info_supplementaire=wp_kses_post(get_sub_field('info_supplementaire'));
 				if(!$ouverture) $ouverture='-';
 				if(!$fermeture) $fermeture='-';
+
+				//TODO fonction pour rendre les horaires lisibles
+				//remplacer . par h
+				//enlever 00 après .
+				//enlever premier 0 devant les horaires à un seul chiffre
 				
-				printf('<li class="horaire"><strong class="jour">%s</strong>',$jour);
-				if($ouverture) printf('<span>%s</span>',$ouverture);
-				if($fermeture) printf('<span>%s</span>',$fermeture);
+				printf('<li class="horaire"><strong class="jour"><span aria-hidden="true">%s</span><span class="screen-reader-text">%s</span></strong>',$jour,$jour_entier);
+				if($ouverture) printf('<span aria-hidden="true">%s</span><span class="screen-reader-text">%s</span>',$ouverture,str_replace('.','h',$ouverture));
+				if($fermeture) printf('<span aria-hidden="true">%s</span><span class="screen-reader-text">%s</span>',$fermeture,str_replace('.','h',$fermeture));
 				if($info_supplementaire) printf('<span class="info">%s</span>',$info_supplementaire);
 
 				echo '</li>';

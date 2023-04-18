@@ -75,9 +75,9 @@
 		}
 		span {
 			border-left:solid 2px var(--wp--preset--color--sand-main);
-			text-transform: uppercase;
 			&.info {
 				padding:1em 1ch;
+				text-transform: uppercase;
 			}
 			&:first-of-type {
 				padding-top: 0.5em;

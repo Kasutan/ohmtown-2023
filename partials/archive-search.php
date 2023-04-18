@@ -26,7 +26,7 @@ printf('<li class="post-summary %s">',$post_type);
 			global $product;
 			printf('<p class="price">%s</p>', $product->get_price_html());
 		} 
-		printf('<a href="%s" class="suite">%s<span class="screen-reader-text">de %s</span><span class="chevrons-suite">>>></span></a>',get_the_permalink(),$label_suite,get_the_title());
+		printf('<a href="%s" class="suite">%s<span class="screen-reader-text">de %s</span><span class="chevrons-suite" aria-hiden="true">>>></span></a>',get_the_permalink(),$label_suite,get_the_title());
 	echo '</div>';
 
 echo '</li>';

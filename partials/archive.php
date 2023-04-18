@@ -36,7 +36,7 @@ printf('<%s class="post-summary">',$tag);
 		$extrait=wpautop(get_the_excerpt());
 		printf('<div class="extrait">%s</div>',$extrait);
 
-		printf('<a href="%s" class="suite">%s ><span class="screen-reader-text"> %s</span>
+		printf('<a href="%s" class="suite">%s<span aria-hidden="true">&nbsp;></span><span class="screen-reader-text"> %s</span>
 		</a>',esc_url( get_permalink( ) ),$suite,get_the_title( ));
 		
 	echo '</div>';
