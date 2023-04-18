@@ -43,6 +43,17 @@
 			//On place la fenêtre au bon endroit, sans animation
 			$(document).scrollTop( $(cible).offset().top - 80); 
 
+			//Si le volet de navigation en mobile est ouvert, on le referme
+			var boutonMenu=$('#menu-toggle');
+			var volet = $( '#volet-navigation' );
+			var header = $( '#site-header' );
+			if($(volet).hasClass('toggled')) {
+				$(volet).removeClass('toggled');
+				$(header).removeClass('volet-ouvert');
+				$(boutonMenu).attr('aria-expanded','false')
+			}
+
+
 		})
 
 
