@@ -55,6 +55,10 @@
 		p {
 			margin-bottom: 0.5em;
 		}
+		&:focus-visible, &:focus {
+			outline: dashed 2px var(--wp--preset--color--orange-main);
+			outline-offset: -2px;
+		}
 	}
 	.horaires {
 		display: flex;

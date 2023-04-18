@@ -1808,6 +1808,10 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
 .site-footer .horaires-wrap p {
   margin-bottom: 0.5em;
 }
+.site-footer .horaires-wrap:focus-visible, .site-footer .horaires-wrap:focus {
+  outline: dashed 2px var(--wp--preset--color--orange-main);
+  outline-offset: -2px;
+}
 .site-footer .horaires {
   display: flex;
 }

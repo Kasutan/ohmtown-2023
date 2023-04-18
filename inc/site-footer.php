@@ -45,9 +45,9 @@ function kasutan_main_footer() {
 	echo '<div class="main-footer">';
 		//Horaires
 		if(have_rows('ohm_horaires','option')) :
-			echo '<div class="horaires-wrap">';
+			echo '<div class="horaires-wrap" tabindex="0">';
 			if($label_horaires) printf('<p><strong>%s</strong></p>',$label_horaires);
-			echo '<ul class="horaires">';
+			echo '<ul class="horaires" >';
 			while(have_rows('ohm_horaires','option')) : the_row();
 				$jour=esc_attr(get_sub_field('jour'));
 				$ouverture=esc_attr(get_sub_field('ouverture'));
@@ -56,7 +56,6 @@ function kasutan_main_footer() {
 				if(!$ouverture) $ouverture='-';
 				if(!$fermeture) $fermeture='-';
 				
-				//TODO tabindex ?
 				printf('<li class="horaire"><strong class="jour">%s</strong>',$jour);
 				if($ouverture) printf('<span>%s</span>',$ouverture);
 				if($fermeture) printf('<span>%s</span>',$fermeture);
