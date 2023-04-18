@@ -83,6 +83,7 @@
 		})
 
 		function bindScroll() {
+			$('.pagination li a').attr('title','Aller à la page');
 			$('.pagination li').click(function(e) {
 				$("html, body").animate({
 					scrollTop: $('#filtre-liste').offset().top - 150
