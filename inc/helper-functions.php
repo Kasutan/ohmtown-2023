@@ -93,25 +93,7 @@ function ea_class( $base_classes, $optional_class, $conditional ) {
 	return $conditional ? $base_classes . ' ' . $optional_class : $base_classes;
 }
 
-/**
- *  Background Image Style
- *
- * @param int $image_id
- * @return string $output
- */
-function ea_bg_image_style( $image_id = false, $image_size = 'full' ) {
-	if( !empty( $image_id ) )
-		return ' style="background-image: url(' . wp_get_attachment_image_url( $image_id, $image_size ) . ');"';
-}
 
-/* Decor svg*/
-
-function kasutan_affiche_decor_svg($nom) {
-	$icon_path = get_theme_file_path( '/icons/' . $nom . '.svg' );
-	if( file_exists( $icon_path ) ) {
-		printf('<div class="decor">%s</div>',file_get_contents( $icon_path ));
-	}
-}
 
 /**
  * Get Icon
@@ -205,19 +187,6 @@ function kasutan_get_page_ID($nom) {
 	return $page;
 }
 
-/**
-* Convertir une zone de texte en liste à puces.
-*/
-function kasutan_make_list($text) {
-	$array=explode('<br />',$text);
-	ob_start();
-		echo '<ul>';
-		foreach($array as $item) {
-			printf('<li>%s</li>',$item);
-		}
-		echo '</ul>';
-	return ob_get_clean();
-}
 
 /***************************************************************
 			Blocs réutilisables

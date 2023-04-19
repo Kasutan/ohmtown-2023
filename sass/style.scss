@@ -29,16 +29,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "base/elements";
 @import "base/navigation"; 
 @import "base/print";
-@import "base/animations";
 @import "lib/modaal";
 @import "templates/header";
 @import "templates/footer";
 @import "templates/loop";
 @import "templates/blog";
-@import "templates/page";
 @import "templates/search";
 @import "templates/single";
-@import "components/blocs-natifs";
 @import "components/filtre";
 @import "components/newsletter";
 @import "components/pagination";

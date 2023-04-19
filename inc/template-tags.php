@@ -8,7 +8,7 @@
  * @license      GPL-2.0+
 **/
 
-//TODO supprimer les fonctions inutilisées
+
 
 /**
  * Entry Category
@@ -22,10 +22,7 @@ function ea_entry_category($contexte='archive') {
 	}
 	if( !empty( $term ) && ! is_wp_error( $term ) )
 		if($contexte==='archive') {
-			$picto=kasutan_picto_categorie($term->term_id,'blanc');
-			if($picto) {
-				printf('<div class="picto-cat">%s</div>',wp_get_attachment_image( $picto,'thumbnail'));
-			}
+			
 			//pour le filtre
 			printf('<span class="categorie screen-reader-text">%s</span>',$term->slug);
 		} else {
@@ -39,22 +36,6 @@ function ea_entry_category($contexte='archive') {
 }
 
 
-/**
-* Picto associé à une catégorie
-*
-*/
-function kasutan_picto_categorie($term_id,$couleur="blanc") {
-	if(!function_exists('get_field')) {
-		return false;
-	}
-	if($couleur=='blanc') {
-		$champ='ohmtown_picto';
-	} else {
-		$champ='ohmtown_picto_'.$couleur;
-	}
-	return esc_attr(get_field($champ,'category_'.$term_id));
-
-}
 
 /**
  * Post Summary Title
@@ -98,27 +79,6 @@ function ea_post_summary_image( $size = 'thumbnail' ) {
 	);
 }
 
-
-
-/**
-* Affiche le titre des pages ordinaires
-*
-*/
-function kasutan_page_titre() {
-	$masquer=false;
-	$classe="entry-title";
-	$titre=get_the_title();
-	if(function_exists('get_field') && esc_attr(get_field('ohmtown_masquer_titre'))==='oui') {
-		$masquer=true;
-	}
-	if(is_front_page(  )) {
-		$masquer=true;
-	}
-	if($masquer) {
-		$classe.=" screen-reader-text";
-	}
-	printf('<h1 class="%s">%s</h1>',$classe,$titre);
-}
 
 /**
 * Banniere contenant une image, le titre de la page et un lien retour vers la home
@@ -262,24 +222,12 @@ function kasutan_boutons_partage() {
 	<?php
 }
 
-/**
-* Image mise en avant
-*
-*/
-function kasutan_affiche_thumbnail_dans_contenu() {
-	if(has_post_thumbnail()) {
-		echo '<div class="thumbnail">';
-			the_post_thumbnail( 'large');
-		echo '</div>';
-	}
-}
 
 /**
 * Filtre par catégories pour les archives de blog
 *
 */
 function kasutan_affiche_filtre_articles() {
-	$avec_pictos=function_exists('kasutan_picto_categorie');
 	echo '<p class="screen-reader-text">Filtrer les actualités</p>';
 	echo '<form class="filtre-archive" id="filtre-liste">';
 		$terms=get_terms( array(
@@ -291,25 +239,12 @@ function kasutan_affiche_filtre_articles() {
 		<label for="toutes" class="toutes">Tous les articles</label>
 		<?php
 		foreach($terms as $term) : 
-			$pictos=$classe='';
-			if($avec_pictos) {
-				$picto_blanc=kasutan_picto_categorie($term->term_id,'blanc');
-				$picto_bleu=kasutan_picto_categorie($term->term_id,'bleu');
-				if($picto_blanc && $picto_bleu) {
-					$pictos=sprintf('<span class="picto blanc">%s</span><span class="picto bleu">%s</span>',wp_get_attachment_image( $picto_blanc,'thumbnail'),wp_get_attachment_image( $picto_bleu,'thumbnail'));
-					$classe="avec-pictos";
-				}
-			}
-			
-
 			printf('<input type="radio" id="%s" name="filtre-categorie" value="%s">',
 				$term->slug,
 				$term->slug
 			);
-			printf('<label for="%s" class="%s">%s %s</label>',
+			printf('<label for="%s" >%s</label>',
 				$term->slug,
-				$classe,
-				$pictos,
 				$term->name
 			);
 		endforeach;
