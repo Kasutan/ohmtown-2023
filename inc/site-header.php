@@ -28,7 +28,7 @@ function kasutan_header_top() {
 	}
 
 	if($logo) {
-		printf('<div class="logo-header"><a href="/" class="logo-link" title="Accueil">%s</a></div>', wp_get_attachment_image( $logo,'thumbnail'));
+		printf('<div class="logo-header"><a href="/" class="logo-link" title="Accueil">%s</a></div>', wp_get_attachment_image( $logo,'thumbnail',array('decoding'=>'async','loading'=>'eager')));
 	}
 
 	if($resa_mobile && $resa_url) {

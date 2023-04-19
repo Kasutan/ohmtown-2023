@@ -18,7 +18,7 @@ $logo=esc_attr( get_field('logo') );
 
 if($logo) {
 	printf('<section class="acf home-logo %s">', $className);
-		if($logo) printf('<div class="image">%s</div>',wp_get_attachment_image( $logo, 'medium'));
+		if($logo) printf('<div class="image">%s</div>',wp_get_attachment_image( $logo, 'medium'),false,array('decoding'=>'async','loading'=>'eager'));
 	echo '</section>';
 }
 
