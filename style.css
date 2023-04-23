@@ -2268,6 +2268,8 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   color: var(--wp--preset--color--noir);
   padding: 1.6rem var(--padding-x) 2.8rem;
   position: relative;
+  max-width: 100vw;
+  overflow: hidden;
   --largeur-logo:8rem;
 }
 .site-footer strong {
