@@ -2947,6 +2947,14 @@ form.search-form input.search-submit {
   background-image: url("icons/soundcloud.svg");
   background-size: 37.5%;
 }
+.nav-social ul li a[href*=linkedin] {
+  background-image: url("icons/linkedin-in.svg");
+  background-size: 37.5%;
+}
+.nav-social ul li a[href*=tiktok] {
+  background-image: url("icons/tiktok.svg");
+  background-size: 37.5%;
+}
 .nav-social ul li:last-of-type a {
   margin-right: 0;
 }
@@ -2966,6 +2974,15 @@ form.search-form input.search-submit {
   .nav-social li a:focus-visible {
     outline-color: var(--wp--preset--color--orange-main);
     outline-offset: 5px;
+  }
+}
+
+@media (min-width: 960px) {
+  .site-header .nav-social ul {
+    flex-wrap: wrap;
+  }
+  .site-header .nav-social li a, .site-header .nav-social li:last-of-type a {
+    margin: 0 15px 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */

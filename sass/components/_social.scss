@@ -37,6 +37,14 @@
 				background-image: url('icons/soundcloud.svg');
 				background-size: calc(100% * 12/32);
 			}
+			&[href*="linkedin"] {
+				background-image: url('icons/linkedin-in.svg');
+				background-size: calc(100% * 12/32);
+			}
+			&[href*="tiktok"] {
+				background-image: url('icons/tiktok.svg');
+				background-size: calc(100% * 12/32);
+			}
 		}
 
 		li:last-of-type a {
@@ -58,6 +66,20 @@
 			&:focus-visible {
 				outline-color:var(--wp--preset--color--orange-main);
 				outline-offset: 5px;
+			}
+		}
+	}
+}
+
+//Cas particulier du header desktop avec 5 liens
+@include bp(lg) {
+	.site-header .nav-social {
+		ul {
+			flex-wrap: wrap;
+		}
+		li, li:last-of-type {
+			a {
+				margin:0 15px 15px;
 			}
 		}
 	}
